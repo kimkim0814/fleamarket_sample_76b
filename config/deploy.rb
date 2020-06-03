@@ -2,7 +2,7 @@
 lock "~> 3.14.0"
 
 set :application, "fleamarket_sample_76b"
-set :repo_url, "git@example.com:kao37/fleamarket_sample_76b.git"
+set :repo_url, "git@github.com:kao37/fleamarket_sample_76b.git"
 
 set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system', 'public/uploads')
 
