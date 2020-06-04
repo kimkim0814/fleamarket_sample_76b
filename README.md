@@ -7,7 +7,6 @@
 |name|string|null: false| 
 |price|integer|null: false|
 |description｜string|null: false, foreign_key: true |
-|image_id|references|null: false, foreign_key: trye |
 |user_id| references|null: false, foreign_key: true |
 |category_id｜references | null:false, foreign_key: true|
 |brand_id｜references | null: false, foreign_key: true |
@@ -107,5 +106,6 @@
 |Column|Type|Options|
 |------|----|-------|
 |image|string|null;false|
+|item_id|references|null:false,foreign_ket: true|
 ### Association
 - belongs_to :item
