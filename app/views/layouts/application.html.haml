@@ -15,9 +15,10 @@
             %a{:href => "#"}
               %img.hurima{:src => "/assets/material/logo/logo.png"}/
           .search-box
-          -#  = form_with url: image_path do |form|
-          -#    = form.text_field :email
-          -#    = form.submit
+            = form_with  do |form|
+              = form.text_field :search,class: 'input-box',placeholder: 'キーワードからを探す'
+              = form.submit
+              -# {src: "/assets/material/logo/icon-search.1.png"}
         .nav
           %ul.left-box
             %li.left-box--first カテゴリ

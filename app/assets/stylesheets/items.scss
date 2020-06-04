@@ -25,7 +25,11 @@
       .search-box{
         margin-left: auto;
         width: 100%;
-        background-color: blue;
+        .input-box{
+          width: calc(100% - 26px);
+          height: 36px;
+          padding: 0 0 0 5px;
+        }
       }
     }
     .nav{
