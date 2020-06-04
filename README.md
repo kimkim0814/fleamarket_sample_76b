@@ -11,7 +11,7 @@
 |category_id｜references | null:false, foreign_key: true|
 |brand_id｜references | null: false, foreign_key: true |
 |size｜string | null:false|
-|status｜string | null:false |
+|status｜integer | null:false |
 |cost| string | null:false |
 |days｜string| null:false|
 ### Associatio
