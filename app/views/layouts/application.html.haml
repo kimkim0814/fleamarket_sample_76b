@@ -15,15 +15,14 @@
             %a{:href => "#"}
               %img{:src => "logo.png"}/
           .search-box
+          -#  = form_with url: image_path do |form|
+          -#    = form.text_field :email
+          -#    = form.submit
         .nav
           %ul.left-box
-            %li.left-box--first
-            %li
-            %li.left-box--second
-            %li
+            %li.left-box--first カテゴリ
+            %li.left-box--second ブランド
           %ul.right-box
-            %li.right-box--login
-            %li
-            %li.right-box--new
-            %li
+            %li.right-box--login ログイン
+            %li.right-box--new 新規会員登録
     = yield

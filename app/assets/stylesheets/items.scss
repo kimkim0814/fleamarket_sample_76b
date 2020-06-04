@@ -7,7 +7,7 @@
   .headerInner{
     max-width: 1040px;
     width: 100%;
-    height: 82px;
+    min-height: 82px;
     margin: 0 auto;
     padding: 15px 0 0;
     .main-header{
@@ -23,7 +23,56 @@
           vertical-align: bottom;
         }
       }
+      .search-box{
+        margin-left: auto;
+        width: 100%;
+        background-color: blue;
+      }
     }
-  }
+    .nav{
+      font-size: 14px;
+      display: flex;
+      margin-bottom: 10px;
+      .left-box{
+        display: flex;
+        list-style: none;
+        &--first{
+          position: relative;
+          line-height: 38px;
+          padding-right: 36px;
+        }
+        &--second{
+          position: relative;
+          line-height: 38px;
+          padding-right: 36px;
+        }
+      }
+       .right-box{
+          margin-left: auto;
+          display: flex;
+          &--login{
+            color: #333;
+            line-height: 38px;
+            padding-right:16px;
+           }
+          
+          &--new{
+            color:#333;
+            line-height: 38px;
+            padding-right:16px;
+            
+           }
+         }
+        }
+        
+      }
+      .right-box{
+        list-style: none;
+        position: relative;
+        display: flex;
+        margin-left:auto;
+      }
+    }
+  
 
-}
+
