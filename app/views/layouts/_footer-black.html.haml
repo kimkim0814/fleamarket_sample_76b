@@ -1,4 +1,4 @@
-%footer.footer
+.footer
   .footer__top
     .footer__top__about.footer-content
       %h2 FURIMAについて
@@ -12,7 +12,7 @@
         %li
           = link_to "#" do
             FURIMA利用規約
-    .footer__top__helpguide.footer-content
+    .footer__top__see.footer-content
       %h2 FURIMAを見る
       %ul
         %li
@@ -25,33 +25,18 @@
     .footer__top__privacy-law.footer-content
       %h2 ヘルプ&ガイド
       .footer__top__privacy-law__wrapper
-        .footer__top__privacy-law__wrapper__privacy
-          %ul
-            %li
-              = link_to "#" do
-                ヘルプ&ガイド
-            %li
-              = link_to "#" do
-                FURIMAロゴ利用ガイドライン
-            %li
-              = link_to "#" do
-                お知らせ
-        .footer__top__privacy-law__wrapper__law
-          %ul
-            %li
-              = link_to "#" do
-                個人データの安全管理に係る基本方針
-            %li
-              = link_to "#" do
-                特定商取引に関する表記
-            %li
-              = link_to "#" do
-                資金決済法に基づく表示
-            %li
-              = link_to "#" do
-                法令遵守と犯罪抑止のために
+        %ul
+          %li
+            = link_to "#" do
+              ヘルプ&ガイド
+          %li
+            = link_to "#" do
+              FURIMAロゴ利用ガイドライン
+          %li
+            = link_to "#" do
+              お知らせ
   .footer__bottom
     .footer__bottom__logo
       = link_to root_path do
-        = image_tag "https://www-mercari-jp.akamaized.net/assets/img/common/common/logo-white.svg?2482339763"
+        = image_tag "/assets/material/logo/logo-white.png"
     .footer__bottom__copyright
