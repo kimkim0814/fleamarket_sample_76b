@@ -4,10 +4,10 @@
 ## Items テーブル
 |Column|Type|Options|
 |------|----|-------|
-|item_name|string|null: false| 
+|name|string|null: false| 
 |price|integer|null: false|
-|image|string|null: false|
 |description｜string|null: false, foreign_key: true |
+|image_id|references|null: false, foreign_key: trye |
 |user_id| references|null: false, foreign_key: true |
 |category_id｜references | null:false, foreign_key: true|
 |brand_id｜references | null: false, foreign_key: true |
@@ -21,6 +21,7 @@
 - belongs_to :user
 - belongs_to :brand
 - belongs_to :category
+- has_many :images
 
 
 
@@ -57,14 +58,14 @@
 - has_many :favorites
 - has_many :items
 - has_many :comments
-- belongs_to :card
+- has_one :card
 
 
 
 ## Cardsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|user_id(カード保持者)| references |null:false, foreign_key:true | 
+|user_id| references |null:false, foreign_key:true | 
 |payjp_id|string|null:false|
 ### Association
 - belongs_to : user
@@ -96,6 +97,15 @@
 ## Brandsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|item_id|string|null;false,foreign_key:true |
+|name|string|null;false|
 ### Association
 - has_many :items
+
+
+
+## Imagesテーブル
+|Column|Type|Options|
+|------|----|-------|
+|image|string|null;false|
+### Association
+- belongs_to :item
