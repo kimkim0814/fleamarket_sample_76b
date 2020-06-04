@@ -1,3 +1,21 @@
 // Place all the styles related to the items controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.header{
+  padding: 0 60px;
+  .headerInner{
+    max-width: 1040px;
+    width: 100%;
+    min-height: 82px;
+    margin: 0 auto;
+    padding: 15px 0 0;
+    background-color: red;
+    .main-header{
+      position: relative;
+    display: flex;
+    align-items: center;
+    }
+  }
+
+}
