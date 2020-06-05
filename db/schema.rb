@@ -18,10 +18,10 @@ ActiveRecord::Schema.define(version: 2020_06_05_023803) do
     t.string "familyname_kana", null: false
     t.string "firstname_kana", null: false
     t.date "birth_date", null: false
-    t.bigint "user_id_id", null: false
+    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id_id"], name: "index_identifications_on_user_id_id"
+    t.index ["user_id"], name: "index_identifications_on_user_id"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|

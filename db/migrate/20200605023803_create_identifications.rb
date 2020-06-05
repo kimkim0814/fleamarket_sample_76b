@@ -6,7 +6,7 @@ class CreateIdentifications < ActiveRecord::Migration[5.2]
       t.string :familyname_kana,  null: false 
       t.string :firstname_kana,   null: false 
       t.date :birth_date,         null: false 
-      t.references :user_id,      null: false
+      t.references :user
       t.timestamps
     end
   end
