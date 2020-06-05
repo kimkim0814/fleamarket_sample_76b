@@ -1,0 +1,41 @@
+<h2>住所情報登録</h2>
+
+<%= form_for @address do |f| %>
+  <%= render "devise/shared/error_messages", resource: @address %>
+
+  <div class="field">
+    <%= f.label :postcode %><br />
+    <%= f.text_field :postcode %>
+  </div>
+
+  <div class="field">
+    <%= f.label :prefecture_code %><br />
+    <%= f.text_field :prefecture_code %>
+  </div>
+
+  <div class="field">
+    <%= f.label :address_city %><br />
+    <%= f.text_field :address_city %>
+  </div>
+
+  <div class="field">
+    <%= f.label :address_street %><br />
+    <%= f.text_field :address_street %>
+  </div>
+
+  <div class="field">
+    <%= f.label :address_building %><br />
+    <%= f.text_field :address_building %>
+  </div>
+
+  <div class="field">
+    <%= f.label :phone_number %><br />
+    <%= f.text_field :phone_number %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Sign up" %>
+  </div>
+<% end %>
+
+<%= render "devise/shared/links" %>

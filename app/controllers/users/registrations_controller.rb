@@ -29,20 +29,39 @@ class Users::RegistrationsController < Devise::RegistrationsController
       flash.now[:alert] = @identification.errors.full_messages
       render :new_identification and return
     end
+    
+    session["devise.regist_data"] = {dentification: @identification.attributes}
+    @address = @identification.build_address
+    render :new_address
+  end
+
+  def create_address
+    @user = User.new(session["devise.regist_data"]["user"])
+    @identification = Identification.new(session["devise.regist_data"]["identification"])
+    @address = Address.new(address_params)
+    unless @address.valid?
+      flash.now[:alert] = @address.errors.full_messages
+      render :new_address and return
+    end
+    @identification.build_address(@address.attributes)
     @user.build_identification(@identification.attributes)
+    @identification.save
     @user.save
-    session["devise.regist_data"]["user"].clear
+    # session["devise.regist_data"]["identification"].clear
+    # session["devise.regist_data"]["user"].clear
     sign_in(:user, @user)
   end
 
-# 省略
-
+ 
   protected
 
   def identification_params
     params.require(:identification).permit(:familyname,:firstname,:familyname_kana,:firstname_kana,:birth_date)
   end
 
+  def address_params
+    params.require(:address).permit(:postcode, :prefecture_code, :address_city, :address_street,:address_building,:phone_number)
+  end
   # GET /resource/edit
   # def edit
   #   super
