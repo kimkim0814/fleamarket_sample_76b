@@ -130,18 +130,11 @@
     // }
 
   }
-  .footer__bottom{
+  .footer__logo{
     width: 1020px;
     height: 33px;
-    margin:30px auto 20px;
-    display: flex;
-    align-items: center;
-
+    margin: 0 auto;
     position: relative;
-    &__logo{
-      position: absolute;
-      left: 0;
-      text-align: left;
       a{
         opacity: 1;
       }
@@ -149,12 +142,9 @@
         width: 124px;
         height: 33px;
       }
-    }
-    &__copyright{
-      position: absolute;
-      text-align: center;
-      line-height: auto;
-      font-size: 12px;
+    
+    p{
+      font-size:14px;
     }
   }
 }
