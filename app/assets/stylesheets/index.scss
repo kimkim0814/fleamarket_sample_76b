@@ -49,8 +49,10 @@
       }
     }
 
+
+
     &__top-introduction {
-      padding: 60px, 20px;
+      padding: 60px 20px;
       &__title {
         text-align: center;
         font-size: 26px;
@@ -66,6 +68,93 @@
         max-width: 1020px;
         width: 100%;
         margin: 0 auto;
+        &__list {
+          width: 30%;
+          margin: 16px 5% 0 0;
+          text-align: left;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          &__pict {
+            position: relative;
+            margin-bottom: 20px;
+            &__number {
+              display: inline-block;
+              position: absolute;
+              top: 0;
+              left: 0;
+              border-radius: 4%;
+              font-size: 30px;
+              text-align: center;
+              margin: 0 5px 0 0;
+              padding: 10px 20px;
+              background-color: #3CCACE;
+              color: #fff;
+            }
+            .image {
+              width: 100%;
+              vertical-align: bottom;
+            }
+          }
+          &__text {
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 50px;
+            margin: 0 0 0 2px;
+          }
+          span.main__top-introduction__lists__list__text {
+            color: #3CCACE;
+          }
+          &__description {
+            font-size: 18px;
+            line-height: 1.5;
+            margin: 16px 0 0;
+          }
+        }
+      }
+    }
+
+
+
+    &__middle-visual {
+      background-image: url("/assets/material/pict/bg-topMiddleDl-pict.jpg");
+      background-position: bottom right;
+      height: 400px;
+      background-size: cover;
+      display: flex;
+      align-items: center;
+      &__content {
+        color: #fff;
+        text-shadow: 0 0 5px rgba(0,0,0,0.4);
+        text-align: left;
+        max-width: 1040px;
+        width: 100%;
+        margin: 0 auto;
+        &__title {
+          font-size: 27px;
+          font-weight: bold;
+          line-height: 1.4;
+        }
+        &__text {
+          font-size: 18px;
+          margin: 20px 0 30px;
+          line-height: 1.5;
+        }
+        &__btn {
+          display: flex;
+          margin: 24px 0 0 0;
+          &__apple {
+            margin-right: 10px;              
+            .image {
+              width: 180px;
+            }
+          }
+          &__google {
+            .image {
+              width: 180px;
+            }
+          }
+        }
       }
     }
   }
