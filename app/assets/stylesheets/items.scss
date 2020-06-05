@@ -95,11 +95,15 @@
   text-align: center;
   li{
     margin-top: 16px;
-    list-style: none;
+   
   }
   h2{
+    margin: 0 0 20px;
     font-size: 16px;
     font-weight: bold;
+  }
+  ul{
+    list-style: none;
   }
   a{
     color: #fff;
