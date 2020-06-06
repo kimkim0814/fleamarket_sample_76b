@@ -24,37 +24,37 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   def create_identification
     @user = User.new(session["devise.regist_data"]["user"])
-    p @user
     @identification = Identification.new(identification_params)
-    p @identification
     unless @identification.valid?
       flash.now[:alert] = @identification.errors.full_messages
       render :new_identification and return
     end
-    session["devise.regist_data"] = {identification: @identification.attributes}
-    @address = @identification.build_address	
+   
     @user.build_identification(@identification.attributes)	
     @user.save
-        
+    session["devise.regist_data"]["user"].clear
+    sign_in(:user, @user)
+    session["devise.regist_data"] = {identification: @identification.attributes}
+    @address = @identification.build_address	
     render :new_address
   end
 
   def create_address
-    @user = User.new(session["devise.regist_data"]["user"])
+   
     @identification = Identification.new(session["devise.regist_data"]["identification"])
-    p @identification
     @address = Address.new(address_params)
     unless @address.valid?
       flash.now[:alert] = @address.errors.full_messages
       render :new_address and return
     end
-    @identification.build_address(@address.attributes)
-  
-    @identification.save!
 
-    # session["devise.regist_data"]["identification"].clear
-    # session["devise.regist_data"]["user"].clear
+    @identification.build_address(@address.attributes)
+    @identification.save!
+    session["devise.regist_data"]["identification"].clear
+   
     sign_in(:identification, @identification)
+  
+    
   end
 
  
