@@ -36,17 +36,25 @@
         width: 100%;
         form{
           display: flex;
+          margin-bottom:5px;
+          width: 100%;
           .input-box{
             width: calc(100% - 26px);
             height: 36px;
             padding: 0 0 0 5px;
 
           }
-          .icon-search{
+
+          .search-btn{
             width: 36px;
             border: 0;
             cursor: pointer;
             background-color: #3CCACE;
+            img{
+              width: 100%;
+              vertical-align: bottom;
+            }
+
             
           }
       }

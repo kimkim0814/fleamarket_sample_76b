@@ -18,7 +18,8 @@
             = form_with  do |form|
               = form.text_field :search,class: 'input-box',placeholder: 'キーワードから探す'
               = form.button type: "submit",class: "search-btn" do
-                %img.icon-search{src: "/assets/icon-search 1.png"}
+                .search-btn__box
+                  %img.icon-search{src: "/assets/icon-search 1.png"}
   
                 
         .nav
