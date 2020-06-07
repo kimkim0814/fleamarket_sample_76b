@@ -4,6 +4,15 @@
 
 .header{
   padding: 0 60px;
+  
+    color: #333;
+    text-decoration: none;
+    line-height: 32px;
+    background-position: center right;
+    background-repeat: no-repeat;
+    background-size: 18px;
+    padding-right: 30px;
+  
   .header__Inner{
     max-width: 1040px;
     width: 100%;
@@ -50,6 +59,15 @@
       .left-box{
         display: flex;
         list-style: none;
+        a{
+          color: #333;
+          text-decoration: none;
+          line-height: 32px;
+          background-position: center right;
+          background-repeat: no-repeat;
+          background-size: 18px;
+          padding-right: 30px;
+        }
         &--first{
           position: relative;
           line-height: 38px;
@@ -64,6 +82,14 @@
        .right-box{
           margin-left: auto;
           display: flex;
+          a{
+            display: flex;
+            align-items: center;
+            color: #333;
+            text-decoration: none;
+            line-height: 32px;
+            font-size: 14px;
+          }
           &--login{
             color: #333;
             line-height: 38px;
