@@ -19,10 +19,10 @@ ActiveRecord::Schema.define(version: 2020_06_05_054254) do
     t.string "address_street", null: false
     t.string "address_building", null: false
     t.integer "phone_number", null: false
-    t.bigint "identification_id"
+    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["identification_id"], name: "index_addresses_on_identification_id"
+    t.index ["user_id"], name: "index_addresses_on_user_id"
   end
 
   create_table "identifications", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|

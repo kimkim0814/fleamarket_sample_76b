@@ -23,37 +23,40 @@ class Users::RegistrationsController < Devise::RegistrationsController
   end
 
   def create_identification
-    @user = User.new(session["devise.regist_data"]["user"])
+    @user = session["devise.regist_data"]["user"]
     @identification = Identification.new(identification_params)
+    # binding.pry
     unless @identification.valid?
       flash.now[:alert] = @identification.errors.full_messages
       render :new_identification and return
     end
-   
-    @user.build_identification(@identification.attributes)	
-    @user.save
-    session["devise.regist_data"]["user"].clear
-    sign_in(:user, @user)
-    session["devise.regist_data"] = {identification: @identification.attributes}
-    @address = @identification.build_address	
+    @address = Address.new
+    session["devise.regist_data"] = {identification: @identification.attributes},{user: @user}
+    # binding.pry
     render :new_address
   end
 
   def create_address
-   
-    @identification = Identification.new(session["devise.regist_data"]["identification"])
-    @address = Address.new(address_params)
+    @user = User.new(session["devise.regist_data"][1]["user"])
+    # p @user
+    @address = @user.build_address(address_params)
+    # @address = @user.address.new(address_params)
+    @identification = Identification.new(session["devise.regist_data"][0]["identification"])
+    # binding.pry
     unless @address.valid?
       flash.now[:alert] = @address.errors.full_messages
       render :new_address and return
     end
-
-    @identification.build_address(@address.attributes)
-    @identification.save!
-    session["devise.regist_data"]["identification"].clear
-   
-    sign_in(:identification, @identification)
-  
+    
+    # @identification.save!
+    session["devise.regist_data"][0]["identification"].clear
+    
+    # sign_in(:identification, @identification)
+    @user.build_identification(@identification.attributes)	
+    @user.save
+    binding.pry
+    session["devise.regist_data"][1]["user"].clear
+    sign_in(:user, @user)
     
   end
 
@@ -67,6 +70,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   def address_params
     params.require(:address).permit(:postcode, :prefecture_code, :address_city, :address_street,:address_building,:phone_number)
   end
+  
   # GET /resource/edit
   # def edit
   #   super
