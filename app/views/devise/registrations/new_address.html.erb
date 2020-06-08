@@ -5,32 +5,32 @@
 
   <div class="field">
     <%= f.label :郵便番号 %><br />
-    <%= f.number_field :postcode %>
+    <%= f.text_field :postcode, autofocus: true, autocomplete: "postcode" %>
   </div>
 
   <div class="field">
     <%= f.label :都道府県 %><br />
-    <%= f.number_field :prefecture_code %>
+     <%= f.collection_select :prefecture_code, JpPrefecture::Prefecture.all, :code, :name %>
   </div>
 
   <div class="field">
     <%= f.label :市町村 %><br />
-    <%= f.text_field :address_city %>
+    <%= f.text_field :address_city, autofocus: true, autocomplete: "address_city"%>
   </div>
 
   <div class="field">
     <%= f.label :番地 %><br />
-    <%= f.text_field :address_street %>
+    <%=  f.text_field :address_street, autofocus: true, autocomplete: "address_street"   %>
   </div>
 
   <div class="field">
     <%= f.label :建物名_任意%><br />
-    <%= f.text_field :address_building %>
+    <%=  f.text_field :address_building, autofocus: true, autocomplete: "address_building"  %>
   </div>
 
   <div class="field">
     <%= f.label :電話番号_任意  %><br />
-    <%= f.number_field :phone_number %>
+    <%= f.text_field :phone_number %>
   </div>
 
   <div class="actions">

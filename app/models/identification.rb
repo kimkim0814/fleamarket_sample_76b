@@ -4,4 +4,5 @@ class Identification < ApplicationRecord
   validates :familyname,:firstname,:familyname_kana,:firstname_kana,:birth_date ,presence: true
 
   accepts_nested_attributes_for :address 
+  
 end

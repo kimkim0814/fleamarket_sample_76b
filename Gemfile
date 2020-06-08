@@ -73,3 +73,6 @@ group :production do
 end
 
 gem 'devise'
+gem 'jp_prefecture'
+gem 'sqlite3', '~> 1.3.13'
+gem 'jquery-rails'
