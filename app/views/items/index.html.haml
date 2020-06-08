@@ -111,58 +111,118 @@
 
 
 
-  .main__pickup
-    %h2.main__pickup__title
+  .main__category
+    %h2.main__category__title
       ピックアップカテゴリー
-    .main__pickup__product
+    .main__category__product
       = link_to "#" do
-        .main__pickup__product__head
+        .main__category__product__head
           新規登録商品
-      .main__pickup__product__lists
+      .main__category__product__lists
 
-        .main__pickup__product__lists__list
+        .main__category__product__lists__list
           = link_to "#" do
-            .main__pickup__product__lists__list__image
+            .main__category__product__lists__list__image
               = image_tag src =  "/assets/material/icon/member_photo_noimage_thumb.png", class: "image"
-            .main__pickup__product__lists__list__body
-              %h3.main__pickup__product__lists__list__body__name
+            .main__category__product__lists__list__body
+              %h3.main__category__product__lists__list__body__name
                 ①
-              .main__pickup__product__lists__list__body__details
-                .main__pickup__product__lists__list__body__details__price
+              .main__category__product__lists__list__body__details
+                .main__category__product__lists__list__body__details__price
                   10,000円
-                  %i.main__pickup__product__lists__list__body__details__price__star
+                  %i.main__category__product__lists__list__body__details__price__star
                     = icon('fa', 'star')
-                .main__pickup__product__lists__list__body__details__tax
+                    0
+                .main__category__product__lists__list__body__details__tax
                   (税込)
 
-        .main__pickup__product__lists__list
+        .main__category__product__lists__list
           = link_to "#" do
-            .main__pickup__product__lists__list__image
+            .main__category__product__lists__list__image
               = image_tag src =  "/assets/material/icon/member_photo_noimage_thumb.png", class: "image"
-            .main__pickup__product__lists__list__body
-              %h3.main__pickup__product__lists__list__body__name
+            .main__category__product__lists__list__body
+              %h3.main__category__product__lists__list__body__name
                 ②
-              .main__pickup__product__lists__list__body__details
-                .main__pickup__product__lists__list__body__details__price
+              .main__category__product__lists__list__body__details
+                .main__category__product__lists__list__body__details__price
                   20,000円
-                  %i.main__pickup__product__lists__list__body__details__price__star
+                  %i.main__category__product__lists__list__body__details__price__star
                     = icon('fa', 'star')
-                .main__pickup__product__lists__list__body__details__tax
+                    0
+                .main__category__product__lists__list__body__details__tax
                   (税込)
 
-        .main__pickup__product__lists__list
+        .main__category__product__lists__list
           = link_to "#" do
-            .main__pickup__product__lists__list__image
+            .main__category__product__lists__list__image
               = image_tag src =  "/assets/material/icon/member_photo_noimage_thumb.png", class: "image"
-            .main__pickup__product__lists__list__body
-              %h3.main__pickup__product__lists__list__body__name
+            .main__category__product__lists__list__body
+              %h3.main__category__product__lists__list__body__name
                 ③
-              .main__pickup__product__lists__list__body__details
-                .main__pickup__product__lists__list__body__details__price
+              .main__category__product__lists__list__body__details
+                .main__category__product__lists__list__body__details__price
                   30,000円
-                  %i.main__pickup__product__lists__list__body__details__price__star
+                  %i.main__category__product__lists__list__body__details__price__star
                     = icon('fa', 'star')
-                .main__pickup__product__lists__list__body__details__tax
+                    0
+                .main__category__product__lists__list__body__details__tax
                   (税込)
 
 
+
+  .main__brand
+    %h2.main__brand__title
+      ピックアップブランド
+    .main__brand__product
+      = link_to "#" do
+        .main__brand__product__head
+          アーカイブ
+      .main__brand__product__lists
+
+        .main__brand__product__lists__list
+          = link_to "#" do
+            .main__brand__product__lists__list__image
+              = image_tag src =  "/assets/material/icon/member_photo_noimage_thumb.png", class: "image"
+            .main__brand__product__lists__list__body
+              %h3.main__brand__product__lists__list__body__name
+                ①
+              .main__brand__product__lists__list__body__details
+                .main__brand__product__lists__list__body__details__price
+                  10,000円
+                  %i.main__brand__product__lists__list__body__details__price__star
+                    = icon('fa', 'star')
+                    0
+                .main__brand__product__lists__list__body__details__tax
+                  (税込)
+
+        .main__brand__product__lists__list
+          = link_to "#" do
+            .main__brand__product__lists__list__image
+              = image_tag src =  "/assets/material/icon/member_photo_noimage_thumb.png", class: "image"
+            .main__brand__product__lists__list__body
+              %h3.main__brand__product__lists__list__body__name
+                ②
+              .main__brand__product__lists__list__body__details
+                .main__brand__product__lists__list__body__details__price
+                  20,000円
+                  %i.main__brand__product__lists__list__body__details__price__star
+                    = icon('fa', 'star')
+                    0
+                .main__brand__product__lists__list__body__details__tax
+                  (税込)
+
+        .main__brand__product__lists__list
+          = link_to "#" do
+            .main__brand__product__lists__list__image
+              = image_tag src =  "/assets/material/icon/member_photo_noimage_thumb.png", class: "image"
+            .main__brand__product__lists__list__body
+              %h3.main__brand__product__lists__list__body__name
+                ③
+              .main__brand__product__lists__list__body__details
+                .main__brand__product__lists__list__body__details__price
+                  30,000円
+                  %i.main__brand__product__lists__list__body__details__price__star
+                    = icon('fa', 'star')
+                    0
+                .main__brand__product__lists__list__body__details__tax
+                  (税込)

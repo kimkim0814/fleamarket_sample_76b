@@ -209,7 +209,7 @@
 
 
 
-    &__pickup {
+    &__category {
       padding: 80px 0 0;
       background-color: #f8f8f8;
       height: 100%;
@@ -225,23 +225,24 @@
           font-size: 24px;
           text-decoration: none;
           color: #3CCACE;
-          .main__pickup__product__head {
+          .main__category__product__head {
             font-weight: bold;
           }
         }
         &__lists {
-          width: 780px;
+          width: 100%;
           margin: 26px auto;
           display: flex;
-          justify-content: space-around;
+          justify-content: center;
           &__list {
             width: 220px;
             display: inline-block;
             float: left;
+            margin-right: 35px;
             a {
               background-color: #fff;
               display: inline-block;
-              .main__pickup__product__lists__list__image {
+              .main__category__product__lists__list__image {
                 width: 220px;
                 height: 150px;
                 position: relative;
@@ -260,7 +261,7 @@
                   object-fit: cover;
                 }
               }
-              .main__pickup__product__lists__list__body {
+              .main__category__product__lists__list__body {
                 background-color: white;
                 color: #333;
                 padding: 16px;
@@ -273,11 +274,101 @@
                 &__details {
                   font-size: 16px;
                   &__price {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
                     &__star {
-                      display: block;
-                      color: black;
-                      z-index: 1;
                     }
+                  }
+                  &__tax {
+                    font-size: 10px;
+                    text-align: left;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+
+
+    &__brand {
+      padding: 80px 0 0;
+      background-color: #f8f8f8;
+      height: 100%;
+      padding-bottom: 80px;
+      &__title {
+        text-align: center;
+        font-size: 28px;
+        line-height: 1.4;
+        font-weight: bold;
+      }
+      &__product {
+        text-align: center;
+        a {
+          font-size: 24px;
+          text-decoration: none;
+          color: #3CCACE;
+          .main__brand__product__head {
+            font-weight: bold;
+          }
+        }
+        &__lists {
+          width: 100%;
+          margin: 26px auto;
+          display: flex;
+          justify-content: center;
+          &__list {
+            width: 220px;
+            display: inline-block;
+            float: left;
+            margin-right: 35px;
+            a {
+              background-color: #fff;
+              display: inline-block;
+              .main__brand__product__lists__list__image {
+                width: 220px;
+                height: 150px;
+                position: relative;
+                overflow: hidden;
+                margin: 0;
+                z-index: auto;
+                .image {
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  right: 0;
+                  bottom: 0;
+                  width: 100%;
+                  z-index: auto;
+                  height: 150px;
+                  object-fit: cover;
+                }
+              }
+              .main__brand__product__lists__list__body {
+                background-color: white;
+                color: #333;
+                padding: 16px;
+                &__name {
+                  overflow: hidden;
+                  line-height: 1.5;
+                  font-size: 16px;
+                  text-align: left;
+                }
+                &__details {
+                  font-size: 16px;
+                  &__price {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    &__star {
+                    }
+                  }
+                  &__tax {
+                    font-size: 10px;
+                    text-align: left;
                   }
                 }
               }
