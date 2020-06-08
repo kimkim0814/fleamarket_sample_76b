@@ -1,6 +1,6 @@
 class Address < ApplicationRecord
   belongs_to :identification, optional: true
-  validates :postcode, :prefecture_code, :address_city, :address_street,:address_building,:phone_number,presence: true
+  validates :postcode, :prefecture_code, :address_city, :address_street, presence: true
   belongs_to :user
  
   include JpPrefecture
@@ -14,4 +14,7 @@ class Address < ApplicationRecord
   def prefecture_name=(prefecture_name)
     self.prefecture_code = JpPrefecture::Prefecture.find(name: prefecture_name).code
   end 
+
+  validates :postcode, format: { with: /\A\d{3}[-]\d{4}$|^\d{3}[-]\d{2}$|^\d{3}$|^\d{5}$|^\d{7}\z/}
+
 end
