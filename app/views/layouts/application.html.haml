@@ -1,7 +1,7 @@
 !!!
 %html
   %head
-    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{content: "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
     %link{href: "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css", rel: "stylesheet"}
     %title FleamarketSample76b
     = csrf_meta_tags
@@ -13,8 +13,9 @@
       .header__Inner
         .main-header
           %h1.icon
-            %a{:href => "#"}
-              %img.hurima{src: "/assets/material/logo/logo.png"}
+            = link_to "#" do
+              = image_tag "/assets/material/logo/logo.png", class: "hurima"
+
           .search-box
             = form_with  do |form|
               = form.text_field :search,class: 'input-box',placeholder: 'キーワードから探す'
