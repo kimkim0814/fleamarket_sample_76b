@@ -25,24 +25,20 @@ class Users::RegistrationsController < Devise::RegistrationsController
   def create_identification
     @user = session["devise.regist_data"]["user"]
     @identification = Identification.new(identification_params)
-    # binding.pry
     unless @identification.valid?
       flash.now[:alert] = @identification.errors.full_messages
       render :new_identification and return
     end
     @address = Address.new
     session["devise.regist_data"] = {identification: @identification.attributes},{user: @user}
-    # binding.pry
     render :new_address
   end
 
   def create_address
     @user = User.new(session["devise.regist_data"][1]["user"])
-    # p @user
     @address = @user.build_address(address_params)
     # @address = @user.address.new(address_params)
     @identification = Identification.new(session["devise.regist_data"][0]["identification"])
-    # binding.pry
     unless @address.valid?
       flash.now[:alert] = @address.errors.full_messages
       render :new_address and return
@@ -54,7 +50,6 @@ class Users::RegistrationsController < Devise::RegistrationsController
     # sign_in(:identification, @identification)
     @user.build_identification(@identification.attributes)	
     @user.save
-    binding.pry
     session["devise.regist_data"][1]["user"].clear
     sign_in(:user, @user)
     

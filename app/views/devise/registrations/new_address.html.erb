@@ -4,32 +4,32 @@
   <%= render "devise/shared/error_messages", resource: @address %>
 
   <div class="field">
-    <%= f.label :postcode %><br />
+    <%= f.label :郵便番号 %><br />
     <%= f.number_field :postcode %>
   </div>
 
   <div class="field">
-    <%= f.label :prefecture_code %><br />
+    <%= f.label :都道府県 %><br />
     <%= f.number_field :prefecture_code %>
   </div>
 
   <div class="field">
-    <%= f.label :address_city %><br />
+    <%= f.label :市町村 %><br />
     <%= f.text_field :address_city %>
   </div>
 
   <div class="field">
-    <%= f.label :address_street %><br />
+    <%= f.label :番地 %><br />
     <%= f.text_field :address_street %>
   </div>
 
   <div class="field">
-    <%= f.label :address_building %><br />
+    <%= f.label :建物名_任意%><br />
     <%= f.text_field :address_building %>
   </div>
 
   <div class="field">
-    <%= f.label :phone_number %><br />
+    <%= f.label :電話番号_任意  %><br />
     <%= f.number_field :phone_number %>
   </div>
 
