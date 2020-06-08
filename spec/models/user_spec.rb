@@ -43,8 +43,11 @@ describe 'user登録テスト', model: User do
         user = build(:user, password: "0000000", password_confirmation: "0000000")
         expect(user).to be_valid
       end
-  
- 
+
+      it " passwordが6文字以下であれば登録できないこと " do
+        user = build(:user, password: "000000", password_confirmation: "000000")
+        user.valid?
+        expect(user.errors[:password]).to include("is too short (minimum is 7 characters)")
       end
     end
   end
