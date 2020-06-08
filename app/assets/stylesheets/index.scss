@@ -3,6 +3,10 @@
   .main {
     background: #f8f8f8;
     font-family: "Source Sans Pro", Helvetica, Arial, "游ゴシック体", "YuGothic", "メイリオ", "Meiryo", sans-serif;
+
+
+
+    // 人生を変えるフリマアプリ
     &__top-visual {
       width: 100%;
       height: 560px;
@@ -39,10 +43,18 @@
             .image {
               width: 180px;
             }
+            .image:hover {
+              opacity: 0.6;
+              transition-duration: 0.3s;
+            }
           }
           &__google {
             .image {
               width: 180px;
+            }
+            .image:hover {
+              opacity: 0.6;
+              transition-duration: 0.3s;
             }
           }
         }
@@ -51,16 +63,22 @@
 
 
 
+    // FURIMAが選ばれる3つの理由
     &__top-introduction {
       padding: 60px 20px;
       &__title {
         text-align: center;
         font-size: 26px;
-        line-height: 1.4;
         font-weight: bold;
-        margin-bottom: 25px;
-        padding-bottom: 15px;
-        position: relative;
+        margin-bottom: 0;
+        padding-bottom: 10px;
+        &__border {
+          width: 70px;
+          height: 4px;
+          background-color: #3CCACE;
+          margin: 0 auto;
+          margin-bottom: 25px;
+        }
       }
       &__lists {
         text-align: center;
@@ -116,6 +134,7 @@
 
 
 
+    // 会員数日本一位
     &__middle-visual {
       background-image: url("/assets/material/pict/bg-topMiddleDl-pict.jpg");
       background-position: bottom right;
@@ -148,10 +167,18 @@
             .image {
               width: 180px;
             }
+            .image:hover {
+              opacity: 0.6;
+              transition-duration: 0.3s;
+            }
           }
           &__google {
             .image {
               width: 180px;
+            }
+            .image:hover {
+              opacity: 0.6;
+              transition-duration: 0.3s;
             }
           }
         }
@@ -160,6 +187,7 @@
 
 
 
+    // FURIMAの特徴
     &__middle-introduction {
       padding: 60px 100px;
       background-color: #fff;
@@ -168,9 +196,15 @@
         text-align: center;
         margin: 0 0 40px;
         font-weight: bold;
-        margin-bottom: 25px;
-        padding-bottom: 15px;
-        position: relative;
+        margin-bottom: 0;
+        padding-bottom: 10px;
+        &__border {
+          width: 70px;
+          height: 4px;
+          background-color: #3CCACE;
+          margin: 0 auto;
+          margin-bottom: 25px;
+        }
       }
       &__items {
         max-width: calc(1040px + 20px);
@@ -209,6 +243,7 @@
 
 
 
+    // ピックアップカテゴリー
     &__category {
       padding: 80px 0 0;
       background-color: #f8f8f8;
@@ -242,7 +277,7 @@
             a {
               background-color: #fff;
               display: inline-block;
-              .main__category__product__lists__list__image {
+              .main__category__product__lists__list--image {
                 width: 220px;
                 height: 150px;
                 position: relative;
@@ -261,7 +296,7 @@
                   object-fit: cover;
                 }
               }
-              .main__category__product__lists__list__body {
+              .main__category__product__lists__list--body {
                 background-color: white;
                 color: #333;
                 padding: 16px;
@@ -294,6 +329,7 @@
 
 
 
+    // ピックアップブランド
     &__brand {
       padding: 80px 0 0;
       background-color: #f8f8f8;
@@ -328,7 +364,7 @@
             a {
               background-color: #fff;
               display: inline-block;
-              .main__brand__product__lists__list__image {
+              .main__brand__product__lists__list--image {
                 width: 220px;
                 height: 150px;
                 position: relative;
@@ -347,7 +383,7 @@
                   object-fit: cover;
                 }
               }
-              .main__brand__product__lists__list__body {
+              .main__brand__product__lists__list--body {
                 background-color: white;
                 color: #333;
                 padding: 16px;
@@ -372,6 +408,56 @@
                   }
                 }
               }
+            }
+          }
+        }
+      }
+    }
+
+
+
+    // 今すぐ無料ダウンロード
+    &__banner {
+      background-image: url("/assets/material/pict/bg-appBanner-pict.jpg");
+      padding: 100px 40px;
+      position: relative;
+      background-size: cover;
+      background-position: center;
+      &__content {
+        color: #fff;
+        text-align: center;
+        &__title {
+          text-shadow: 0 0 5px rgba(0,0,0,0.4);
+          font-size: 24px;
+          font-weight: bold;
+          line-height: 1.4;
+        }
+        &__text {
+          font-size: 35px;
+          text-shadow: 0 0 5px rgba(0,0,0,0.4);
+        }
+        &__btn {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          margin: 20px auto 0;
+          &__apple {
+            margin-right: 10px;
+            .image {
+              width: 180px;
+            }
+            .image:hover {
+              opacity: 0.6;
+              transition-duration: 0.3s;
+            }
+          }
+          &__google {
+            .image {
+              width: 180px;
+            }
+            .image:hover {
+              opacity: 0.6;
+              transition-duration: 0.3s;
             }
           }
         }
