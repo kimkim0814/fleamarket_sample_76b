@@ -9,35 +9,6 @@
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
-    .header
-      .header__Inner
-        .main-header
-          %h1.icon
-            = link_to "#" do
-              = image_tag "/assets/material/logo/logo.png", class: "hurima"
-
-          .search-box
-            = form_with  do |form|
-              = form.text_field :search,class: 'input-box',placeholder: 'キーワードから探す'
-              = form.button type: "submit",class: "search-btn" do
-                .search-btn__box
-                  %img.icon-search{src: "/assets/icon-search 1.png"}
-  
-                
-        .nav
-          %ul.left-box
-            %li.left-box--first 
-              = link_to "#" do
-                カテゴリー
-            %li.left-box--second 
-              = link_to "#" do
-                ブランド
-          %ul.right-box
-            %li.right-box--login 
-              = link_to "#" do
-                ログイン
-            %li.right-box--new 
-              = link_to "#" do
-                新規会員登録
+    = render "layouts/header"  
     = yield
     = render "layouts/footer-black"
