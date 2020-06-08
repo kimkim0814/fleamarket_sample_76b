@@ -31,6 +31,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
     end
     @address = Address.new
     session["devise.regist_data"] = {identification: @identification.attributes},{user: @user}
+    binding.pry
     render :new_address
   end
 
