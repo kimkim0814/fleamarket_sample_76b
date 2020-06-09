@@ -78,4 +78,6 @@ gem 'jp_prefecture'
 gem 'sqlite3', '~> 1.3.13'
 gem 'jquery-rails'
 gem 'rspec-rails'
-gem "haml-rails", "~> 2.0"
+gem 'haml-rails'
+gem 'erb2haml'
+gem 'font-awesome-sass'
