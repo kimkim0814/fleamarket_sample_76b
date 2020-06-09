@@ -1,0 +1,9 @@
+.mypage
+  .mypage_html
+    .mypage_container
+      .mypage_index
+        = render "side_content"
+      .logout
+        .logout__main
+          .logout__main__btn
+            = link_to "ログアウト", "", method: "delete"

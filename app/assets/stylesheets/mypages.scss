@@ -1,16 +1,18 @@
 * {
   box-sizing: border-box;
 }
-
-html{
-  background:whitesmoke;
+.mypage{
+  overflow:hidden;
   
-  .mypage_container{
-    margin: 40px auto 0;
-    padding: 0 0 40px;
-    width: 1020px;
+  .mypage_html{
+    background:whitesmoke;
     height: 100%;
-  }
+    .mypage_container{
+      margin: 40px auto 0;
+      padding: 0 0 40px;
+      width: 1020px;
+      height: 100%;
+    }
 }
 
 // サイドコンテンツ
@@ -184,4 +186,5 @@ li{
 .mypages_profile {
   text-decoration: none;
   color: black;
+}
 }

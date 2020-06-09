@@ -1,0 +1,72 @@
+* {
+  box-sizing: border-box;
+}
+html{
+  background:whitesmoke;
+  .mypage_container{
+    margin: 40px auto 0;
+    padding: 0 0 40px;
+    width: 1020px;
+    height: 100%;
+  }
+}.credit_html{
+  background-size: cover;
+  background-color:#f5f5f5;
+}
+.credit {
+  background: white;
+  height: 400px;
+  width: 600px;
+  margin: 24px auto;
+
+  &__header  {
+    height: 50px;
+    line-height: 50px;
+    width: 100%;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    border-bottom: solid 1px #eee;
+    margin-top: 50px;
+  }
+}
+.credit_contents {
+  background-color:white;
+  width: 100%;
+  height: 400px;
+  padding-top: 64px;
+  &__box{
+    height: 300px;
+    width: 400px;
+    background-color:white;
+    margin: 0 auto;
+    &__credit_card{
+      width: 200px;
+      background-color: white;
+      font-size: 16px;
+      font-weight: bold;
+    }
+  }
+}
+.credit_contents__btn{
+  padding: 24px 0;
+  border-bottom: 1px solid #eee;
+  &__button{
+    background-color: red;
+    width: 320px;
+    height: 50px;
+    background: #ea352d;
+    border: 1px solid #ea352d;
+    color: #fff;
+    text-align: center;
+    padding-top: 10px;
+  }
+  &__payment{
+    height: 20px;
+    width: 100%;
+    color: #0099e8;
+    text-decoration: none;
+    text-align: right;
+    margin: 40px 0 0;
+  }
+}

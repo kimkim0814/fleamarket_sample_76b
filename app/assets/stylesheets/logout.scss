@@ -1,0 +1,43 @@
+* {
+  box-sizing: border-box;
+}
+
+html{
+  background:whitesmoke;
+  .mypage_container{
+    margin: 40px auto 0;
+    padding: 0 0 40px;
+    width: 1020px;
+    height: 100%;
+  }
+}
+
+.logout{
+  float:right;
+  width:700px;
+  background-color:white;
+  height: 170px;
+  margin: auto;
+  position: relative;
+
+  &__main {
+    background-color:#3CCACE;
+    width: 50%;
+    height: 50px;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom :0;
+    position: absolute;
+    margin: auto; 
+    
+    &__btn {
+        width: 50%;
+        height: 50%;
+        background: #3CCACE;
+        border: 10px solid #3CCACE;
+        margin:0 auto;
+        text-align: center;
+    }
+  }
+}
