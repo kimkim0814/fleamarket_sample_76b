@@ -265,26 +265,31 @@
           }
         }
         &__lists {
-          width: 100%;
+          width: 780px;
           margin: 26px auto;
           display: flex;
           justify-content: center;
-          &__list {
+          .list {
             width: 220px;
             display: inline-block;
             float: left;
             margin-right: 35px;
-            a {
+            .list__content{
               background-color: #fff;
               display: inline-block;
-              .main__category__product__lists__list--image {
+            &-sold-mark--text{
+              
+            }
+              .main__category__product__lists__list--image{
                 width: 220px;
                 height: 150px;
                 position: relative;
                 overflow: hidden;
                 margin: 0;
                 z-index: auto;
-                .image {
+                
+
+                .img {
                   position: absolute;
                   top: 0;
                   left: 0;
@@ -294,6 +299,7 @@
                   z-index: auto;
                   height: 150px;
                   object-fit: cover;
+                  
                 }
               }
               .main__category__product__lists__list--body {
@@ -308,19 +314,20 @@
                 }
                 &__details {
                   font-size: 16px;
-                  &__price {
+                  ul {
                     display: flex;
                     align-items: center;
                     justify-content: space-between;
-                    &__star {
-                    }
                   }
-                  &__tax {
+  
+                  p {
                     font-size: 10px;
                     text-align: left;
+                    
                   }
                 }
-              }
+              
+             }
             }
           }
         }
@@ -413,7 +420,6 @@
         }
       }
     }
-
 
 
     // 今すぐ無料ダウンロード
