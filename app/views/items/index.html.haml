@@ -113,14 +113,14 @@
 
 
 
-  .main__category
-    %h2.main__category__title
+  .main__content
+    %h2.main__content__title
       ピックアップカテゴリー
-    .main__category__product
+    .main__content__product
       = link_to "#" do
-        .main__category__product__head
+        .main__content__product__head
           新規登録商品
-      .main__category__product__lists
+      .main__content__product__lists
         -if @items[0] !=nil
           -@items[0..2].each do |item|
             .list
@@ -129,13 +129,13 @@
                   .list__content-sold-mark
                     %h3.list__content-sold-mark--text
                       SOLD
-                %figure.main__category__product__lists__list--image
+                %figure.main__content__product__lists__list--image
                   = item.images.first(1).each do |image|
                     =image_tag image.image.to_s, class:'img'
-                .main__category__product__lists__list--body
-                  %h3.main__category__product__lists__list--body__name
+                .main__content__product__lists__list--body
+                  %h3.main__content__product__lists__list--body__name
                     = item.name
-                  .main__category__product__lists__list--body__details
+                  .main__content__product__lists__list--body__details
                     %ul
                       %li
                         ="#{item.price.to_s(:delimited)}円"
@@ -144,36 +144,58 @@
                     %p (税込)
                   
 
-  .main__brand
-    %h2.main__brand__title
+  .main__content
+    %h2.main__content__title
       ピックアップブランド
-    .main__category__product__lists
-      -if @items[0] !=nil
-        -@items[0..2].each do |item|
-          .list
-            = link_to "#",class:"list__content" do
-              - if item.sold_day != nil
-                .list__content-sold-mark
-                  %h3.list__content-sold-mark--text
-                    SOLD
-                %figure.main__category__product__lists__list--image
+    .main__content__product
+      = link_to "#" do
+        .main__content__product__head
+          アーカイバ
+      .main__content__product__lists
+        -if @items[3] !=nil
+          -@items[3..5].each do |item|
+            .list
+              = link_to "#",class:"list__content" do
+                - if item.sold_day != nil
+                  .list__content-sold-mark
+                    %h3.list__content-sold-mark--text
+                      SOLD
+                %figure.main__content__product__lists__list--image
                   = item.images.first(1).each do |image|
                     =image_tag image.image.to_s, class:'img'
-                .main__category__product__lists__list--body
-                  %h3.main__category__product__lists__list--body__name
+                .main__content__product__lists__list--body
+                  %h3.main__content__product__lists__list--body__name
                     = item.name
-                  .main__category__product__lists__list--body__details
+                  .main__content__product__lists__list--body__details
                     %ul
                       %li
                         ="#{item.price.to_s(:delimited)}円"
                       %li
                         = icon('fa','star')
                     %p (税込)
-    -# .main__brand__product
-    -#   = link_to "#" do
-    -#     .main__brand__product__head
-    -#       アーカイバ
-    -#   .main__brand__product__lists
+    -# .main__brand__product__lists
+    -#   -if @items[3] !=nil
+    -#     -@items[3..5].each do |item|
+    -#       .list
+    -#         = link_to "#",class:"list__content" do
+    -#           - if item.sold_day != nil
+    -#             .list__content-sold-mark
+    -#               %h3.list__content-sold-mark--text
+    -#                 SOLD
+    -#             %figure.main__brand__product__lists__list--image
+    -#               = item.images.first(1).each do |image|
+    -#                 =image_tag image.image.to_s, class:'img'
+    -#             .main__brand__product__lists__list--body
+    -#               %h3.main__brand__product__lists__list--body__name
+    -#                 = item.name
+    -#               .main__brand__product__lists__list--body__details
+    -#                 %ul
+    -#                   %li
+    -#                     ="#{item.price.to_s(:delimited)}円"
+    -#                   %li
+    -#                     = icon('fa','star')
+    -#                 %p (税込)
+
 
     -#     .main__brand__product__lists__list
     -#       = link_to "#" do
@@ -191,37 +213,37 @@
     -#             .main__brand__product__lists__list--body__details__tax
     -#               (税込)
 
-        .main__brand__product__lists__list
-          = link_to "#" do
-            .main__brand__product__lists__list--image
-              = image_tag "/assets/material/icon/member_photo_noimage_thumb.png", class: "image"
-            .main__brand__product__lists__list--body
-              %h3.main__brand__product__lists__list--body__name
-                ②
-              .main__brand__product__lists__list--body__details
-                .main__brand__product__lists__list--body__details__price
-                  20,000円
-                  %i.main__brand__product__lists__list--body__details__price__star
-                    = icon('fa', 'star')
-                    0
-                .main__brand__product__lists__list--body__details__tax
-                  (税込)
+        -# .main__brand__product__lists__list
+        -#   = link_to "#" do
+        -#     .main__brand__product__lists__list--image
+        -#       = image_tag "/assets/material/icon/member_photo_noimage_thumb.png", class: "image"
+        -#     .main__brand__product__lists__list--body
+        -#       %h3.main__brand__product__lists__list--body__name
+        -#         ②
+        -#       .main__brand__product__lists__list--body__details
+        -#         .main__brand__product__lists__list--body__details__price
+        -#           20,000円
+        -#           %i.main__brand__product__lists__list--body__details__price__star
+        -#             = icon('fa', 'star')
+        -#             0
+        -#         .main__brand__product__lists__list--body__details__tax
+        -#           (税込)
 
-        .main__brand__product__lists__list
-          = link_to "#" do
-            .main__brand__product__lists__list--image
-              = image_tag "/assets/material/icon/member_photo_noimage_thumb.png", class: "image"
-            .main__brand__product__lists__list--body
-              %h3.main__brand__product__lists__list--body__name
-                ③
-              .main__brand__product__lists__list--body__details
-                .main__brand__product__lists__list--body__details__price
-                  30,000円
-                  %i.main__brand__product__lists__list--body__details__price__star
-                    = icon('fa', 'star')
-                    0
-                .main__brand__product__lists__list--body__details__tax
-                  (税込)
+        -# .main__brand__product__lists__list
+        -#   = link_to "#" do
+        -#     .main__brand__product__lists__list--image
+        -#       = image_tag "/assets/material/icon/member_photo_noimage_thumb.png", class: "image"
+        -#     .main__brand__product__lists__list--body
+        -#       %h3.main__brand__product__lists__list--body__name
+        -#         ③
+        -#       .main__brand__product__lists__list--body__details
+        -#         .main__brand__product__lists__list--body__details__price
+        -#           30,000円
+        -#           %i.main__brand__product__lists__list--body__details__price__star
+        -#             = icon('fa', 'star')
+        -#             0
+        -#         .main__brand__product__lists__list--body__details__tax
+        -#           (税込)
 
 
 
