@@ -3,17 +3,13 @@
 }
 .mypage{
   overflow:hidden;
-  
-  .mypage_html{
-    background:whitesmoke;
-    height: 100%;
+
     .mypage_container{
       margin: 40px auto 0;
       padding: 0 0 40px;
       width: 1020px;
       height: 100%;
     }
-}
 
 // サイドコンテンツ
 .mypage_side_content{
@@ -31,10 +27,10 @@
   display: block;
   min-height: 48px;
   padding: 16px;
-  background:  white;
+  background-color:rgb(218, 234, 240);
   font-size: 14px;
   color: black;
-  &__merpay,&__setup{
+  &__setup{
   line-height:70px;
   height: 48px;
   color: black;  
@@ -68,10 +64,10 @@ li{
   width: 700px;
   &__user_name{
     font-size:25px;
-    color:#333;
+    color:white;
   }
   &__user_icon{
-    background-image: url('mypagemain.png');
+    background-image: url('mypagemain.jpg');
     height: 170px;
     position: relative;
     padding: 20px;
@@ -90,7 +86,7 @@ li{
       top: 50%;
       left: 0;
       right: 0;
-      color: #333;
+      color: white;
     }
     h2 {
       font-size: 14px;
@@ -101,6 +97,7 @@ li{
     margin: 8px 0 0;
     display: flex;
     justify-content: center;
+    color:white;
     div{
       margin: 0 0 0 16px;
     }
@@ -109,13 +106,10 @@ li{
     }
   }
 }
-// .mypage_content__active{
-//   border-top: 2px solid #2d95ea;
-//   background: rgb(161, 19, 19);
-// }
+
 .mypage_content__tabs{
   border: 0;
-  background: #eee;
+  background-color:rgb(218, 234, 240);
   a{
     position: relative;
     display: block;
@@ -134,21 +128,6 @@ li{
     vertical-align: top;
   }
 }
-.mypage_content__go_lists{
-  display: none;
-  text-align: center;
-  border: 0;
-}
-.mypage_content__go_list {
-  margin: 16px;
-  width: 100%;
-  font-size: 20px;
-  text-decoration: none;
-  display: block;
-  background: #eee;
-  color: #333;
-  text-align: center;
-}
 
 .mypage_content__notification{
   li {
@@ -157,7 +136,7 @@ li{
     display: flex;
     &__2 {
     border-bottom: 1px solid #eee;
-    background:rgba(173, 246, 248, 0.973);
+    background-color:rgb(218, 234, 240);
     display: flex;
   }
   }

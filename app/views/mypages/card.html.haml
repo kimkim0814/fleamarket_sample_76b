@@ -1,18 +1,8 @@
 .mypage
-  .mypage_html
-    .mypage_container
-      .mypage_index
-        = render "side_content"
-    .credit_html
-      .credit
-        .credit__header
-          %h2 支払い方法
-        .credit_contents
-          .credit_contents__box
-            .credit_contents__box__credit_card
-              %h2 クレジットカード一覧
-            .credit_contents__btn
-              .credit_contents__btn__button
-              クレジットカードを追加する
-            .credit_contents__btn__payment
-              %h2 支払い方法について
+  .mypage_container
+    .mypage_index
+      = render "side_content"
+    .card
+      .card__main
+        .card__main__btn
+          = link_to "クレジットカード登録", "", method: "delete"
