@@ -1,0 +1,24 @@
+.user_footer{
+  padding: 60px 0;
+  color: #fff;
+  background-color: #272727;
+  text-align: center;
+  font-family: "Source Sans Pro", Helvetica, Arial, "游ゴシック体", "YuGothic", "メイリオ", "Meiryo", sans-serif;
+
+  &__logo{
+    max-width: 160px;
+    width: 100%;
+    margin: 0 auto;
+      a{
+        opacity: 1;
+      }
+      img{
+        width: 100%;
+        vertical-align: bottom;
+      }
+    
+    p{
+      font-size:14px;
+    }
+  }
+}
