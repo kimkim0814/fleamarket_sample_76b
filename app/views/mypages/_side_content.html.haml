@@ -2,8 +2,10 @@
   %nav.mypage_side_content__nav
     %ul.mypage_side_content__nav_list
       %li
-        マイページ
-        .fas.fa-chevron-right
+        .mypage_side_content__nav_list_item
+          マイページ
+          =link_to 'マイページ','/mypages/index', class: ''
+          .fas.fa-chevron-right
       %li
         .mypage_side_content__nav_list_item 
           お知らせ
@@ -60,7 +62,7 @@
         .mypage_side_content__nav_list_item 
           お問い合わせ
           %i.fas.fa-chevron-right
-        .mypage_side_content__nav_list__merpay
+        .mypage_side_content__nav_list_item__merpay
           メルペイ
       %li
         .mypage_side_content__nav_list_item 
@@ -70,7 +72,7 @@
         .mypage_side_content__nav_list_item 
           ポイント
           %i.fas.fa-chevron-right
-        .mypage_side_content__nav_list__setup
+        .mypage_side_content__nav_list_item__setup
           設定
         %li
         .mypage_side_content__nav_list_item 
@@ -83,7 +85,7 @@
           %i.fas.fa-chevron-right
         %li
         .mypage_side_content__nav_list_item 
-          = link_to "#", class: "#" do
+          = link_to "", class: "#" do
             支払い方法
             %i.fas.fa-chevron-right
         %li
@@ -101,5 +103,5 @@
           %i.fas.fa-chevron-right
         %li
         .mypage_side_content__nav_list_item 
-          = link_to 'ログアウト', '#', class: ''
+          = link_to 'ログアウト', '/mypages/logout', class: ''
           %i.fas.fa-chevron-right

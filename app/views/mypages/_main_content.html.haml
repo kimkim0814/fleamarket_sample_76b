@@ -1,0 +1,85 @@
+-# メインコンテンツ
+.mypage_content
+  %section.mypage_content__user_icon
+    %figure= image_tag 'imageicon.png' ,width: 60,height: 60
+    .mypage_content__user_name
+      = "ニックネーム"
+    %h2 
+    .mypage_content__number
+      .mypage_content__evaluation
+        評価
+        %span.bold 0
+      .mypage_content__sell-product
+        = "出品数 0"
+  -# お知らせタブ
+  %ul.mypage_content__tabs
+    %li.info
+      = link_to "お知らせ",root_path,class:"#"
+      %li
+        = link_to "やることリスト",root_path
+
+  -# お知らせ一覧
+  %ul.mypage_content__notification
+    %li
+      %figure= image_tag 'imageicon.png' ,width: 48,height: 48
+      .mypage_content__item-body
+        .mypage_content__item-text
+          事務局から個別メッセージ「ログイン通知」
+        %time
+          %i.far.fa-clock
+          %span 1 時間前
+    %li
+      %figure= image_tag 'imageicon.png' ,width: 48,height: 48
+      .mypage_content__item-body
+        .mypage_content__item-text
+          事務局から個別メッセージ「ログイン通知」
+        %time
+          %i.far.fa-clock
+          %span 13 時間前
+    %li
+      %figure= image_tag 'imageicon.png' ,width: 48,height: 48
+      .mypage_content__item-body
+        .mypage_content__item-text
+          <メルカリはじめたあなたへ>買うならメルペイスマート払い！
+        %time
+          %i.far.fa-clock
+          %span 21 時間前
+    %li
+      %figure= image_tag 'imageicon.png' ,width: 48,height: 48
+      .mypage_content__item-body
+        .mypage_content__item-text
+          <モノガタリ>あなたのモノにまつわるモノがたりを投稿しよう！キャンペーン第2弾
+        %time
+          %i.far.fa-clock
+          %span 1 日前
+    %li
+      %figure= image_tag 'imageicon.png' ,width: 48,height: 48
+      .mypage_content__item-body
+        .mypage_content__item-text
+          事務局から個別メッセージ「ログイン通知」
+        %time
+          %i.far.fa-clock
+          %span 2 日前
+    %li
+    %li__2
+      .mypage_content__item-body__show
+        .mypage_content__item-text
+          = link_to "一覧を見る",root_path
+    %li__2
+  .mypage_content__tab-container
+    %h2.mypage_content__tab-head
+      購入した商品
+    %ul.mypage_content__tabs
+      %li
+        = link_to "取引中",root_path,class:"#"
+        %li
+          = link_to "過去の取引",root_path
+    .mypage_content__tab-content
+      %ul.mypage_content__tab-transaction-now
+        %li.mypage_content__item-notfound    
+      %ul.mypage_content__notification
+        .mypage_content__notification__buying_items
+          .mypage_content__item-body
+            .mypage_content__item-text
+              = "商品をを購入しました。"
+              %span.status 購入済み

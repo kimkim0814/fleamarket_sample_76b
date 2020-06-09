@@ -2,16 +2,16 @@
   box-sizing: border-box;
 }
 
-  html{
-  background-color: rgb(206, 67, 67);
+html{
+  background:whitesmoke;
+  
+  .mypage_container{
+    margin: 40px auto 0;
+    padding: 0 0 40px;
+    width: 1020px;
+    height: 100%;
+  }
 }
-
-.mypage_content{
-  float: right;
-  padding-top: 40px;
-  width: 700px;
-}
-
 
 // サイドコンテンツ
 .mypage_side_content{
@@ -32,13 +32,17 @@
   background:  white;
   font-size: 14px;
   color: black;
-
+  &__merpay,&__setup{
+  line-height:70px;
+  height: 48px;
+  color: black;  
+  }
+}
   a {
     text-decoration: none;
     color: black;
     display: table-header-group;
   }
-}
 
 .fa-chevron-right{
   display: inline-block;
@@ -49,31 +53,35 @@
 li{
   border-top: 1px solid #eee;
 }
+.mypage_icon{
+  background-image: url("/imageicon.png");
+  height: 60px;
+  width: 60px;
+}
 
 
 // メインコンテンツ
 .mypage_content{
   float: right;
-  padding-top: 40px;
   width: 700px;
   &__user_name{
     font-size:25px;
+    color:#333;
   }
   &__user_icon{
-    background-image: url("#");
-    height: 155px;
+    background-image: url('mypagemain.png');
+    height: 170px;
     position: relative;
-    padding: 40px;
+    padding: 20px;
     background-repeat: no-repeat;
     background-size: cover;
     text-align: center;
     figure{
       overflow: hidden;
-      width: 50px;
-      height: 50px;
       margin: 0 auto;
       border-radius: 50%;
     }
+    
     a{
       display: block;
       position: absolute;
@@ -91,7 +99,7 @@ li{
     margin: 8px 0 0;
     display: flex;
     justify-content: center;
-    div+div{
+    div{
       margin: 0 0 0 16px;
     }
     span{
@@ -99,10 +107,10 @@ li{
     }
   }
 }
-.mypage_content__active{
-  border-top: 2px solid #ea352d;
-  background: white;
-}
+// .mypage_content__active{
+//   border-top: 2px solid #2d95ea;
+//   background: rgb(161, 19, 19);
+// }
 .mypage_content__tabs{
   border: 0;
   background: #eee;
@@ -126,6 +134,7 @@ li{
 }
 .mypage_content__go_lists{
   display: none;
+  text-align: center;
   border: 0;
 }
 .mypage_content__go_list {
@@ -140,16 +149,21 @@ li{
 }
 
 .mypage_content__notification{
-
   li {
     border-bottom: 1px solid #eee;
     background: white;
     display: flex;
+    &__2 {
+    border-bottom: 1px solid #eee;
+    background:rgba(173, 246, 248, 0.973);
+    display: flex;
+  }
   }
   &__buying_items {
     border-bottom: 1px solid #eee;
     background: white;
     display: flex;
+
   }
 }
 .mypage_content__item-body {
@@ -157,23 +171,17 @@ li{
   min-height: 80px;
   padding: 16px;
   color: #333;
+&__show{
+  display: block;
+  height: 80px;
+  line-height: 80px;
+  margin:0 auto;
+  }
 }
-
 .mypage_content__tab-container {
   padding-top: 50px;
 }
-
-.status {
-  display: inline-block;
-  margin: 8px 0 0 0;
-  padding: 5px 6px;
-  border-radius: 2px;
-  font-size: 12px;
-  color: #fff;
-  background: #0099e8;
-}
-
 .mypages_profile {
   text-decoration: none;
   color: black;
-} 
+}
