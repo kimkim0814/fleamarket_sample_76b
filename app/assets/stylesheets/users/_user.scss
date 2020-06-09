@@ -1,0 +1,99 @@
+.user_main{
+  background-color: #f8f8f8;
+  width: 100%;
+  padding-bottom: 80px;
+  &__container{
+    background-color: white;
+    margin: 0 auto;
+    width: 50%;
+    padding-bottom: 50px;
+    &--title{
+    font-size: 22px;
+    padding: 32px;
+    line-height: 1.5;
+    text-align: center;
+    border-bottom: 1px solid #f8f8f8;
+    font-weight: bold;
+    }
+    .field{
+      &__nickname{
+        width: 50%;
+        margin: 0 auto;
+        padding: 10px 0;
+        &--label{
+          font-size: 15px;
+          font-weight: bold;
+        }
+        &--field{
+          padding-left: 5px;
+          height: 43px;
+          width: 100%;
+        }
+      }
+      &__email{
+        width: 50%;
+        margin: 0 auto;
+        padding: 10px 0;
+        &--label{
+          font-size: 15px;
+          font-weight: bold;
+        }
+        &--field{
+          padding-left: 5px;
+          height: 43px;
+          width: 100%;
+        }
+      }
+      &__password{
+        width: 50%;
+        margin: 0 auto;
+        padding: 10px 0;
+        &--label{
+          font-size: 15px;
+          font-weight: bold;
+        }
+        &--field{
+          padding-left: 5px;
+          height: 43px;
+          width: 100%;
+        }
+      }
+      &__confirmation{
+        width: 50%;
+        margin: 0 auto;
+        padding: 10px 0;
+        &--label{
+          font-size: 15px;
+          font-weight: bold;
+        }
+        &--field{
+          padding-left: 5px;
+          height: 43px;
+          width: 100%;
+        }
+      }
+    }
+    .actions{
+      padding: 20px 20% 30px 25%;
+      .submit{
+        display       : inline-block;
+        border-radius : 5%;         
+        font-size     : 11pt;   
+        text-align    : center;     
+        cursor        : pointer;     
+        padding       : 12px calc(50% - 44px);  
+        background    : #3CCACE;    
+        color         : #ffffff;     
+        line-height   : 24px;         
+        transition    : .3s;     
+      }
+    }
+  }
+}
+.user_link__login{
+  text-decoration: none;
+  float: right;
+  padding-right: 20px;
+  padding-top: 10px;
+  color: #3CCACE; 
+}

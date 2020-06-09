@@ -4,10 +4,11 @@ Rails.application.routes.draw do
     sessions: 'users/sessions',
   }
   devise_scope :user do
-    get 'identifications', to: 'users/registrations#new_identification'
+    get 'identifications', to: 'users/registrations#new_identification', as: :new_identification
     post 'identifications', to: 'users/registrations#create_identification'
-    get 'addresses', to: 'users/registrations#new_address'
+    get 'addresses', to: 'users/registrations#new_address', as: :new_address
     post 'addresses', to: 'users/registrations#create_address'
   end
   root 'items#index'
+  resources :items
 end
