@@ -1,0 +1,179 @@
+* {
+  box-sizing: border-box;
+}
+
+  html{
+  background-color: rgb(206, 67, 67);
+}
+
+.mypage_content{
+  float: right;
+  padding-top: 40px;
+  width: 700px;
+}
+
+
+// サイドコンテンツ
+.mypage_side_content{
+  float: left;
+  width: 280px;
+  margin: 0 40px 0 0;
+}
+
+.mypage_nav_list li {
+  border-top: 1px solid #eee;
+}
+
+.mypage_side_content__nav_list_item {
+  position: relative;
+  display: block;
+  min-height: 48px;
+  padding: 16px;
+  background:  white;
+  font-size: 14px;
+  color: black;
+
+  a {
+    text-decoration: none;
+    color: black;
+    display: table-header-group;
+  }
+}
+
+.fa-chevron-right{
+  display: inline-block;
+  position: absolute;
+  top: 23px;
+  right: 15px;
+}
+li{
+  border-top: 1px solid #eee;
+}
+
+
+// メインコンテンツ
+.mypage_content{
+  float: right;
+  padding-top: 40px;
+  width: 700px;
+  &__user_name{
+    font-size:25px;
+  }
+  &__user_icon{
+    background-image: url("#");
+    height: 155px;
+    position: relative;
+    padding: 40px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    figure{
+      overflow: hidden;
+      width: 50px;
+      height: 50px;
+      margin: 0 auto;
+      border-radius: 50%;
+    }
+    a{
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      color: #333;
+    }
+    h2 {
+      font-size: 14px;
+      margin: 8px 0 0;
+    }
+  }
+  &__number{
+    margin: 8px 0 0;
+    display: flex;
+    justify-content: center;
+    div+div{
+      margin: 0 0 0 16px;
+    }
+    span{
+      margin: 0 0 0 8px;
+    }
+  }
+}
+.mypage_content__active{
+  border-top: 2px solid #ea352d;
+  background: white;
+}
+.mypage_content__tabs{
+  border: 0;
+  background: #eee;
+  a{
+    position: relative;
+    display: block;
+    color: #333;
+    font-size: 16px;
+    line-height: 72px;
+    text-decoration: none;
+  }
+  ul{
+    list-style: none;
+  }
+  li{
+    width: 50%;
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+  }
+}
+.mypage_content__go_lists{
+  display: none;
+  border: 0;
+}
+.mypage_content__go_list {
+  margin: 16px;
+  width: 100%;
+  font-size: 20px;
+  text-decoration: none;
+  display: block;
+  background: #eee;
+  color: #333;
+  text-align: center;
+}
+
+.mypage_content__notification{
+
+  li {
+    border-bottom: 1px solid #eee;
+    background: white;
+    display: flex;
+  }
+  &__buying_items {
+    border-bottom: 1px solid #eee;
+    background: white;
+    display: flex;
+  }
+}
+.mypage_content__item-body {
+  display: block;
+  min-height: 80px;
+  padding: 16px;
+  color: #333;
+}
+
+.mypage_content__tab-container {
+  padding-top: 50px;
+}
+
+.status {
+  display: inline-block;
+  margin: 8px 0 0 0;
+  padding: 5px 6px;
+  border-radius: 2px;
+  font-size: 12px;
+  color: #fff;
+  background: #0099e8;
+}
+
+.mypages_profile {
+  text-decoration: none;
+  color: black;
+} 
