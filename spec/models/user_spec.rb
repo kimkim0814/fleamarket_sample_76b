@@ -20,6 +20,18 @@ describe 'user登録テスト', model: User do
       expect(user.errors[:email]).to include("can't be blank")
     end
 
+    it "emailが@を含まないと登録できないこと" do
+      user = build(:user, email: "aaa.aaa")
+      user.valid?
+      expect(user.errors[:email]).to include("is invalid")
+    end
+
+    it "emailがドメインを含まないと登録できないこと" do
+      user = build(:user, email: "aaa@aaa")
+      user.valid?
+      expect(user.errors[:email]).to include("is invalid")
+    end
+
     it "passwordがない場合は登録出来ないこと" do
       user = build(:user, password: nil)
       user.valid?
