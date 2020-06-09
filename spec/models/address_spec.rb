@@ -3,11 +3,6 @@ require 'rails_helper'
 describe '住所登録テスト' , model: Address do
   describe '#create' do
 
-    # it "郵便番号、都道府県、市区町村、番地が存在すれば登録できること" do
-    #   address = build(:address)
-    #   expect(address).to be_valid
-    # end
-
     it "postcode が空では登録出来ないこと" do
       address = build(:address, postcode: nil)
       address.valid?
