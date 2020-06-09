@@ -244,8 +244,8 @@
 
 
 
-    // ピックアップカテゴリー
-    &__category {
+    // ピックアップカテゴリーandブランド
+    &__content {
       padding: 80px 0 0;
       background-color: #f8f8f8;
       height: 100%;
@@ -261,31 +261,34 @@
           font-size: 24px;
           text-decoration: none;
           color: #3CCACE;
-          .main__category__product__head {
+          .main__content__product__head {
             font-weight: bold;
           }
         }
         &__lists {
-          width: 100%;
+          width: 780px;
           margin: 26px auto;
           display: flex;
           justify-content: center;
-          &__list {
+          .list {
             width: 220px;
             display: inline-block;
             float: left;
             margin-right: 35px;
-            a {
+            .list__content{
               background-color: #fff;
               display: inline-block;
-              .main__category__product__lists__list--image {
+
+              .main__content__product__lists__list--image{
                 width: 220px;
                 height: 150px;
                 position: relative;
                 overflow: hidden;
                 margin: 0;
                 z-index: auto;
-                .image {
+                
+
+                .img {
                   position: absolute;
                   top: 0;
                   left: 0;
@@ -295,9 +298,10 @@
                   z-index: auto;
                   height: 150px;
                   object-fit: cover;
+                  
                 }
               }
-              .main__category__product__lists__list--body {
+              .main__content__product__lists__list--body {
                 background-color: white;
                 color: #333;
                 padding: 16px;
@@ -309,111 +313,26 @@
                 }
                 &__details {
                   font-size: 16px;
-                  &__price {
+                  ul {
                     display: flex;
                     align-items: center;
                     justify-content: space-between;
-                    &__star {
-                    }
                   }
-                  &__tax {
+  
+                  p {
                     font-size: 10px;
                     text-align: left;
+                    
                   }
                 }
-              }
+              
+             }
             }
           }
         }
       }
     }
 
-
-
-    // ピックアップブランド
-    &__brand {
-      padding: 80px 0 0;
-      background-color: #f8f8f8;
-      height: 100%;
-      padding-bottom: 80px;
-      &__title {
-        text-align: center;
-        font-size: 28px;
-        line-height: 1.4;
-        font-weight: bold;
-      }
-      &__product {
-        text-align: center;
-        a {
-          font-size: 24px;
-          text-decoration: none;
-          color: #3CCACE;
-          .main__brand__product__head {
-            font-weight: bold;
-          }
-        }
-        &__lists {
-          width: 100%;
-          margin: 26px auto;
-          display: flex;
-          justify-content: center;
-          &__list {
-            width: 220px;
-            display: inline-block;
-            float: left;
-            margin-right: 35px;
-            a {
-              background-color: #fff;
-              display: inline-block;
-              .main__brand__product__lists__list--image {
-                width: 220px;
-                height: 150px;
-                position: relative;
-                overflow: hidden;
-                margin: 0;
-                z-index: auto;
-                .image {
-                  position: absolute;
-                  top: 0;
-                  left: 0;
-                  right: 0;
-                  bottom: 0;
-                  width: 100%;
-                  z-index: auto;
-                  height: 150px;
-                  object-fit: cover;
-                }
-              }
-              .main__brand__product__lists__list--body {
-                background-color: white;
-                color: #333;
-                padding: 16px;
-                &__name {
-                  overflow: hidden;
-                  line-height: 1.5;
-                  font-size: 16px;
-                  text-align: left;
-                }
-                &__details {
-                  font-size: 16px;
-                  &__price {
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-between;
-                    &__star {
-                    }
-                  }
-                  &__tax {
-                    font-size: 10px;
-                    text-align: left;
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    }
 
 
 
