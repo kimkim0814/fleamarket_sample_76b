@@ -1,0 +1,191 @@
+.main
+  .main__top-visual
+    .main__top-visual__content
+      %h2.main__top-visual__content__title
+        人生を変えるフリマアプリ
+      %p.main__top-visual__content__subtitle
+        FURIMAは誰でも簡単に出品・購入できる
+        %br
+        フリマアプリです
+      .main__top-visual__content__btn
+        .main__top-visual__content__btn__apple
+          = link_to "https://itunes.apple.com/jp/app/id667861049?l=ja&mt=8" do
+            = image_tag  "https://web-jp-assets.mercdn.net/_next/static/images/app-store-a5c17948c6fd6d5b60b13d421cd60b35.svg", class: "image"
+        .main__top-visual__content__btn__google
+          = link_to "https://play.google.com/store/apps/details?id=com.kouzoh.mercari&hl=ja" do
+            = image_tag "https://web-jp-assets.mercdn.net/_next/static/images/google-play-495575abb895b405aa6336b2a4304958.svg", class: "image"
+
+
+
+  .main__top-introduction
+    %h2.main__top-introduction__title
+      FURIMAが選ばれる3つの理由
+      %h2.main__top-introduction__title__border
+    %ul.main__top-introduction__lists
+
+      %li.main__top-introduction__lists__list
+        .main__top-introduction__lists__list__pict
+          %span.main__top-introduction__lists__list__pict__number
+            1
+          = image_tag "/assets/material/pict/pict-reason-01.jpg", class: "image"
+        %h3.main__top-introduction__lists__list__text
+          %span.main__top-introduction__lists__list__text
+            3分
+          ですぐに出品
+        %p.main__top-introduction__lists__list__description
+          スマホで入力するだけで簡単に出品できる！
+
+      %li.main__top-introduction__lists__list
+        .main__top-introduction__lists__list__pict
+          %span.main__top-introduction__lists__list__pict__number
+            2
+          = image_tag "/assets/material/pict/pict-reason-02.jpg", class: "image"
+        %h3.main__top-introduction__lists__list__text
+          %span.main__top-introduction__lists__list__text
+            シンプル
+          で使いやすい
+        %p.main__top-introduction__lists__list__description
+          めんどくさい入力は必要なく、検索も購入もスムーズ！
+
+      %li.main__top-introduction__lists__list
+        .main__top-introduction__lists__list__pict
+          %span.main__top-introduction__lists__list__pict__number
+            3
+          = image_tag "/assets/material/pict/pict-reason-03.jpg", class: "image"
+        %h3.main__top-introduction__lists__list__text
+          手数料
+          %span.main__top-introduction__lists__list__text
+            業界最安
+        %p.main__top-introduction__lists__list__description
+          最大3%でお得に出品&購入！
+
+
+
+  .main__middle-visual
+    .main__middle-visual__content
+      %h2.main__middle-visual__content__title
+        会員数日本一位
+      %p.main__middle-visual__content__text
+        FURIMAは、フリマアプリで最も人気。
+        %br
+        出品・購入回数も業界最多です！ 
+        %br
+        欲しかったあの商品に出会えるかもしれません。
+      .main__middle-visual__content__btn
+        .main__middle-visual__content__btn__apple
+          = link_to "https://itunes.apple.com/jp/app/id667861049?l=ja&mt=8" do
+            = image_tag "https://web-jp-assets.mercdn.net/_next/static/images/app-store-a5c17948c6fd6d5b60b13d421cd60b35.svg", class: "image"
+        .main__middle-visual__content__btn__google
+          = link_to "https://play.google.com/store/apps/details?id=com.kouzoh.mercari&hl=ja" do
+            = image_tag "https://web-jp-assets.mercdn.net/_next/static/images/google-play-495575abb895b405aa6336b2a4304958.svg", class: "image"
+
+
+
+  .main__middle-introduction
+    %h2.main__middle-introduction__title
+      FURIMAの特徴
+      %h2.main__middle-introduction__title__border
+    .main__middle-introduction__items
+
+      %ul.main__middle-introduction__items__item
+        %li.main__middle-introduction__items__item__icon
+          = image_tag "/assets/material/icon/icon-01.png", class: "image"
+        %h3.main__middle-introduction__items__item__text
+          簡単に売り買いできる
+        %p.main__middle-introduction__items__item__description
+          スマホひとつで、いつでもどこでも簡単に出品・購入が可能！
+
+      %ul.main__middle-introduction__items__item
+        %li.main__middle-introduction__items__item__icon
+          = image_tag "/assets/material/icon/icon-03.png", class: "image"
+        %h3.main__middle-introduction__items__item__text
+          売上金は即日振込みに対応
+        %p.main__middle-introduction__items__item__description
+          午前9時までに振込を依頼いただければ、翌日に指定の口座に入金いたします!
+
+      %ul.main__middle-introduction__items__item
+        %li.main__middle-introduction__items__item__icon
+          = image_tag "/assets/material/icon/icon-04.png", class: "image"
+        %h3.main__middle-introduction__items__item__text
+          様々な支払いに対応
+        %p.main__middle-introduction__items__item__description
+          お支払いは、クレジットカードだけでなく、ポイントや売上金など多彩な方法があります。
+
+
+
+  .main__content
+    %h2.main__content__title
+      ピックアップカテゴリー
+    .main__content__product
+      = link_to "#" do
+        .main__content__product__head
+          新規登録商品
+      .main__content__product__lists
+        -if @items[0] !=nil
+          -@items[0..2].each do |item|
+            .list
+              = link_to "#",class:"list__content" do
+                - if item.sold_day != nil
+                  .list__content-sold-mark
+                    %h3.list__content-sold-mark--text
+                      SOLD
+                %figure.main__content__product__lists__list--image
+                  = item.images.first(1).each do |image|
+                    =image_tag image.image.to_s, class:'img'
+                .main__content__product__lists__list--body
+                  %h3.main__content__product__lists__list--body__name
+                    = item.name
+                  .main__content__product__lists__list--body__details
+                    %ul
+                      %li
+                        ="#{item.price.to_s(:delimited)}円"
+                      %li
+                        = icon('fa','star')
+                    %p (税込)
+                  
+
+  .main__content
+    %h2.main__content__title
+      ピックアップブランド
+    .main__content__product
+      = link_to "#" do
+        .main__content__product__head
+          アーカイバ
+      .main__content__product__lists
+        -if @items[3] !=nil
+          -@items[3..5].each do |item|
+            .list
+              = link_to "#",class:"list__content" do
+                - if item.sold_day != nil
+                  .list__content-sold-mark
+                    %h3.list__content-sold-mark--text
+                      SOLD
+                %figure.main__content__product__lists__list--image
+                  = item.images.first(1).each do |image|
+                    =image_tag image.image.to_s, class:'img'
+                .main__content__product__lists__list--body
+                  %h3.main__content__product__lists__list--body__name
+                    = item.name
+                  .main__content__product__lists__list--body__details
+                    %ul
+                      %li
+                        ="#{item.price.to_s(:delimited)}円"
+                      %li
+                        = icon('fa','star')
+                    %p (税込)
+
+
+
+  .main__banner
+    .main__banner__content
+      %h2.main__banner__content__title
+        誰でも簡単、人生を変えるフリマアプリ
+      %p.main__banner__content__text
+        今すぐ無料ダウンロード！
+      .main__banner__content__btn
+        .main__top-visual__content__btn__apple
+          = link_to "https://itunes.apple.com/jp/app/id667861049?l=ja&mt=8" do
+            = image_tag "https://web-jp-assets.mercdn.net/_next/static/images/app-store-a5c17948c6fd6d5b60b13d421cd60b35.svg", class: "image"
+        .main__top-visual__content__btn__google
+          = link_to "https://play.google.com/store/apps/details?id=com.kouzoh.mercari&hl=ja" do
+            = image_tag "https://web-jp-assets.mercdn.net/_next/static/images/google-play-495575abb895b405aa6336b2a4304958.svg", class: "image"
