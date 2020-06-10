@@ -1,25 +1,25 @@
-%h2 ユーザー情報登録
-= form_for(@user, url: user_registration_path) do |f|
-  = render "devise/shared/error_messages", resource: @user
-  .field
-    = f.label :ニックネーム
-    %br/
-    = f.text_field :nickname , autofocus: true
-  .field
-    = f.label :email
-    %br/
-    = f.email_field :email, autofocus: true, autocomplete: "email"
-  .field
-    = f.label :パスワード
-    - if @minimum_password_length
-      %em
-        (#{@minimum_password_length} 文字以上)
-    %br/
-    = f.password_field :password, autocomplete: "new-password"
-  .field
-    = f.label :パスワード_確認
-    %br/
-    = f.password_field :password_confirmation, autocomplete: "new-password"
-  .actions
-    = f.submit "Next"
-= render "devise/shared/links"
+.user_main
+  .user_main__container
+    %h2.user_main__container--title
+      ユーザー情報登録
+    = form_for(@user, url: user_registration_path) do |f|
+      = render "devise/shared/error_messages", resource: @user
+      .field__nickname
+        = f.label :ニックネーム, class:"field__nickname--label"
+        %br/
+        = f.text_field :nickname , autofocus: true,placeholder: "　例）furima", class:"field__nickname--field"
+      .field__email
+        = f.label :email, class:"field__email--label"
+        %br/
+        = f.email_field :email, autofocus: true, autocomplete: "email",placeholder: "　例）xxx@xxx.xxx", class:"field__email--field"
+      .field__password
+        = f.label :パスワード, class:"field__password--label"
+        %br/
+        = f.password_field :password, autocomplete: "new-password",placeholder: " 　#{@minimum_password_length} 文字以上の英数字", class:"field__password--field"
+      .field__confirmation
+        = f.label :パスワード_確認, class:"field__confirmation--label"
+        %br/
+        = f.password_field :password_confirmation, autocomplete: "new-password" ,placeholder: "　もう一度入力してください",class:"field__confirmation--field"
+      .actions.user_submit
+        = f.submit "次へ進む", class:"user_submit--btn"
+    = render "devise/shared/links"
