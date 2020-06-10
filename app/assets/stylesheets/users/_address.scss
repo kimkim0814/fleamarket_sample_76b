@@ -125,3 +125,24 @@
   padding-top: 10px;
   color: #3CCACE; 
 }
+
+.address_crate_main{
+  background-color: #f8f8f8;
+  width: 100%;
+  padding-bottom: 80px;
+  &__container{
+    height: calc(100vh - 347px);
+    background-color: white;
+    margin: 0 auto;
+    width: 50%;
+    padding-bottom: 50px;
+    &--title{
+    font-size: 22px;
+    padding: 32px;
+    line-height: 1.5;
+    text-align: center;
+    border-bottom: 1px solid #f8f8f8;
+    font-weight: bold;
+    }
+  }
+}
