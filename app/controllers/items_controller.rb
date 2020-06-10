@@ -4,7 +4,7 @@ class ItemsController < ApplicationController
   end
 
   def show
-    # @item = Item.find(params[:id])
+    @item = Item.find(params[:id])
   end
   private
 
@@ -13,4 +13,10 @@ class ItemsController < ApplicationController
     @bigcategories   = Bigcategory.all
     @smallcategories = Smallcategory.all
   end
+
+  def item_params
+    params.require(:item).permit(:name, :category_id,:price, :brand_id, :explanation,images: [:image, :_destroy, :id])
+
+  end
+
 end

@@ -1,1 +1,152 @@
-aaaa
+.main
+  .item-contents
+    .item-box
+      %h2.item-box__name
+        =@item.name
+      .item-box__image
+        - if @item.sold_day !=nil
+          .item-box-image__sold-mark
+            .item-box-image__sold-mark--text
+              SOLD
+        - else
+        .item-box-image__main-image-box
+          = image_tag "#{@item.images[0].image}", class: "item-box-image__main"
+        %ul
+          - @item.images.each.with_index do |image|
+            = image_tag "#{image.image}", class: "item-box-image__thumbnail"
+      .item-box__price
+        = "#{@item.price.to_s(:delimited)}円"
+        %span (税込)
+        %span.item-box__price--detail
+          = "#{@item.cost}"
+      - if @item.sold_day == nil
+        - if user_signed_in?
+          - if @item.user.id == current_user.id
+            = link_to edit_item_path(@item), class:'item-box__item-change-btn' do
+              商品の編集
+            %p or
+            %a#modal-open.item-box__item-delete-btn この商品を削除する
+          - else 
+            =link_to item_orders_path(@order), class:'item-box__order-btn' do
+              購入画面に進む
+      -else
+        %p.item-box__sold-tag 売り切れました
+      .item-box__item-detail
+        = @item.description
+      .table
+        %table
+          %tr
+            %th 出品者
+            %td
+              = @item.user.nickname
+          %tr
+            %th カテゴリー
+            %td
+              %a.category1
+                = @item.category.parent.parent.name
+              %br
+              %a.category2
+                = @item.category.parent.name
+              %br
+              %a.category3
+                = @item.category.name
+          %tr
+            %th ブランド
+            %td 
+              -if @item.brand?
+                =@item.brand
+          %tr
+            %th 商品のサイズ
+            %td 
+              - if @item.item_size_id?
+                = @item.item_size.size
+
+          %tr
+            %th 商品の状態
+            %td 
+              = @item.condition.name
+          %tr
+            %th 発送料の負担
+            %td
+              = @item.shipping_fee.name
+          %tr
+            %th 発送元の地域
+            %td
+              = @item.prefecture.name
+          %tr
+            %th 発送日の目安
+            %td
+              = @item.shipping_day.name
+      .item-box__option-area
+        .item-box__option-area--like-btn
+          %i.fa.fa-star
+          お気に入り 0
+        %a.item-box__option-area--optional-btn
+          %i.fa.fa-flag
+          不適切な商品情報
+
+    .comment-box
+      .comment-container
+        - @comments.each do |comment|
+          %ul.comment-block.clearfix
+            - if comment.user_id == @item.user_id
+              %li.comment-user__nickname
+                出品者
+            - else
+              %li.comment-user__nickname
+                = comment.user.nickname
+            %li.comment-body
+              .comment-body__text
+                = comment.comment
+                %br
+                .comment-body__text--time
+                  %i.fa.fa-clock
+                  = comment.created_at.strftime("%Y-%m-%d %H:%M:%S")
+            %li.comment-user__icon
+              = image_tag "member_photo_noimage_thumb.png", size: "40x40"
+      .comment-textform
+        - if @item.sold_day != nil
+          = button_tag type: 'submit', class: "comment-btn-sold"do
+            %i.fa.fa-comment 売り切れのためコメントできません
+          %p.comment-notice 
+            相手のことを考え丁寧なコメントを心がけましょう。
+            %br
+            不快な言葉遣いなどは利用制限や退会処分となることがあります。
+        - else 
+          - if user_signed_in?
+            = form_with(model: [@item, @comment], local: true, id: "new-comment") do |form|
+              = form.text_area :comment, class: "textbox",placeholder: "コメントは120文字まで入力できます。"
+              = button_tag type: 'submit', class: "comment-btn"do
+                %i.fa.fa-comment コメントする
+              %p.comment-notice 
+                相手のことを考え丁寧なコメントを心がけましょう。
+                %br
+                不快な言葉遣いなどは利用制限や退会処分となることがあります。
+          - else
+            = button_tag type: 'submit', class: "comment-btn"do
+              %i.fa.fa-comment ログインしないとコメントできません
+            %p.comment-notice 
+              相手のことを考え丁寧なコメントを心がけましょう。
+              %br
+              不快な言葉遣いなどは利用制限や退会処分となることがあります。
+    %ul.nav-item-link.clreafix
+      - if @item.previous.present? 
+        = link_to item_path(@item.previous), class: "nav-item-prev" do
+          %i.fa.fa-angle-left
+          前の商品
+      - if @item.next.present? 
+        = link_to item_path(@item.next), class: "nav-item-next" do
+          後ろの商品
+          %i.fa.fa-angle-right
+
+    .relayted-items
+      = link_to "#{@item.category.parent.parent.name}をもっと見る", '#'
+
+%aside#modal-content
+  %span.modal-tilte 確認
+  %p 削除すると二度と復活できません。
+  %p 本当に削除しますか？
+  .modal-content__footer
+    %a#modal-close.button-link キャンセル
+    = link_to item_path(@item), method: :delete, class: "button-link", id: "modal-close" do
+      削除
