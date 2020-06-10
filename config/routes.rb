@@ -13,5 +13,8 @@ Rails.application.routes.draw do
   get 'mypages/index'
   get 'mypages/logout'
   get 'mypages/card'
-  resources :items
+
+  resources :items  do
+    get :item_buy
+  end    
 end
