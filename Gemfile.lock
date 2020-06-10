@@ -308,8 +308,8 @@ DEPENDENCIES
   chromedriver-helper
   coffee-rails (~> 4.2)
   devise
-  factory_bot_rails
   erb2haml
+  factory_bot_rails
   font-awesome-sass
   haml-rails
   jbuilder (~> 2.5)
