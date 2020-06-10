@@ -43,9 +43,7 @@
             width: calc(100% - 26px);
             height: 36px;
             padding: 0 0 0 5px;
-
           }
-
           .search-btn{
             width: 36px;
             border: 0;
@@ -55,10 +53,8 @@
               width: 100%;
               vertical-align: bottom;
             }
-
-            
           }
-      }
+        }
       }
     }
     .nav{
@@ -88,41 +84,37 @@
           padding-right: 36px;
         }
       }
-       .right-box{
-          margin-left: auto;
-          display: flex;
-          a{
-            display: flex;
-            align-items: center;
-            color: #333;
-            text-decoration: none;
-            line-height: 32px;
-            font-size: 14px;
-          }
-          &--login{
-            color: #333;
-            line-height: 38px;
-            padding-right:16px;
-           }
-          
-          &--new{
-            color:#333;
-            line-height: 38px;
-            padding-right:16px;
-            
-           }
-         }
-        }
-        
-      }
       .right-box{
+        margin-left: auto;
+        display: flex;
         list-style: none;
         position: relative;
         display: flex;
         margin-left:auto;
+        a{
+          display: flex;
+          align-items: center;
+          color: #333;
+          text-decoration: none;
+          line-height: 32px;
+          font-size: 14px;
+        }
+        &--login{
+          color: #333;
+          line-height: 38px;
+          padding-right:16px;
+          }
+        
+        &--new{
+          color:#333;
+          line-height: 38px;
+          padding-right:16px;
+          
+        }
       }
     }
-  
+  }
+}
 
 
 //footer-black

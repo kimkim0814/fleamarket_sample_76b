@@ -1,10 +1,14 @@
 @import "index";
 @import "items";
 @import "reset";
+@import "users/header";
+@import "users/footer";
+@import "users/user";
+@import "users/identification";
+@import "users/address";
+@import "users/login";
 @import "mypages"; 
 @import "logout";
 @import "card";
-
-
 @import "font-awesome-sprockets";
 @import "font-awesome";

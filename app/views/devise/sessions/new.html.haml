@@ -1,17 +1,16 @@
-%h2 Log in
-= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
-  .field
-    = f.label :email
-    %br/
-    = f.email_field :email, autofocus: true, autocomplete: "email"
-  .field
-    = f.label :password
-    %br/
-    = f.password_field :password, autocomplete: "current-password"
-  - if devise_mapping.rememberable?
-    .field
-      = f.check_box :remember_me
-      = f.label :remember_me
-  .actions
-    = f.submit "Log in"
-= render "devise/shared/links"
+.login_main
+  .login_main__container
+    %h2.user_main__container--title
+      ログイン
+    = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+      .field__email
+        = f.label :Email, class:"field__email--label"
+        %br/
+        = f.email_field :email, autofocus: true, autocomplete: "email", class:"field__email--field",placeholder: "　例）xxx@xxx.xxx"
+      .field__password
+        = f.label :パスワード, class:"field__password--label"
+        %br/
+        = f.password_field :password, autocomplete: "current-password", class:"field__password--field",placeholder: " 　7文字以上の英数字"
+      .actions.login_submit
+        = f.submit "ログイン", class:"login_submit--btn"
+    = render "devise/shared/links"
