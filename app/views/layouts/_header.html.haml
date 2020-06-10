@@ -23,9 +23,7 @@
       - if user_signed_in? 
         %ul.right-box     
           %li.right-box--login
-            = link_to "マイページ","#"
-          %li.right-box--new
-            = link_to "ログアウト",destroy_user_session_path,method: :delete
+            = link_to "マイページ", mypages_index_path
       - else 
         %ul.right-box
           %li.right-box--login 
