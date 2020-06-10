@@ -1,0 +1,133 @@
+.identification_main{
+  background-color: #f8f8f8;
+  width: 100%;
+  padding-bottom: 80px;
+  &__container{
+    background-color: white;
+    margin: 0 auto;
+    width: 50%;
+    padding-bottom: 50px;
+    &--title{
+    font-size: 22px;
+    padding: 32px;
+    line-height: 1.5;
+    text-align: center;
+    border-bottom: 1px solid #f8f8f8;
+    font-weight: bold;
+    }
+    &__name{
+      width: 100%;
+      display: flex;
+      justify-content: space-evenly;
+      .field{
+        &__familyname{
+          width: 25%;
+          margin-left: 15%;
+          padding: 10px 0;
+          &--label{
+            font-size: 15px;
+            font-weight: bold;
+          }
+          &--field{
+            padding-left: 5px;
+            height: 43px;
+            width: 100%;
+          }
+        }
+        &__firstname{
+          width: 25%;
+          margin-right: 15%;
+          padding: 10px 0;
+          &--label{
+            font-size: 15px;
+            font-weight: bold;
+          }
+          &--field{
+            padding-left: 5px;
+            height: 43px;
+            width: 100%;
+          }
+        }
+      }
+    } 
+    &__kana{ 
+      width: 100%;
+      display: flex;
+      justify-content: space-evenly;
+      .field{
+        &__familyname_kana{
+          width: 25%;
+          margin-left: 15%;
+          padding: 10px 0;
+          &--label{
+            font-size: 15px;
+            font-weight: bold;
+          }
+          &--field{
+            padding-left: 5px;
+            height: 43px;
+            width: 100%;
+          }
+        }
+        &__firstname_kana{
+          width: 25%;
+          margin-right: 15%;
+          padding: 10px 0;
+          &--label{
+            font-size: 15px;
+            font-weight: bold;
+          }
+          &--field{
+            padding-left: 5px;
+            height: 43px;
+            width: 100%;
+          }
+        }
+      }
+    }   
+    .field{
+      &__bitrh_date{
+        margin-left: 25%;
+        padding: 10px 0;
+        &--label{
+          font-size: 15px;
+          font-weight: bold;
+        }
+        #identification_birth_date_1i{
+          height: 43px;
+          width: 100px;
+        }
+        #identification_birth_date_2i{
+          height: 43px;
+          width: 50px;
+        }
+        #identification_birth_date_3i{
+          height: 43px;
+          width: 50px;
+        }
+      }
+    }
+    .identification_submit{
+      padding: 20px 20% 30px 25%;
+      &--btn{
+        display       : inline-block;
+        border-radius : 5%;         
+        font-size     : 11pt;   
+        text-align    : center;     
+        cursor        : pointer;     
+        padding       : 12px calc(50% - 44px);  
+        background    : #3CCACE;    
+        color         : #ffffff;     
+        line-height   : 24px;         
+        transition    : .3s;     
+      }
+    }
+  }
+}
+.user_link__login{
+  text-decoration: none;
+  float: right;
+  padding-right: 20px;
+  padding-top: 10px;
+  color: #3CCACE; 
+}

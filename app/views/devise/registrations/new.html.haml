@@ -1,6 +1,7 @@
 .user_main
   .user_main__container
-    %h2.user_main__container--title ユーザー情報登録
+    %h2.user_main__container--title
+      ユーザー情報登録
     = form_for(@user, url: user_registration_path) do |f|
       = render "devise/shared/error_messages", resource: @user
       .field__nickname
@@ -19,6 +20,6 @@
         = f.label :パスワード_確認, class:"field__confirmation--label"
         %br/
         = f.password_field :password_confirmation, autocomplete: "new-password" ,placeholder: "　もう一度入力してください",class:"field__confirmation--field"
-      .actions
-        = f.submit "次へ進む", class:"submit"
+      .actions.user_submit
+        = f.submit "次へ進む", class:"user_submit--btn"
     = render "devise/shared/links"
