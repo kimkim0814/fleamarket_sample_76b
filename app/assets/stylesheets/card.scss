@@ -1,0 +1,33 @@
+*{
+  box-sizing:border-box;
+}
+
+.card{
+  float:right;
+  width:700px;
+  background-color:rgb(218, 234, 240);
+  height: 170px;
+  margin: auto;
+  position: relative;
+
+  &__main {
+    background-color:#3CCACE;
+    width: 50%;
+    height: 50px;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom :0;
+    position: absolute;
+    margin: auto; 
+    
+    &__btn {
+        width: 60%;
+        height: 50%;
+        background: #3CCACE;
+        border: 10px solid #3CCACE;
+        margin:0 auto;
+        text-align: center;
+    }
+  }
+}
