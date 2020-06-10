@@ -16,7 +16,7 @@
     font-weight: bold;
     }
     .field{
-      &__nickname{
+      &__postcode{
         width: 50%;
         margin: 0 auto;
         padding: 10px 0;
@@ -30,7 +30,21 @@
           width: 100%;
         }
       }
-      &__email{
+      &__prefecture_code{
+        width: 50%;
+        margin: 0 auto;
+        padding: 10px 0;
+        &--label{
+          font-size: 15px;
+          font-weight: bold;
+        }
+        #address_prefecture_code{
+          padding-left: 5px;
+          height: 43px;
+          width: 100%;
+        }
+      }
+      &__address_city{
         width: 50%;
         margin: 0 auto;
         padding: 10px 0;
@@ -44,7 +58,7 @@
           width: 100%;
         }
       }
-      &__password{
+      &__address_street{
         width: 50%;
         margin: 0 auto;
         padding: 10px 0;
@@ -58,7 +72,21 @@
           width: 100%;
         }
       }
-      &__confirmation{
+      &__address_building{
+        width: 50%;
+        margin: 0 auto;
+        padding: 10px 0;
+        &--label{
+          font-size: 15px;
+          font-weight: bold;
+        }
+        &--field{
+          padding-left: 5px;
+          height: 43px;
+          width: 100%;
+        }
+      }
+      &__phone_number{
         width: 50%;
         margin: 0 auto;
         padding: 10px 0;
@@ -73,7 +101,7 @@
         }
       }
     }
-    .user_submit{
+    .address_submit{
       padding: 20px 20% 30px 25%;
       &--btn{
         display       : inline-block;

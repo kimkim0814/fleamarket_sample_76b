@@ -1,5 +1,5 @@
 .address_main
-  .address_main__container.user_main__container--title
+  .address_main__container.user_main__container
     %h2.address_main__container--title
       住所情報登録
     = form_for(@address) do |f|
@@ -7,27 +7,27 @@
       .field__postcode
         = f.label :郵便番号, class:"field__postcode--label"
         %br/
-        = f.text_field :postcode, autofocus: true, autocomplete: "postcode",placeholder: "　例）furima", class:"field__postcode--field"
-      .field
-        = f.label :都道府県, class:"field__nickname--label"
+        = f.text_field :postcode, autofocus: true, autocomplete: "postcode",placeholder: "　例）000-0000", class:"field__postcode--field"
+      .field__prefecture_code
+        = f.label :都道府県, class:"fieldprefecture_code--label"
         %br/
-        = f.collection_select :prefecture_code, JpPrefecture::Prefecture.all, :code, :name ,placeholder: "　例）furima", class:"field__nickname--field"
-      .field
-        = f.label :市町村, class:"field__nickname--label"
+        = f.collection_select :prefecture_code, JpPrefecture::Prefecture.all, :code, :name, prompt:"-----"
+      .field__address_city
+        = f.label :市町村, class:"field__address_city--label"
         %br/
-        = f.text_field :address_city, autofocus: true, autocomplete: "address_city", placeholder: "　例）furima", class:"field__nickname--field"
-      .field
-        = f.label :番地, class:"field__nickname--label"
+        = f.text_field :address_city, autofocus: true, autocomplete: "address_city",placeholder: "　入力してください", class:"field__address_city--field"
+      .field__address_street
+        = f.label :番地, class:"field__address_street--label"
         %br/
-        = f.text_field :address_street, autofocus: true, autocomplete: "address_street",placeholder: "　例）furima", class:"field__nickname--field"
-      .field
-        = f.label :建物名_任意, class:"field__nickname--label"
+        = f.text_field :address_street, autofocus: true, autocomplete: "address_street",placeholder: "　入力してください", class:"field__address_street--field"
+      .field__address_building
+        = f.label :建物名, class:"field__address_building--label"
         %br/
-        = f.text_field :address_building, autofocus: true, autocomplete: "address_building",placeholder: "　例）furima", class:"field__nickname--field"
-      .field
-        = f.label :電話番号_任意, class:"field__nickname--label"
+        = f.text_field :address_building, autofocus: true, autocomplete: "address_building",placeholder: "　任意", class:"field__address_building--field"
+      .field__phone_number
+        = f.label :電話番号, class:"field__phone_number--label"
         %br/
-        = f.text_field :phone_number
+        = f.text_field :phone_number, placeholder: "　任意" ,class:"field__phone_number--field"
       .actions.address_submit
         = f.submit "Sign up", class: "address_submit--btn"
     = render "devise/shared/links"
