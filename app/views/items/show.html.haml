@@ -43,32 +43,24 @@
             %th カテゴリー
             %td
               %a.category1
-                = @item.category.parent.parent.name
-              %br
-              %a.category2
-                = @item.category.parent.name
-              %br
-              %a.category3
-                = @item.category.name
+                = @item.category.ancestry
           %tr
             %th ブランド
             %td 
-              -if @item.brand?
-                =@item.brand
+              =@item.brand
           %tr
             %th 商品のサイズ
             %td 
-              - if @item.item_size_id?
-                = @item.item_size.size
+            =@item.size
 
           %tr
             %th 商品の状態
             %td 
-              = @item.condition.name
+              = @item.status
           %tr
             %th 発送料の負担
             %td
-              = @item.shipping_fee.name
+              = @item.cost
           %tr
             %th 発送元の地域
             %td

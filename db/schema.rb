@@ -65,7 +65,7 @@ ActiveRecord::Schema.define(version: 2020_06_09_040312) do
     t.bigint "category_id", null: false
     t.bigint "brand_id", null: false
     t.string "size", null: false
-    t.integer "status", null: false
+    t.string "status", null: false
     t.string "cost", null: false
     t.string "days", null: false
     t.date "sold_day"
