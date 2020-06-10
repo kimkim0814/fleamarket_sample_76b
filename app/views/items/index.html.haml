@@ -124,7 +124,7 @@
         -if @items[0] !=nil
           -@items[0..2].each do |item|
             .list
-              = link_to "item",class:"list__content" do
+              = link_to "",class:"list__content" do
                 - if item.sold_day != nil
                   .list__content-sold-mark
                     %h3.list__content-sold-mark--text
