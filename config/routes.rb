@@ -11,10 +11,12 @@ Rails.application.routes.draw do
     post 'addresses', to: 'users/registrations#create_address'
   end
   root 'items#index'
-  resources :items,only:[:show]
+  resources :items,except:[:index] do
+    resources :comments, only: :create
+end
   get 'mypages/index'
   get 'mypages/logout'
   get 'mypages/card'
   
-  resources :items
+
 end

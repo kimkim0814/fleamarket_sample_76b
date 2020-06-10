@@ -38,6 +38,7 @@ ActiveRecord::Schema.define(version: 2020_06_10_074157) do
   end
 
   create_table "comements", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "text", null: false
     t.bigint "user_id", null: false
     t.bigint "item_id", null: false
     t.datetime "created_at", null: false
