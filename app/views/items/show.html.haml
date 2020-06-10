@@ -62,13 +62,9 @@
             %td
               = @item.cost
           %tr
-            %th 発送元の地域
-            %td
-              = @item.prefecture.name
-          %tr
             %th 発送日の目安
             %td
-              = @item.shipping_day.name
+              = @item.days
       .item-box__option-area
         .item-box__option-area--like-btn
           %i.fa.fa-star
