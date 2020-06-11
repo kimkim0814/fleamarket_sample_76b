@@ -1,6 +1,8 @@
+.bread_crumbs
+  .bread_crumbs__line
+    - breadcrumb :mypages
+    = breadcrumbs separator: "#{content_tag(:i, '', class: 'fas fa-chevron-right')}", class: "breadcrumbs-list"
 .mypage
-  - breadcrumb :mypages
-  = render "layouts/breadcrumbs"
   .mypage_container
     .mypage_index
       = render "side_content"
