@@ -1,0 +1,37 @@
+%main.itembuy_main_contents
+  .itembuy_main_contents_border
+    %h2.title1 購入内容の確認
+  %section.itembuy_content
+    .itembuy_content_in
+      .itembuy_content_in__left
+        = image_tag 'rip.png' ,width: 75,height: 75
+        -# = image_tag "#{item.images[0].image_url}",
+      .itembuy_content_in__right
+        .itembuy 商品名
+        .money 1,000円(税込) 送料込み
+  %section.pay_contents
+    .pay_contents__in
+      .pay_contents_charge
+        .pay_contents_charge__pay1
+          %p.payment 支払金額
+          %p.totalmoney 1,000円
+        .pay_contents_charge__pay2
+          %form.buyitem_check{action: "#", method: ""}
+            %input{name: "", type: "checkbox", value: ""}/
+            %form
+            %p.points 
+            ポイントを使用(所持ポイント:P500)
+      .pay_box_itembuy
+        .pay_top
+          .pay_top__text
+            支払方法
+        .pay_link
+          = link_to "クレジットカードを選択してください", ""
+      .pay_box_itembuy
+        .pay_top
+          .pay_top__text
+            配送先
+        .pay_link
+          = link_to "配送先を登録してください", ""
+      .pay_box_btn
+        %button.btn_buy{type: "submit"} 購入する

@@ -3,13 +3,14 @@
     .main-header
       %h1.icon
         = link_to "#" do
-          = image_tag"/assets/material/logo/logo.png/", class: "hurima"
+          = image_tag  asset_path("/assets/material/logo/logo.png"), class: "hurima"
       .search-box
         = form_with  do |form|
           = form.text_field :search,class: 'input-box',placeholder: 'キーワードから探す'
           = form.button type: "submit",class: "search-btn" do
             .search-btn__box
-              %img.icon-search{src: "/assets/icon-search 1.png"}
+              = image_tag  asset_path("/assets/icon-search 1.png"), class: "icon-search"
+
 
             
     .nav

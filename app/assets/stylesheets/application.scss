@@ -1,6 +1,8 @@
 @import "index";
 @import "items";
+@import "itemsbuy";
 @import "reset";
+@import 'items';
 @import "users/header";
 @import "users/footer";
 @import "users/user";
@@ -12,4 +14,6 @@
 @import "card";
 @import "font-awesome-sprockets";
 @import "font-awesome";
-@import "items_show"
+@import "items_show";
+@import "item-sell";
+@import "new";

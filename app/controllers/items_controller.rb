@@ -8,6 +8,12 @@ class ItemsController < ApplicationController
     @comment = Comment.new
 
   end
+  def itemsbuy
+  end
+
+  def new
+  end
+
   private
 
   def set_categories
