@@ -4,7 +4,7 @@ class ItemsController < ApplicationController
   end
 
 
-  def item_buy
+  def itemsbuy
   end
 
 

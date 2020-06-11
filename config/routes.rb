@@ -15,6 +15,6 @@ Rails.application.routes.draw do
   get 'mypages/card'
 
   resources :items  do
-    get :item_buy
+    get :itemsbuy
   end    
 end
