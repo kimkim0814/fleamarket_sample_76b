@@ -1,0 +1,25 @@
+a {
+  .item-sell{
+    height: 120px;
+    width: 120px;
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
+    background-color: #3CCACE;
+    text-align: center;
+    padding: 15px;
+    border-radius: 4%;
+    p{
+      color: #fff;
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+    img{
+      width: 60%;
+    }
+    &:hover {
+      opacity: 0.6;
+      transition-duration: 0.3s;
+    }
+  }
+}
