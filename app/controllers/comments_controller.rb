@@ -2,11 +2,14 @@ class CommentsController < ApplicationController
 
 
   def create
-   if @comment = Comment.create
-    redirect_to :root
-   else
-    render 'new'
-   end
+    @comment = Comment.new(comment_params)
+    if @comment.save
+     Comment.create
+     redirect_to "/items/#{comment.item.id}"
+    else
+      redirect_to "/items/#{comment.item.id}"
+    end
+   redirect_to "/posts/#{comment.post.id}"
     @item = Item.find(params[:item_id])
   end
 
