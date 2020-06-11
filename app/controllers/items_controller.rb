@@ -14,6 +14,13 @@ class ItemsController < ApplicationController
   def new
   end
 
+  def destroy
+    if @item.destroy
+      redirect_to user_path
+    else
+      redirect_to item_path
+    end
+  end
   private
 
   def set_categories

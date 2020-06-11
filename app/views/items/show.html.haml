@@ -19,20 +19,7 @@
         %span (税込)
         %span.item-box__price--detail
           = "送料#{@item.cost}"
-
-          -# 購入画面編集画面
-      -# - if @item.sold_day == nil
-      -#   - if user_signed_in?
-      -#     - if @item.user.id == current_user.id
-      -#       = link_to edit_item_path(@item), class:'item-box__item-change-btn' do
-      -#         商品の編集
-      -#       %p or
-      -#       %a#modal-open.item-box__item-delete-btn この商品を削除する
-      -#     - else 
-      -#       =link_to item_orders_path(@order), class:'item-box__order-btn' do
-      -#         購入画面に進む
-      -# -else
-      -#   %p.item-box__sold-tag 売り切れました
+      
       .item-box__item-detail
         = @item.description
       .table-content
@@ -66,6 +53,9 @@
             %th 発送日の目安
             %td
               = @item.days
+      -# - if user_sined_in?
+      -#   - if @item.user.id == %current_user.id
+      -#     =link_to item_path(@item),method: delete
       .item-box__option-area
         .item-box__option-area__like-btn
           %i.fa.fa-star
