@@ -9,7 +9,7 @@
             .item-box-image__sold-mark--text
               SOLD
         - else
-        .item-box-image__main-image-box
+        .item-box__image__main-image-box
           = image_tag "#{@item.images[0].image}", class: "item-box-image__main"
         %ul
           - @item.images.each.with_index do |image|
@@ -18,7 +18,7 @@
         = "#{@item.price.to_s(:delimited)}円"
         %span (税込)
         %span.item-box__price--detail
-          = "#{@item.cost}"
+          = "送料#{@item.cost}"
       -# - if @item.sold_day == nil
       -#   - if user_signed_in?
       -#     - if @item.user.id == current_user.id
@@ -34,7 +34,7 @@
       .item-box__item-detail
         = @item.description
       .table
-        %table
+        %table 
           %tr
             %th 出品者
             %td
