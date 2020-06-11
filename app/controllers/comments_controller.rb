@@ -9,7 +9,6 @@ class CommentsController < ApplicationController
     else
       redirect_to "/items/#{comment.item.id}"
     end
-   redirect_to "/posts/#{comment.post.id}"
     @item = Item.find(params[:item_id])
   end
 
