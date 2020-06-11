@@ -3,10 +3,11 @@ class ItemsController < ApplicationController
     @items = Item.includes(:images).order(updated_at: "DESC")
   end
 
-
   def itemsbuy
   end
 
+  def new
+  end
 
   private
 
