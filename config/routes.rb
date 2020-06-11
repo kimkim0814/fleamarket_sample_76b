@@ -14,4 +14,5 @@ Rails.application.routes.draw do
   get 'mypages/logout'
   get 'mypages/card'
   resources :items
+  resources :users, only: :new
 end
