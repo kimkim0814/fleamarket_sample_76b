@@ -1,0 +1,31 @@
+// パンくず
+
+.breadcrumbs {
+  
+  background-color: rgb(255, 255, 255);
+  box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+  height: 50px;
+  width: 100vw;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  padding-left: 205px;
+  text-decoration: none;
+  text-decoration: none;
+
+  a {
+    text-decoration: none;
+    color: black;
+    padding: 0 5px;
+  }
+
+  a:hover {
+    color: gray;
+    text-decoration-line: underline;
+  }
+
+  .current {
+    font-weight: 600;
+    padding-left: 5px;
+  }
+}
