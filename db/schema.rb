@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_09_112404) do
+ActiveRecord::Schema.define(version: 2020_06_10_115338) do
 
   create_table "addresses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "postcode", null: false
@@ -35,6 +35,16 @@ ActiveRecord::Schema.define(version: 2020_06_09_112404) do
     t.string "ancestry"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "text", null: false
+    t.bigint "user_id", null: false
+    t.bigint "item_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["item_id"], name: "index_comments_on_item_id"
+    t.index ["user_id"], name: "index_comments_on_user_id"
   end
 
   create_table "identifications", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -65,7 +75,7 @@ ActiveRecord::Schema.define(version: 2020_06_09_112404) do
     t.bigint "category_id", null: false
     t.bigint "brand_id", null: false
     t.string "size", null: false
-    t.integer "status", null: false
+    t.string "status", null: false
     t.string "cost", null: false
     t.string "days", null: false
     t.date "sold_day"
@@ -89,6 +99,8 @@ ActiveRecord::Schema.define(version: 2020_06_09_112404) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "comments", "items"
+  add_foreign_key "comments", "users"
   add_foreign_key "items", "brands"
   add_foreign_key "items", "categories"
   add_foreign_key "items", "users"
