@@ -124,7 +124,7 @@
         -if @items[0] !=nil
           -@items[0..2].each do |item|
             .list
-              = link_to "#",class:"list__content" do
+              = link_to item_path(item.id),class:"list__content" do
                 - if item.sold_day != nil
                   .list__content-sold-mark
                     %h3.list__content-sold-mark--text
@@ -155,7 +155,7 @@
         -if @items[3] !=nil
           -@items[3..5].each do |item|
             .list
-              = link_to "#",class:"list__content" do
+              = link_to item_path(item.id),class:"list__content" do
                 - if item.sold_day != nil
                   .list__content-sold-mark
                     %h3.list__content-sold-mark--text
@@ -175,21 +175,3 @@
                     %p (税込)
 
 
-
-  .main__banner
-    .main__banner__content
-      %h2.main__banner__content__title
-        誰でも簡単、人生を変えるフリマアプリ
-      %p.main__banner__content__text
-        今すぐ無料ダウンロード！
-      .main__banner__content__btn
-        .main__top-visual__content__btn__apple
-          = link_to "https://itunes.apple.com/jp/app/id667861049?l=ja&mt=8" do
-            = image_tag asset_path("https://web-jp-assets.mercdn.net/_next/static/images/app-store-a5c17948c6fd6d5b60b13d421cd60b35.svg"), class: "image"
-        .main__top-visual__content__btn__google
-          = link_to "https://play.google.com/store/apps/details?id=com.kouzoh.mercari&hl=ja" do
-            = image_tag asset_path("https://web-jp-assets.mercdn.net/_next/static/images/google-play-495575abb895b405aa6336b2a4304958.svg"), class: "image"
-
-
-
-    = render "layouts/item-sell"

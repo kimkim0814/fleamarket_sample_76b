@@ -81,6 +81,8 @@ gem 'rspec-rails'
 gem 'haml-rails'
 gem 'erb2haml'
 gem 'font-awesome-sass'
+gem 'merge_db_schema'
 gem 'carrierwave'
 gem 'ancestry'
 gem "gretel"
+=======
