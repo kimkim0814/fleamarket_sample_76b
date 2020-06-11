@@ -4,9 +4,9 @@ class CommentsController < ApplicationController
   def create
     @comment = Comment.new(comment_params)
     if @comment.save
-     redirect_to item_path
+     redirect_to item_path(comment.item)
     else
-      redirect_to item_path
+      redirect_to item_path(comment.item)
     end
     @item = Item.find(params[:item_id])
   end
