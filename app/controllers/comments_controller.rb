@@ -2,7 +2,11 @@ class CommentsController < ApplicationController
 
 
   def create
-    @comment = Comment.create
+   if @comment = Comment.create
+    redirect_to :root
+   else
+    render 'new'
+   end
     @item = Item.find(params[:item_id])
   end
 
