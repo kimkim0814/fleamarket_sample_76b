@@ -1,0 +1,16 @@
+.main{
+  padding: 40px;
+  margin:0 auto;
+  .item-contents{
+    width: 700px;
+    .item-box{
+      background-color: #fff;
+      padding: 24px 40px 40px;
+      &__name{
+        text-align: center;
+        font-weight: bold;
+        font-size: 24px;
+      }
+    }
+  }
+}
