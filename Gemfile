@@ -75,10 +75,11 @@ end
 
 gem 'devise'
 gem 'jp_prefecture'
-gem 'sqlite3', '~> 1.3.13'
+# gem "sqlite3", "~> 1.3", ">= 1.3.6"
 gem 'jquery-rails'
 gem 'rspec-rails'
 gem 'haml-rails'
 gem 'erb2haml'
 gem 'font-awesome-sass'
 gem 'carrierwave'
+gem 'ancestry'

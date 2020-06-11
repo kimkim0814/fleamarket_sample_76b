@@ -20,10 +20,13 @@
         %li.left-box--second 
           = link_to "#" do
             ブランド
-      %ul.right-box
-        %li.right-box--login 
-          = link_to "#" do
-            ログイン
-        %li.right-box--new 
-          = link_to "#" do
-            新規会員登録
+      - if user_signed_in? 
+        %ul.right-box     
+          %li.right-box--login
+            = link_to "マイページ", mypages_index_path
+      - else 
+        %ul.right-box
+          %li.right-box--login 
+            = link_to "ログイン",new_user_session_path
+          %li.right-box--new 
+            = link_to "新規会員登録",new_user_registration_path

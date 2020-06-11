@@ -1,0 +1,87 @@
+.mypage_side_content
+  %nav.mypage_side_content__nav
+    %ul.mypage_side_content__nav_list
+      %li
+        .mypage_side_content__nav_list_item
+          =link_to 'マイページ','/mypages/index'
+          .fas.fa-chevron-right
+      %li
+        .mypage_side_content__nav_list_item 
+          お知らせ
+          .fas.fa-chevron-right
+      %li
+        .mypage_side_content__nav_list_item 
+          やることリスト
+          .fas.fa-chevron-right
+      %li
+        .mypage_side_content__nav_list_item 
+          =link_to "いいね！一覧"
+          .fas.fa-chevron-right
+      %li
+        .mypage_side_content__nav_list_item 
+          =link_to"出品する"
+          .fas.fa-chevron-right
+      %li
+        .mypage_side_content__nav_list_item 
+          = link_to "出品した商品 - 出品中" 
+          .fas.fa-chevron-right
+      %li
+        .mypage_side_content__nav_list_item 
+          =link_to "出品した商品 - 取引中"
+          .fas.fa-chevron-right
+      %li
+        .mypage_side_content__nav_list_item 
+          = link_to "出品した商品 - 売却済み"
+          .icon.fas.fa-chevron-right
+      %li
+        .mypage_side_content__nav_list_item 
+          購入した商品 - 取引中
+          .fas.fa-chevron-right
+      %li
+        .mypage_side_content__nav_list_item
+          購入した商品 - 過去の取引
+          %i.fas.fa-chevron-right
+      %li
+        .mypage_side_content__nav_list_item
+          = link_to "出品した商品 - 売却済み"
+          %i.fas.fa-chevron-right
+      %li
+        .mypage_side_content__nav_list_item 
+          評価一覧
+          %i.fas.fa-chevron-right
+      %li
+        .mypage_side_content__nav_list_item 
+          お問い合わせ
+          %i.fas.fa-chevron-right
+        .mypage_side_content__nav_list_item__setup
+          設定
+        %li
+        .mypage_side_content__nav_list_item 
+          = link_to 'プロフィール', '#'
+
+          %i.fas.fa-chevron-right
+        %li
+        .mypage_side_content__nav_list_item 
+          発送元・お届け先住所変更
+          %i.fas.fa-chevron-right
+        %li
+        .mypage_side_content__nav_list_item 
+          = link_to '支払方法', '/mypages/card', class: ''
+          %i.fas.fa-chevron-right
+        %li
+        .mypage_side_content__nav_list_item 
+          メール/パスワード
+          %i.fas.fa-chevron-right
+        %li
+        .mypage_side_content__nav_list_item
+          = link_to "#", class: "#" do
+            本人情報
+            %i.fas.fa-chevron-right
+        %li
+        .mypage_side_content__nav_list_item 
+          電話番号の確認
+          %i.fas.fa-chevron-right
+        %li
+        .mypage_side_content__nav_list_item 
+          = link_to 'ログアウト', '/mypages/logout', class: ''
+          %i.fas.fa-chevron-right
