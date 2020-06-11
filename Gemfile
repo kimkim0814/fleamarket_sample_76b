@@ -85,4 +85,3 @@ gem 'merge_db_schema'
 gem 'carrierwave'
 gem 'ancestry'
 gem "gretel"
-=======
