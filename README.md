@@ -128,7 +128,6 @@ fleamarket_sample_76b DB設計
 |Column|Type|Options|
 |------|----|-------|
 |ancestry|string||
-|item_id|references|null: false, foreign_key: true |
 ### Association
 - has_many :items
 - has_ancestry
