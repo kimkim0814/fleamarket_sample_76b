@@ -53,9 +53,6 @@
             %th 発送日の目安
             %td
               = @item.days
-      -# - if user_sined_in?
-      -#   - if @item.user.id == %current_user.id
-      -#     =link_to item_path(@item),method: delete
       .item-box__option-area
         .item-box__option-area__like-btn
           %i.fa.fa-star
@@ -63,4 +60,10 @@
         %a.item-box__option-area__optional-btn
           %i.fa.fa-flag
           不適切な商品情報
-
+  .edit-delete-box
+    - if @item.user.id == current_user.id
+      = link_to edit_item_path(@item), class:'item-change-btn' do
+        商品の編集
+      %p or
+      = link_to item_path(@item), method: :delete,class:'item-delete-btn' do
+        商品の削除
