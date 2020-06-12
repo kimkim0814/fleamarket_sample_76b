@@ -22,10 +22,11 @@
           = f.label :なまえ　ふりがな, class:"field__firstname_kana--label"
           %br/
           = f.text_field :firstname_kana , placeholder: "　例）たろう", class:"field__firstname_kana--field"
-      .field__bitrh_date
-        = f.label :生年月日, class:"field__bitrh_date--label"
+      .field__birth_date
+        = f.label :生年月日, class:"field__birth_date--label"
         %br/
         != sprintf(f.date_select(:birth_date , use_month_numbers: true, prompt:"--", start_year:Time.now.year, end_year:1900, default: Date.new(1989, 1, 1) , date_separator:'%s'),'年 ', '月 ','日')
+        %span 日
       .actions.identification_submit
         = f.submit "Sign up", class:"identification_submit--btn"
     = render "devise/shared/links"

@@ -86,9 +86,10 @@
       }
     }   
     .field{
-      &__bitrh_date{
+      &__birth_date{
         margin-left: 25%;
         padding: 10px 0;
+        position: relative;
         &--label{
           font-size: 15px;
           font-weight: bold;
@@ -104,6 +105,13 @@
         #identification_birth_date_3i{
           height: 43px;
           width: 50px;
+        }
+        span{
+          position: absolute;
+          top: 50px;
+          left: 50px;
+          top: 44px;
+          left: 261px;
         }
       }
     }
