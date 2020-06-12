@@ -131,7 +131,7 @@ fleamarket_sample_76b DB設計
 - has_many :items
 
 
-##Imagesテーブル
+## Imagesテーブル
 |Column|Type|Options|
 |------|----|-------|
 |image|string|null:false|
