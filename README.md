@@ -127,7 +127,7 @@ fleamarket_sample_76b DB設計
 ## Categorysテーブル
 |Column|Type|Options|
 |------|----|-------|
-|item_id|string|null;false,foreign_key:true |
+|name|string|null;false|
 |ancestry|string||
 ### Association
 - has_many :items
