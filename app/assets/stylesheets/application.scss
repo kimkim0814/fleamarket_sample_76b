@@ -1,6 +1,8 @@
 @import "index";
 @import "items";
+@import "itemsbuy";
 @import "reset";
+@import 'items';
 @import "users/header";
 @import "users/footer";
 @import "users/user";
@@ -11,5 +13,9 @@
 @import "mypages"; 
 @import "logout";
 @import "card";
+@import "breadcrumbs";
 @import "font-awesome-sprockets";
 @import "font-awesome";
+@import "items_show";
+@import "item-sell";
+@import "new";

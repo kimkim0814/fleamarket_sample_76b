@@ -1,0 +1,394 @@
+@mixin form {
+  height: 50px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  padding: 0 15px;
+  width: 100%;
+}
+@mixin form2 {
+  height: 50px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  padding:  30px;
+  width: 100%;
+  background-color: white;
+  cursor: pointer;
+}
+@mixin must($color) {
+  margin: 0 0 0 8px;
+  background-color:$color;
+  border-radius: 2px;
+  color:white;
+  font-size: 12px;
+  padding: 2px 4px;
+  text-align: center;
+}
+.preview {
+  width: 100px;
+  height: 100px;
+}
+label {
+  cursor: pointer;
+}
+a {
+  text-decoration: none;
+}
+
+
+
+.product-body {
+  background-color:#f5f5f5;
+  font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
+  padding: 100px 100px;
+  @media screen and (max-width:768px) {
+    .product-body__main {
+      width: 100%;
+      }
+    }
+  &__main {
+    background-color: white;
+    margin: 0 auto;
+    width: 60%; 
+    &__form {
+      p {
+        color: rgb(136, 136, 136);
+        padding: 40px 40px 0 40px;
+        font-weight: bold;
+      }
+
+
+
+      // 出品画像
+      &__image {
+        padding: 40px;
+        border-bottom: 1px solid #EEEEEE;
+        &__set {
+          display: flex;
+          font-weight: bold;
+          &__must {
+            @include must($color:red);
+            margin-right: 10px;
+          }
+        }
+
+        // 1枚以上3枚までアップロードできます
+        &__text {
+          margin-top: 15px;
+        }
+
+        // 写真BOX
+        &__box {
+          display: flex;
+          justify-content: space-around;
+          margin-top: 15px;
+          .item-image {
+            width: 90%;
+            justify-content: space-evenly;
+            display: flex;
+          }
+        }
+
+        // 写真アップロードボタン
+        &__boxes {
+          display: flex;
+          justify-content: space-evenly;
+          margin-top: 15px;
+          &__form {
+            .hidden {
+              display: none;
+            }
+          }
+        }
+
+        // 写真削除ボタン
+        &__del {
+          display: flex;
+          justify-content: space-evenly;
+          margin-top: 5px;
+          button {
+            margin-top: 5px;
+            cursor: pointer;
+            border: none;
+            background-color: crimson;
+            color: white;
+            border-radius: 2px;
+            padding: 5px 10px;
+            &:hover {
+              opacity: 0.6;
+            }
+          }
+        }
+      }
+
+
+
+      // 商品名
+      &__name-area {
+        padding: 40px;
+        &__box {
+          display:flex;
+          margin-bottom: 15px;
+          font-weight: bold;
+          &__must {
+            @include must($color:red);
+          }
+        }
+        input {
+          @include form;
+        }
+      }
+
+      // 商品の説明
+      &__explanation  {
+        padding: 40px;
+        border-bottom: 1px solid #EEEEEE;
+        &__box {
+          display:flex;
+          margin-bottom: 15px;
+          font-weight: bold;
+          &__must {
+            @include must($color:red);
+          }
+        }
+        textarea {
+          height: 200px;
+          border-radius: 4px;
+          border: 1px solid #ccc;
+          padding: 10px;
+          width: 100%;
+          resize: none;
+        }
+      }
+
+
+
+      // 商品の詳細
+      // カテゴリー
+      &__category {
+        padding: 40px;
+        &__box {
+          display:flex;
+          margin-bottom: 15px;
+          font-weight: bold;
+          &__must {
+            @include must($color:red);
+          }
+        }
+        select {
+          @include form2;
+        }
+      }
+
+      // ブランド名
+      &__brand {
+        padding: 40px;
+        &__box {
+          display:flex;
+          margin-bottom: 15px;
+          font-weight: bold;
+          &__must-gray {
+            @include must($color:#ccc);
+          }
+        }
+          input {
+            @include form;
+          }
+      }
+
+      // 商品の状態
+      &__status {
+        padding: 40px;
+        &__box {
+          display:flex;
+          margin-bottom: 15px;
+          font-weight: bold;
+          &__must {
+            @include must($color:red);
+          }
+        }
+        select {
+          @include form2;
+        }
+      }
+
+      // サイズ
+      &__size {
+        padding: 40px;
+        border-bottom: 1px solid #EEEEEE;
+        &__box {
+          display:flex;
+          margin-bottom: 15px;
+          font-weight: bold;
+          &__must {
+            @include must($color:red);
+          }
+        }
+        select {
+          @include form2;
+        }
+      }
+
+
+
+      // 配送について
+      // 配送料の負担
+      &__burden {
+        padding: 40px;
+        &__box {
+          display:flex;
+          margin-bottom: 15px;
+          font-weight: bold;
+          &__must {
+            @include must($color:red);
+          }
+        }
+          select {
+            @include form2;
+          }
+      }
+
+      // 発送元の地域
+      &__area {
+        padding: 40px;
+        &__box {
+          display:flex;
+          margin-bottom: 15px;
+          font-weight: bold;
+          &__must {
+            @include must($color:red);
+          }
+        }
+          select {
+            @include form2;
+          }
+      }
+
+      // 発送までの日数
+      &__days {
+        padding: 40px;
+        border-bottom: 1px solid #EEEEEE;
+        &__box {
+          display:flex;
+          margin-bottom: 15px;
+          font-weight: bold;
+          &__must {
+            @include must($color:red);
+          }
+        }
+          select {
+            @include form2;
+          }
+      }
+
+
+
+      // 価格
+      &__price {
+        padding: 40px;
+        display:flex;
+        justify-content: space-between;
+        &__box {
+          display: flex;
+          font-weight: bold;
+          height: 25px;
+          &__must {
+            @include must($color:red);
+          }
+        }
+          .product-body__main__form__price__field{
+            @media screen and (max-width:768px) {
+              input {
+                width: 150px;
+              }
+            }
+          }
+        input {
+          height: 50px;
+          border-radius: 4px;
+          border: 1px solid #ccc;
+          width: 300px;
+          background-color: white;
+          cursor: pointer;
+          text-align: right;
+        }
+      }
+
+
+
+      // 販売手数料
+      &__fee {
+        display:flex;
+        justify-content: space-between;
+        padding: 0 40px;
+        border-bottom: 1px solid #EEEEEE;
+        padding-bottom: 20px;
+      }
+      // 販売利益
+      &__profit {
+        display:flex;
+        padding: 0 40px;
+        margin-top: 20px;
+        justify-content: space-between;
+        margin-bottom: 30px;
+      }
+
+      // 出品ボタン
+      &__exhibition {
+        height: 50px;
+        border-radius: 4px;
+        border: none;
+        width: 80%;
+        background-color: #ea352d;
+        font-weight: bold;
+        color: white;
+        margin: 0 auto 20px;
+        display:block;
+        line-height: 50px;
+        &:hover {
+          background-color: #d22f28;
+          transition: 0.3s;
+          cursor: pointer;
+        }
+      }
+
+      // 下書きボタン
+      &__draft {
+        height: 50px;
+        border-radius: 4px;
+        border: none;
+        width: 80%;
+        background-color: #ccc;;
+        font-weight: bold;
+        color: black;
+        margin: 0 auto 20px;
+        display:block;
+        line-height: 50px;
+        &:hover {
+          background-color: #bfbfbf;
+          transition: 0.3s;
+          cursor: pointer;
+        }
+      }
+    }
+
+    // もどるリンク
+    &__back {
+      display: flex;
+      text-align: center;
+      &__btn {
+        color: #0095ee;
+        margin: 0 auto;
+        font-size: 14px;
+        &:hover {
+          opacity: 0.6;
+          text-decoration: underline;
+        }
+      }
+    }
+    &__notes {
+      font-size: 12px;
+      line-height: 1.4em;
+      padding: 20px 40px 60px 40px;
+    }
+  }
+}
