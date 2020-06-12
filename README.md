@@ -1,5 +1,8 @@
 # README
 fleamarket_sample_76b DB設計
+
+![Uploading スクリーンショット 2020-06-12 12.32.20.png…]()
+
 ## Items テーブル
 |Column|Type|Options|
 |------|----|-------|
@@ -85,6 +88,16 @@ fleamarket_sample_76b DB設計
 - belongs_to :user
 - belongs_to :identification
 
+## Sns_credentialsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|provider|string||
+|uid|string||
+|user| references| foreign_key:true|
+
+
+### Association
+- belongs_to :user
 
 
 ## Cardsテーブル
