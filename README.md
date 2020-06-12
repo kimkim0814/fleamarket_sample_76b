@@ -149,7 +149,7 @@ fleamarket_sample_76b DB設計
 |Column|Type|Options|
 |------|----|-------|
 |image|string|null:false|
-
+|item_id(商品名)|string|null;false,foreign_key:true |
 
 ### Association
 - belongs_to :item
