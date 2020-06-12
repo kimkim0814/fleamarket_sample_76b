@@ -8,25 +8,12 @@
     width: 50%;
     padding-bottom: 50px;
     &--title{
-    font-size: 22px;
-    padding: 32px;
-    line-height: 1.5;
-    text-align: center;
-    border-bottom: 1px solid #f8f8f8;
-    font-weight: bold;
+      @include title;
     }
     .user_new_box__mail{
-      position: relative;
-      width: 50%;
-      height: 60px;
-      margin: 50px auto;
-      border-radius : 20px;         
-      font-size     : 11pt;       
-      cursor        : pointer;     
+      @include user_new_box;  
       background    : #3CCACE; 
       color         : #ffffff;
-      line-height   : 60px; 
-      text-align: center; 
       &--icon {
         position: absolute;
         left: 35px;
@@ -35,18 +22,9 @@
       }     
     }
     .user_new_box__facebook{
-      position: relative;
-      width: 50%;
-      height: 60px;
-      margin: 50px auto;
-      padding: auto;
-      border-radius : 20px;         
-      font-size     : 11pt;       
-      cursor        : pointer;     
+      @include user_new_box;
       background: #385185;
       color         : #ffffff;
-      line-height   : 60px; 
-      text-align: center; 
       &--icon {
         position: absolute;
         left: 35px;
@@ -55,16 +33,7 @@
       }            
     }
     .user_new_box__google{
-      position: relative;
-      width: 50%;
-      height: 60px;
-      margin: 50px auto;
-      padding: auto;
-      border-radius : 20px;         
-      font-size     : 11pt;       
-      cursor        : pointer;     
-      line-height   : 60px;
-      text-align: center;  
+      @include user_new_box;
       border: 1px solid black;   
       &--icon {
         position: absolute;
@@ -84,23 +53,17 @@
       color: black;
     }
     .user_link__login{
-      text-decoration: none;
-      float: right;
+      @include link;
       padding-right: 20px;
       padding-top: 20px;
-      color: #3CCACE; 
     }    
     .user_link__facebook{
-      text-decoration: none;
-      float: right;
+      @include link;
       padding: 10px 20px 0 0;
-      color: #3CCACE; 
     }
     .user_link__google{
-      text-decoration: none;
-      float: right;
+      @include link;
       padding: 10px 20px 0 0;
-      color: #3CCACE; 
       overflow: hidden
     }
   }

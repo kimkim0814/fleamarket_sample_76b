@@ -144,7 +144,7 @@ https://user-images.githubusercontent.com/64791353/84462246-77f1b080-aca9-11ea-9
 - has_many :items
 
 
-##Imagesテーブル
+## Imagesテーブル
 |Column|Type|Options|
 |------|----|-------|
 |image|string|null:false|
