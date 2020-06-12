@@ -1,3 +1,17 @@
-= link_to 'メールアドレスで登録', new_user_registration_path
-= link_to 'Facebookで登録', user_facebook_omniauth_authorize_path, method: :post
-= link_to 'Googleで登録', user_google_oauth2_omniauth_authorize_path, method: :post
+
+.user_new_main
+  .user_new_main__container
+    %h2.user_new_main__container--title
+      新規会員登録
+    = link_to new_user_registration_path, class: "user_new_link" do
+      .user_new_box__mail
+        = icon('fa', 'envelope', class: 'user_new_box__mail--icon')
+        メールアドレスで登録
+    = link_to user_facebook_omniauth_authorize_path, method: :post, class: "user_new_link" do
+      .user_new_box__facebook
+        = icon('fa', 'facebook-official', class: 'user_new_box__facebook--icon')
+        Facebookで登録
+    = link_to user_google_oauth2_omniauth_authorize_path, method: :post, class: "user_new_link--google" do
+      .user_new_box__google 
+        = image_tag "/assets/material/icon/g-logo.png", class: "user_new_box__google--icon"
+        Googleで登録

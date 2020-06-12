@@ -1,0 +1,88 @@
+.user_new_main{
+  background-color: #f8f8f8;
+  width: 100%;
+  padding-bottom: 80px;
+  &__container{
+    background-color: white;
+    margin: 0 auto;
+    width: 50%;
+    padding-bottom: 50px;
+    &--title{
+    font-size: 22px;
+    padding: 32px;
+    line-height: 1.5;
+    text-align: center;
+    border-bottom: 1px solid #f8f8f8;
+    font-weight: bold;
+    }
+    .user_new_box__mail{
+      position: relative;
+      width: 50%;
+      height: 60px;
+      margin: 50px auto;
+      border-radius : 20px;         
+      font-size     : 11pt;       
+      cursor        : pointer;     
+      background    : #3CCACE; 
+      color         : #ffffff;
+      line-height   : 60px; 
+      text-align: center; 
+      &--icon {
+        position: absolute;
+        left: 35px;
+        top: 17px;
+        font-size: 23px;
+      }     
+    }
+    .user_new_box__facebook{
+      position: relative;
+      width: 50%;
+      height: 60px;
+      margin: 50px auto;
+      padding: auto;
+      border-radius : 20px;         
+      font-size     : 11pt;       
+      cursor        : pointer;     
+      background: #385185;
+      color         : #ffffff;
+      line-height   : 60px; 
+      text-align: center; 
+      &--icon {
+        position: absolute;
+        left: 35px;
+        top: 17px;
+        font-size: 23px;
+      }            
+    }
+    .user_new_box__google{
+      position: relative;
+      width: 50%;
+      height: 60px;
+      margin: 50px auto;
+      padding: auto;
+      border-radius : 20px;         
+      font-size     : 11pt;       
+      cursor        : pointer;     
+      line-height   : 60px;
+      text-align: center;  
+      border: 1px solid black;   
+      &--icon {
+        position: absolute;
+        left: 30px;
+        top: 16px;
+        height: 25px;
+      }          
+    }
+    .user_new_link{
+      text-decoration: none;
+      color         : #ffffff;
+      white-space: nowrap;
+    }
+    .user_new_link--google{
+      text-decoration: none;
+      white-space: nowrap;
+      color: black;
+    }
+  }
+}
+
