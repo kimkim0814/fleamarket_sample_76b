@@ -131,7 +131,7 @@
   width: 100%;
   padding-bottom: 80px;
   &__container{
-    height: calc(100vh - 347px);
+    height: calc(100vh - 340px);
     background-color: white;
     margin: 0 auto;
     width: 50%;
@@ -145,4 +145,11 @@
     font-weight: bold;
     }
   }
+}
+.address_link_top{
+  text-decoration: none;
+  float: right;
+  padding-right: 20px;
+  padding-top: 50px;
+  color: #3CCACE; 
 }

@@ -83,6 +83,26 @@
       white-space: nowrap;
       color: black;
     }
+    .user_link__login{
+      text-decoration: none;
+      float: right;
+      padding-right: 20px;
+      padding-top: 20px;
+      color: #3CCACE; 
+    }    
+    .user_link__facebook{
+      text-decoration: none;
+      float: right;
+      padding: 10px 20px 0 0;
+      color: #3CCACE; 
+    }
+    .user_link__google{
+      text-decoration: none;
+      float: right;
+      padding: 10px 20px 0 0;
+      color: #3CCACE; 
+      overflow: hidden
+    }
   }
 }
 
