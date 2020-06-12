@@ -1,7 +1,7 @@
 # README
 fleamarket_sample_76b DB設計
 
-![Uploading スクリーンショット 2020-06-12 12.32.20.png…]()
+https://user-images.githubusercontent.com/64791353/84462246-77f1b080-aca9-11ea-9a78-4de6786f3dec.png
 
 ## Items テーブル
 |Column|Type|Options|
