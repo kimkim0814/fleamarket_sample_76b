@@ -128,7 +128,7 @@ fleamarket_sample_76b DB設計
 |Column|Type|Options|
 |------|----|-------|
 |ancestry|string||
-|item_id(商品名)|string|null;false,foreign_key:true |
+|item_id|references|null: false, foreign_key: true |
 ### Association
 - has_many :items
 - has_ancestry
@@ -149,7 +149,7 @@ fleamarket_sample_76b DB設計
 |Column|Type|Options|
 |------|----|-------|
 |image|string|null:false|
-|item_id(商品名)|string|null;false,foreign_key:true |
+|item_id|references|null: false, foreign_key: true |
 
 ### Association
 - belongs_to :item
