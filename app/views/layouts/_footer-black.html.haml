@@ -1,3 +1,17 @@
+.main__banner
+  .main__banner__content
+    %h2.main__banner__content__title
+      誰でも簡単、人生を変えるフリマアプリ
+    %p.main__banner__content__text
+      今すぐ無料ダウンロード！
+    .main__banner__content__btn
+      .main__top-visual__content__btn__apple
+        = link_to "https://itunes.apple.com/jp/app/id667861049?l=ja&mt=8" do
+          = image_tag "https://web-jp-assets.mercdn.net/_next/static/images/app-store-a5c17948c6fd6d5b60b13d421cd60b35.svg", class: "image"
+      .main__top-visual__content__btn__google
+        = link_to "https://play.google.com/store/apps/details?id=com.kouzoh.mercari&hl=ja" do
+          = image_tag "https://web-jp-assets.mercdn.net/_next/static/images/google-play-495575abb895b405aa6336b2a4304958.svg", class: "image"
+
 .footer
   .footer__top
     .footer__top__about.footer-content
