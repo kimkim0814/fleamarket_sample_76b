@@ -91,7 +91,8 @@ fleamarket_sample_76b DB設計
 |Column|Type|Options|
 |------|----|-------|
 |user_id(カード保持者)|references|null:false, foreign_key:true | 
-|payjp_id|string|null:false|
+|customer_id|string|null:false|
+|card_id|string|null:false|
 ### Association
 - belongs_to : user
 
