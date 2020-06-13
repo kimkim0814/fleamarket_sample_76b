@@ -12,7 +12,8 @@ Rails.application.routes.draw do
   root 'items#index'
   get 'mypages/index'
   get 'mypages/logout'
-  get 'mypages/card'
+  get 'mypages/mycard'
+
   resources :items do
     resources :comments, only: :create
   end

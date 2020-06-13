@@ -12,8 +12,8 @@ crumb :logout do
   parent :mypages
 end
 
-crumb :card do 
-  link "支払方法",  mypages_card_path
+crumb :mycard do 
+  link "支払方法",  mypages_mycard_path
   parent :mypages
 end
 
