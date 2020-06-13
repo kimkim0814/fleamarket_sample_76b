@@ -7,7 +7,7 @@
     background-color: white;
     margin: 0 auto;
     width: 50%;
-    padding-bottom: 50px;
+    padding-bottom: 120px;
     &--title{
       @include title;
     }
@@ -78,11 +78,6 @@
     }
   }
 }
-.user_link__login{
-  @include link;
-  padding-right: 20px;
-  padding-top: 10px;
-}
 
 .address_crate_main{
   background-color: #f8f8f8;
@@ -98,9 +93,4 @@
       @include title;
     }
   }
-}
-.address_link_top{
-  @include link;
-  padding-right: 20px;
-  padding-top: 50px;
 }

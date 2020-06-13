@@ -7,7 +7,7 @@
     background-color: white;
     margin: 0 auto;
     width: 50%;
-    padding-bottom: 75px;
+    padding-bottom: 120px;
     &--title{
       @include title;
     }
@@ -42,13 +42,4 @@
       }
     }
   }
-}
-.user_link__facebook{
-  @include link;
-  padding: 10px 20px 0 0;
-}
-.user_link__google{
-  @include link;
-  padding: 10px 20px 0 0;
-  overflow: hidden
 }

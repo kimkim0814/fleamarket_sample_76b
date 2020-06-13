@@ -29,11 +29,7 @@
         %br/
         = f.text_field :phone_number, placeholder: "　任意" ,class:"field__phone_number--field"
       .actions.address_submit
-        = f.submit "Sign up", class: "address_submit--btn"
+        = f.submit "Sign up", class: "address_submit--btn" 
     = render "devise/shared/links"
-    %br/
     = link_to 'Facebookで登録>', user_facebook_omniauth_authorize_path, method: :post, class: "user_link__facebook"
-    %br/
-    %br/
     = link_to 'Googleで登録>', user_google_oauth2_omniauth_authorize_path, method: :post, class: "user_link__google"
-    %br/

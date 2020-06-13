@@ -2,7 +2,7 @@
   = link_to "既存のアカウントをお持ちの方はこちら(ログイン)>", new_session_path(resource_name), class: "user_link__login"
   %br/
 - if devise_mapping.registerable? && controller_name != 'registrations'
-  = link_to "アカウントをお持ちでない方はこちら(新規登録)>", new_registration_path(resource_name), class: "user_link__login"
+  = link_to "アカウントをお持ちでない方はこちら(新規登録)>",new_user_path, class: "user_link__new"
   %br/
 - if devise_mapping.confirmable? && controller_name != 'confirmations'
   = link_to "Didn't receive confirmation instructions?", new_confirmation_path(resource_name)
