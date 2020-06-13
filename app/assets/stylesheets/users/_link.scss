@@ -1,0 +1,18 @@
+// 既存のアカウントをお持ちの方はこちら(ログイン)>,新規登録
+.user_link__login,.user_link__new{
+  @include link_set;
+}
+
+// Facebookでログイン>  
+.user_link__facebook{
+  @include link_set;
+}
+// Googleでログイン>
+.user_link__google{
+  @include link_set;
+}
+// トップに戻る
+.address_link_top{
+  @include link;
+  padding: 50px 20px 0 0;
+}

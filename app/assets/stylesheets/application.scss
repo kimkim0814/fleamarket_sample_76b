@@ -1,3 +1,4 @@
+@import "mixin";
 @import "index";
 @import "items";
 @import "itemsbuy";
@@ -9,11 +10,14 @@
 @import "users/identification";
 @import "users/address";
 @import "users/login";
+@import "users/new";
+@import "users/link";
 @import "mypages"; 
 @import "logout";
 @import "card";
 @import "breadcrumbs";
 @import "font-awesome-sprockets";
+@import "font-awesome";
 @import "font-awesome";
 @import "items_show";
 @import "item-sell";

@@ -3,7 +3,7 @@
   %section.mypage_content__user_icon
     %figure= image_tag 'imageicon.png' ,width: 60,height: 60
     .mypage_content__user_name
-      = "ニックネーム"
+      #{current_user.nickname}
     %h2 
     .mypage_content__number
       .mypage_content__evaluation
