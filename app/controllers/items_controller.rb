@@ -1,5 +1,5 @@
 class ItemsController < ApplicationController
-  before_action :set_item,only:[:show,:destroy,:edit]
+  before_action :set_item,only:[:show,:destroy,:edit,:update]
   def index
     @items = Item.includes(:images).order(updated_at: "DESC")
   end
@@ -15,6 +15,17 @@ class ItemsController < ApplicationController
   def new
   end
 
+  def edit
+    
+  end
+
+  def update 
+    if @item.update(item_params)
+      redirect_to item_path
+    else
+      redirect_to "#"
+    end
+  end
   def destroy
     if @item.destroy
       redirect_to root_path
