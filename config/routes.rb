@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users, controllers: {
+    omniauth_callbacks: 'users/omniauth_callbacks',
     registrations: 'users/registrations',
     sessions: 'users/sessions',
   }
@@ -13,6 +14,7 @@ Rails.application.routes.draw do
   get 'mypages/index'
   get 'mypages/logout'
   get 'mypages/card'
+  resources :users, only: :new
   resources :items do
     resources :comments, only: :create
   end

@@ -2,14 +2,16 @@
   .header__Inner
     .main-header
       %h1.icon
+
         = link_to "/" do
-          = image_tag  asset_path("/assets/material/logo/logo.png"), class: "hurima"
+          = image_tag  "logo/logo.png", class: "hurima"
+
       .search-box
         = form_with  do |form|
           = form.text_field :search,class: 'input-box',placeholder: 'キーワードから探す'
           = form.button type: "submit",class: "search-btn" do
             .search-btn__box
-              = image_tag  asset_path("/assets/icon-search 1.png"), class: "icon-search"
+              = image_tag  "icon-search 1.png", class: "icon-search"
 
 
             
@@ -30,4 +32,4 @@
           %li.right-box--login 
             = link_to "ログイン",new_user_session_path
           %li.right-box--new 
-            = link_to "新規会員登録",new_user_registration_path
+            = link_to "新規会員登録",new_user_path

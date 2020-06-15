@@ -12,28 +12,28 @@ describe Identification do
     it " 苗字がない場合は登録できないこと" do
       identification = build(:identification, familyname: nil)
       identification.valid?
-      expect(identification.errors[:familyname]).to include("can't be blank")
+      expect(identification.errors[:familyname]).to include("を入力してください")
     end
 
     # 3
     it "名前がない場合は登録できないこと" do
       identification = build(:identification, firstname: nil)
       identification.valid?
-      expect(identification.errors[:firstname]).to include("can't be blank")
+      expect(identification.errors[:firstname]).to include("を入力してください")
     end
 
     # 4
     it "苗字のふりがながない場合は登録できないこと" do
       identification = build(:identification, familyname_kana: nil)
       identification.valid?
-      expect(identification.errors[:familyname_kana]).to include("can't be blank")
+      expect(identification.errors[:familyname_kana]).to include("を入力してください")
     end
 
     # 5
     it "名前のふりがながない場合は登録できないこと" do
       identification = build(:identification, firstname_kana: nil)
       identification.valid?
-      expect(identification.errors[:firstname_kana]).to include("can't be blank")
+      expect(identification.errors[:firstname_kana]).to include("を入力してください")
     end
 
     # 6
@@ -68,7 +68,7 @@ describe Identification do
     it "生年月日がないと登録できないこと" do
       identification = build(:identification, birth_date: nil)
       identification.valid?
-      expect(identification.errors[:birth_date]).to include("can't be blank")
+      expect(identification.errors[:birth_date]).to include("を入力してください")
     end
   end
 end
