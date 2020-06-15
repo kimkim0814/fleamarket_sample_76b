@@ -1,0 +1,18 @@
+.mypage
+  .mypage_container
+    .mypage_index
+      = render "mypages/side_content"
+    .l-content
+      .l-chapter-container
+        .l-chapter-container__head
+          支払い方法
+        .l-single-inner
+          %section.l-single
+            .l-single--content
+              .payment-list
+                クレジットカード情報
+              .form-content
+                %br
+              = "**** **** **** " + @default_card_information.last4
+              .expire__date
+                有効期限

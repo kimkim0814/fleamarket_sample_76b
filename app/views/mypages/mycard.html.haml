@@ -1,6 +1,6 @@
 .bread_crumbs
   .bread_crumbs__line
-    - breadcrumb :mycard
+    - breadcrumb :card
     = breadcrumbs separator: "#{content_tag(:i, '', class: 'fas fa-chevron-right')}", class: "breadcrumbs-list"
 .mypage
   .mypage_container
@@ -9,5 +9,5 @@
     .mycard
       .mycard__main
         .mycard__main__btn
-          = link_to "クレジットカード登録", "/"
+          = link_to "クレジットカード登録",'/cards/new', class: ''
           = render "layouts/item-sell"

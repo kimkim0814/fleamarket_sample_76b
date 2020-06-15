@@ -17,7 +17,7 @@ crumb :mycard do
   parent :mypages
 end
 
-# crumb :card do 
-#   link "クレジットカード情報入力", mypage_credit_register_path 
-#   parent :credit_enter
-# end
+crumb :card do 
+  link "クレジットカード情報入力", new_card_path
+  parent :mypages
+end
