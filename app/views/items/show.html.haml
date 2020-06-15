@@ -1,4 +1,4 @@
-.main
+.main-show
   .item-contents
     .item-box
       %h2.item-box__name
@@ -62,7 +62,7 @@
           不適切な商品情報
   .edit-delete-box
     - if @item.user.id == current_user.id
-      = link_to edit_item_path(@item), class:'item-change-btn' do
+      = link_to edit_item_path(@item), class:'item-edit-btn' do
         商品の編集
       %p or
       = link_to item_path(@item), method: :delete,class:'item-delete-btn' do
