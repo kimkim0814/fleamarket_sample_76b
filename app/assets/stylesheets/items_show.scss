@@ -1,6 +1,7 @@
 .main-show{
   padding: 40px;
   margin:0 auto;
+  background-color: #f8f8f8;
   .item-contents{
     width: 700px;
     margin: 0 auto;
@@ -127,4 +128,44 @@
       }
     }
   }
+  .edit-delete-box{
+    width: 700px;
+    background-color: white;
+    margin: 0 auto;
+    margin-top: 20px;
+    .item-edit-btn{
+      display: block;
+      width: 100%;
+      line-height: 48px;
+      font-size: 14px;
+      border-radius: 4px;
+      border: 1px solid transparent;
+      -webkit-transition: all ease-out .3s;
+      transition: all ease-out .3s;
+      cursor: pointer;
+      text-align: center;
+      background: red;
+      border: 1px solid red;
+      color: #fff;
+    }
+    p{
+      text-align: center;
+    }
+    .item-delete-btn{
+      display: block;
+    width: 100%;
+    line-height: 48px;
+    font-size: 14px;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    -webkit-transition: all ease-out .3s;
+    transition: all ease-out .3s;
+    cursor: pointer;
+    text-align: center;
+    background: #aaa;
+    border: 1px solid #aaa;
+    color: #fff;
+    }
+  }
+ 
 }
