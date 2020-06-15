@@ -9,7 +9,7 @@ class ItemsController < ApplicationController
   end
 
   def create
-    @item = Item.new(item_params)    
+    @item = Item.new(item_params)
     if @item.save
       redirect_to root_path
     else
@@ -48,6 +48,6 @@ class ItemsController < ApplicationController
       :days,
       :sold_day,
       images_attributes: [:image]
-    )
+    ).merge(user_id: current_user.id)
   end
 end

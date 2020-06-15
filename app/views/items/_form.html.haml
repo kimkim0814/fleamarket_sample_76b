@@ -18,7 +18,7 @@
           .product-body__main__form__image__boxes__form
             = f.fields_for :images do |i|
               = i.label :image, class: 'form__mask__image' do
-                -# = icon('fa', 'camera')
+                = icon('fa', 'camera')
                 = i.file_field :image, class: 'hidden'
 
         .product-body__main__form__image__del
