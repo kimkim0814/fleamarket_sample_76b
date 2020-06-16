@@ -2,19 +2,18 @@
   .mypage_container
     .mypage_index
       = render "mypages/side_content"
-    .l-content
-      .l-chapter-container
-        .l-chapter-container__head
-          支払い方法
-        .l-single-inner
-          %section.l-single
-            .l-single--content
-              .payment-list
-                クレジットカード情報
+    .card-main
+      .card-main__container
+        %h2.card-main__head
+          クレジットカード情報確認
+        .card-save-inner
+          %section.card-save-save
+            .card-save-save-content
               .form-content
+                カード情報確認
                 %br
               = "**** **** **** " + @default_card_information.last4
-              .expire__date
+              .expire__datex
                 有効期限
                 %br
             - exp_month = @default_card_information.exp_month.to_s
