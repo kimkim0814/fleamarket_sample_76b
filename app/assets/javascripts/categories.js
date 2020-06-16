@@ -29,7 +29,9 @@ $(function(){
       var idname = $(this).attr('id');
       // console.log(idname);
       
-      $(".child--"+idname).show(); 
+      var child = $("#"+ idname).find('.category__child');
+     
+      $(child).show(); 
     },
     function () {
       $(".category__child").hide(); 
@@ -40,9 +42,14 @@ $(function(){
     function () {
       var parent_id = $(this).parents('.category__parent').attr('id');
       var child_id = $(this).attr('id');
-      console.log(child_id);
-      
-      $(".grandchild--"+parent_id+"/"+child_id).show(); 
+      // console.log(parent_id);
+      // console.log(child_id);
+      // var child = $("#"+ parent_id).find('.category__child')
+      var grandchild = $("#"+ child_id).find(".category__grandchild");
+      console.log(grandchild.length)
+      // console.log('.grandchild--'+parent_id+'/'+child_id)
+      // $('.grandchild--'+parent_id+'/'+child_id).show(); 
+      $(grandchild).show(); 
     },
     function () {
       $(".category__grandchild").hide();

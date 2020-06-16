@@ -62,3 +62,8 @@ ladies_jacket.children.create [{:name=>"すべて"}, {:name=>"Tシャツ/カッ�
 # ladies_suit.children.create [{:name=>"すべて"}, {:name=>"Tシャツ/カットソー（半袖/袖なし）"},{:name=>"Tシャツ/カットソー（七分/長袖）"}]
 # ladies_maternity.children.create [{:name=>"すべて"}, {:name=>"Tシャツ/カットソー（半袖/袖なし）"},{:name=>"Tシャツ/カットソー（七分/長袖）"}]
 # ladies_other.children.create [{:name=>"すべて"}, {:name=>"Tシャツ/カットソー（半袖/袖なし）"},{:name=>"Tシャツ/カットソー（七分/長袖）"}]
+
+
+mens_tops = mens.children.create :name => 'トップス'
+mens_jacket = mens.children.create :name => 'ジャケット/アウター'
+mens_pants = mens.children.create :name => 'パンツ'
