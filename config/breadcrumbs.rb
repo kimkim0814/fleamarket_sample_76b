@@ -17,7 +17,7 @@ crumb :mycard do
   parent :mypages
 end
 
-crumb :card do 
+crumb :create do 
   link "クレジットカード情報入力", new_card_path
-  parent :mypages
+  parent :mycard
 end

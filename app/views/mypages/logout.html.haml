@@ -9,5 +9,5 @@
     .logout
       .logout__main
         .logout__main__btn
-          = link_to "ログアウト", destroy_user_session_path, method: "delete"
+          = link_to "ログアウト", destroy_user_session_path, method: "delete", class:"mypageslogout"
           = render "layouts/item-sell"

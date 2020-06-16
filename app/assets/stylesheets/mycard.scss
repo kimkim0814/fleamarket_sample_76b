@@ -12,6 +12,7 @@
 
   &__main {
     background-color:#3CCACE;
+    border-radius: 20px;
     width: 50%;
     height: 50px;
     left: 0;
@@ -20,14 +21,20 @@
     bottom :0;
     position: absolute;
     margin: auto; 
-    
     &__btn {
         width: 60%;
-        height: 50%;
+        height: 50px;
         background: #3CCACE;
         border: 10px solid #3CCACE;
         margin:0 auto;
+      .mypagescard {
+        color:white;
+        line-height: 30px;
         text-align: center;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
     }
   }
 }
