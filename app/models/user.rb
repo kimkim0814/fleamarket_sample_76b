@@ -13,7 +13,9 @@ class User < ApplicationRecord
   has_many :items
   has_many :sns_credentials
   has_many :favorites
-
+  def already_favorited?(item)
+    self.favorites.exists?(item_id: item.id)
+  end
   def self.from_omniauth(auth)
     sns = SnsCredential.where(provider: auth.provider, uid: auth.uid).first_or_create
     # sns認証したことがあればアソシエーションで取得

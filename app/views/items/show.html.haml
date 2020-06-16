@@ -50,23 +50,22 @@
             %td
               = @item.cost
           %tr
-            %th 発送日の目安
+            %th 発送日の目安ra
             %td
               = @item.days
       .item-box__option-area
         .item-box__option-area__like-btn
           %i.fa.fa-star 
-          ="お気に入り #{@item.favorites.count}"
-            -# - if current_user.already_liked(@item)
-            -#   = button_to '取り消し', item_like_path(@post), method: :delete
-            -# - else
-            -#   = button_to 'いいね', item_like_path(@post)
-
+          = "お気に入り #{@item.favorites.count}"
+          - if current_user.already_favorited?(@item)
+            = button_to '取り消し', item_favorite_path(@item), method: :delete
+          - else
+            = button_to 'いいね', item_favorites_path(@item)
         %a.item-box__option-area__optional-btn
           %i.fa.fa-flag
           不適切な商品情報
   .edit-delete-box
-    - if @item.user.id == current_user.id
+    - if @item.user.id == current_user.id 
       = link_to edit_item_path(@item), class:'item-edit-btn' do
         商品の編集
       %p or

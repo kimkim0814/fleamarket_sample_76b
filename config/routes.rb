@@ -17,10 +17,11 @@ Rails.application.routes.draw do
   resources :users, only: :new
   resources :items do
     resources :comments, only: :create
+    resources :favorites, only: [:create, :destroy]
   end
 
   resources :items  do
-    resources :likes, only: [:create, :destroy]
+
     get :itemsbuy
   end    
 end
