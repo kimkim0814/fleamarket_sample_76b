@@ -6,8 +6,10 @@
   .mypage_container
     .mypage_index
       = render "side_content"
-    .mycard
-      .mycard__main
-        .mycard__main__btn
-          = link_to "クレジットカード登録",'/cards/new', class: "mypagescard"
+    .mycard-main
+      .mycard-main__container
+        %h2.mycard-main__head
+          支払方法
+        .mycard-btn 
+          = link_to "クレジットカード登録", '/cards/new', class:"mycardcard"
           = render "layouts/item-sell"
