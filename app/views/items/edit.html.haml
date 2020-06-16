@@ -2,23 +2,20 @@
   .product-body__main
     = form_with(model: @item, local: true, url:item_path, class: "product-body__main__form") do |f|
       .product-body__main__form__image
-
         .product-body__main__form__image__set
           .product-body__main__form__image__set__title 出品画像
           .product-body__main__form__image__set__must 必須
         .product-body__main__form__image__text 1枚以上3枚までアップロードできます
-
         .product-body__main__form__image__box
           .item-image
-            %img.preview
-            %img.preview
-            %img.preview
-
+            - @item.images.each.with_index do |image|
+              = image_tag "#{image.image}", class: "preview"
         .product-body__main__form__image__boxes
           .product-body__main__form__image__boxes__form
             = f.label :image, class: 'form__mask__image' do
               = icon('fa', 'camera')
               = f.file_field :image, class: 'hidden'
+
 
         .product-body__main__form__image__del
           %button{type: "button", class: "btn"}削除
@@ -36,10 +33,10 @@
 
       .product-body__main__form__explanation
         .product-body__main__form__explanation__box
-          = f.label :explannation, "商品の説明",class: ".product-body__main__form__explanation__box__label"
+          = f.label :description, "商品の説明",class: ".product-body__main__form__explanation__box__label"
           .product-body__main__form__explanation__box__must 必須
         .product-body__main__form__explanation__field
-          = f.text_area :explannation, placeholder:"商品の説明（1,000文字以内で色、素材、重さ、定価、注意点などを記載して下さい)"
+          = f.text_area :description, placeholder:"商品の説明（1,000文字以内で色、素材、重さ、定価、注意点などを記載して下さい)"
 
 
 
