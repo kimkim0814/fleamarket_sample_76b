@@ -8,7 +8,7 @@ class CardsController < ApplicationController
       redirect_to card_path(current_user.id) if card.exists?
     end
 
-    def pay
+    def create
       Payjp.api_key = Rails.application.credentials.payjp[:PAYJP_PRIVATE_KEY]
       if params['payjp-token'].blank?
         redirect_to new_card_path
@@ -19,7 +19,7 @@ class CardsController < ApplicationController
       if @card.save
           redirect_to card_path(current_user.id)
       else
-          redirect_to pay_cards_path
+          redirect_to cards_path
       end
     end
   end
@@ -39,7 +39,7 @@ class CardsController < ApplicationController
     def show
       card = Card.find_by(user_id: current_user.id)
       if card.blank?
-        redirect_to card_path 
+        redirect_to new_card_path 
       else
         Payjp.api_key = Rails.application.credentials.payjp[:PAYJP_PRIVATE_KEY]
         customer = Payjp::Customer.retrieve(card.customer_id)
