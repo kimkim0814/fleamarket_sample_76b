@@ -10,17 +10,22 @@
           .item-image
             - @item.images.each.with_index do |image|
               = image_tag "#{image.image}", class: "preview"
-        .product-body__main__form__image__boxes
-          .product-body__main__form__image__boxes__form
-            = f.label :image, class: 'form__mask__image' do
-              = icon('fa', 'camera')
-              = f.file_field :image, class: 'hidden'
 
 
         .product-body__main__form__image__del
           %button{type: "button", class: "btn"}削除
           %button{type: "button", class: "btn"}削除
           %button{type: "button", class: "btn"}削除
+          -# %label{id: "image-label", action: request.path}
+          -#   .preview
+          -#     %i{class: "fas fa-camera"}
+          -#     .new-contents__box__image-area__text
+          -#       ドラックアンドドロップ
+          -#       %br
+          -#       または、クリックしてファイルをアップロード
+          -#   = f.fields_for :images do |i|
+          -#     = i.file_field :image, {class: "file_field"}
+          -#     = i.check_box :_destroy, {class: "hidden"}
 
 
 
