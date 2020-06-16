@@ -10,14 +10,21 @@
           = form.button type: "submit",class: "search-btn" do
             .search-btn__box
               = image_tag  "icon-search 1.png", class: "icon-search"
-
-
             
     .nav
       %ul.left-box
         %li.left-box--first 
-          = link_to "#" do
-            カテゴリー
+          = link_to "カテゴリー", "#" ,class: "category--header"
+          - @parents.each do |parent|
+            %div{class: "category__parent",id: "#{parent.id}"}
+              = link_to "#{parent.name}","#"
+              - parent.children.each do |child|
+                %div{class: "category__child",id: "child--#{child.ancestry}"}
+                  = link_to "#{child.name}","#" 
+                  - child.children.each do |grandchild|
+                    %div{class: "category__grandchild"}
+                      = link_to "#{grandchild.name}","#"
+
         %li.left-box--second 
           = link_to "#" do
             ブランド
