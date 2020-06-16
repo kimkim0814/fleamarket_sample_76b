@@ -12,6 +12,7 @@ class User < ApplicationRecord
   validates :email, {presence: true, format: { with: VALID_EMAIL_REGEX }, uniqueness: { case_sensitive: false }}
   has_many :items
   has_many :sns_credentials
+  has_many :favorites
 
   def self.from_omniauth(auth)
     sns = SnsCredential.where(provider: auth.provider, uid: auth.uid).first_or_create

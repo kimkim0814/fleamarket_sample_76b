@@ -20,6 +20,7 @@ Rails.application.routes.draw do
   end
 
   resources :items  do
+    resources :likes, only: [:create, :destroy]
     get :itemsbuy
   end    
 end

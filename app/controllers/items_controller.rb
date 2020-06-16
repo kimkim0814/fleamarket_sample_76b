@@ -5,9 +5,8 @@ class ItemsController < ApplicationController
   end
 
   def show
-
     @comment = Comment.new
-
+    @favorite = Favorite.new
   end
   def itemsbuy
   end
