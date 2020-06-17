@@ -20,6 +20,10 @@
         &--field{
           @include field;
         }
+        span{
+          @include require--btn;
+        }
+       
       }
       &__email{
         @include user-form;
@@ -28,6 +32,9 @@
         }
         &--field{
           @include field;
+        }
+        span{
+          @include require--btn;
         }
       }
       &__password{
@@ -38,6 +45,9 @@
         &--field{
           @include field;
         }
+        span{
+          @include require--btn;
+        }
       }
       &__confirmation{
         @include user-form;
@@ -46,6 +56,9 @@
         }
         &--field{
           @include field;
+        }
+        span{
+          @include require--btn;
         }
       }
     }

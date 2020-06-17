@@ -17,25 +17,31 @@
       justify-content: space-evenly;
       .field{
         &__familyname{
-          width: 25%;
-          margin-left: 15%;
+          width: 35%;
+          // margin-left: 15%;
           padding: 10px 0;
           &--label{
             @include label;
           }
           &--field{
             @include field;
+          }
+          span{
+            @include require--btn;
           }
         }
         &__firstname{
-          width: 25%;
-          margin-right: 15%;
+          width: 35%;
+          // margin-right: 15%;
           padding: 10px 0;
           &--label{
             @include label;
           }
           &--field{
             @include field;
+          }
+          span{
+            @include require--btn;
           }
         }
       }
@@ -46,25 +52,46 @@
       justify-content: space-evenly;
       .field{
         &__familyname_kana{
-          width: 25%;
-          margin-left: 15%;
+          position: relative;
+          width: 35%;
+          // margin-left: 15%;
           padding: 10px 0;
           &--label{
             @include label;
+            white-space: nowrap
+            
           }
           &--field{
             @include field;
+          }
+          span{
+            @include require--btn;
+            top: 6px;
+            left: 135px;
+            width: 43px;
+            height: 22px;
+            line-height: 14px;
           }
         }
         &__firstname_kana{
-          width: 25%;
-          margin-right: 15%;
+          position: relative;
+          width: 35%;
+          // margin-right: 15%;
           padding: 10px 0;
           &--label{
             @include label;
           }
           &--field{
             @include field;
+          }
+          span{
+            @include require--btn;
+            position: absolute;
+            top: 6px;
+            left: 135px;
+            width: 43px;
+            height: 22px;
+            line-height: 14px;
           }
         }
       }
@@ -89,12 +116,15 @@
           height: 43px;
           width: 50px;
         }
-        span{
+        &--date{
           position: absolute;
           top: 50px;
           left: 50px;
           top: 44px;
           left: 261px;
+        }
+        &--require{
+          @include require--btn;
         }
       }
     }

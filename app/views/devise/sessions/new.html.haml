@@ -1,14 +1,18 @@
 .login_main
   .login_main__container
     %h2.user_main__container--title
-      ログイン
+      ログイン  
     = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+      - flash.each do |name, msg| 
+        = content_tag :div, msg, id: "flash_#{name}" 
       .field__email
         = f.label :Email, class:"field__email--label"
+        %span 必須
         %br/
         = f.email_field :email, autofocus: true, autocomplete: "email", class:"field__email--field",placeholder: "　例）xxx@xxx.xxx"
       .field__password
         = f.label :パスワード, class:"field__password--label"
+        %span 必須
         %br/
         = f.password_field :password, autocomplete: "current-password", class:"field__password--field",placeholder: " 　7文字以上の英数字"
       .actions.login_submit
