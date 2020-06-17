@@ -18,15 +18,16 @@
           %ul.category__parents
             - @parents.each do |parent|
               %li{class: "category__parent", id: "#{parent.id}"}
-                = link_to "#{parent.name}","#"
+                = link_to "#{parent.name}", "/categories/#{parent.id}", method: :get
                 %ul.category__children
                   - parent.children.each do |child|
                     %li.category__child{class: "child--#{child.ancestry}" ,id: "#{child.id}"}
-                      = link_to "#{child.name}","#" 
+                      = link_to "#{child.name}", "/categories/#{child.id}", method: :get
                       %ul.category__grandchildren
                         - child.children.each do |grandchild|
                           %ul.category__grandchild{class: "grandchild--#{grandchild.ancestry}"}
                             = link_to "#{grandchild.name}","#"
+
 
         %li.left-box--second 
           = link_to "#" do

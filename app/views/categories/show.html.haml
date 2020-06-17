@@ -1,0 +1,25 @@
+.categories__title
+ 
+= @category.name
+%br
+%br
+%br
+  - @category.children.each do |child|
+    = link_to "#{child.name}", ""
+%br
+%br
+
+
+-# - @parents.each do |parent|
+-#   %li
+-#     = parent.name
+-#     %ul
+-#       - parent.children.each do |child|
+-#         %li
+-#           = child.name
+-#           %ul
+-#             - child.children.each do |grandchild|
+-#               %ul
+-#                 = grandchild.name
+
+

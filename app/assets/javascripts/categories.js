@@ -18,7 +18,6 @@ $(function(){
     function () {
       var id = $(this).attr('id');
       var child = $("#"+ id).find('.category__child');
-     
       $(child).show(); 
     },
     function () {
@@ -30,7 +29,6 @@ $(function(){
     function () {
       var id = $(this).attr('id');
       var grandchild = $("#"+ id).find(".category__grandchild");
-      console.log(grandchild.length)
       $(grandchild).show(); 
     },
     function () {

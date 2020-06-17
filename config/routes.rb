@@ -10,6 +10,8 @@ Rails.application.routes.draw do
     get 'addresses', to: 'users/registrations#new_address', as: :new_address
     post 'addresses', to: 'users/registrations#create_address'
   end
+  resources :categories, only: [:index, :show]
+  resources :categories, only:  :show
   root 'items#index'
   get 'mypages/index'
   get 'mypages/logout'
@@ -22,5 +24,4 @@ Rails.application.routes.draw do
   resources :items  do
     get :itemsbuy
   end    
-  resources :categories, only: :index
 end
