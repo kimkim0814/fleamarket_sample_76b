@@ -1,116 +1,132 @@
 *{
   box-sizing:border-box;
 }
-.itembuy_main_contents{
-  height: 700px;
-  width: 700px;
-  margin: 0 auto;
 
-.itembuy_main_contents_border{
-    height: 12%;
-    width: 100%;
-    text-align: center;
-    border-bottom: solid 3px rgb(218, 234, 240);
-    .title1{
-      line-height: 90px;
-      }
-  }
-  
-.itembuy_content{
-  width: 100%;
-  height: 20%;
-  border-bottom: solid 2px rgb(218, 234, 240);
+.purchase-main {
   display: flex;
+  padding-top: 40px;
+  &__container {
+    width: 700px;
+    margin: 0 auto;
+    .purchase-main__head {
+      font-size: 24px;
+      padding: 8px 24px;
+      text-align: center;
+      font-weight: bold;
+      border-bottom: 2px solid rgb(218, 234, 240);
+    }
+  }
+.purchase-input-contents {
+  padding: 24px 16px 0px;
+  border-top: 1px solid rgb(218, 234, 240);;
+  display: block;
+  .purchase-input-content {
+    max-width: 310px;
+    margin: 0 auto;
+  }
 }
-
-.itembuy_content_in{
-  height: 75px;
-  width: 350px;
-  margin: auto;
-  align-items: center;
+.buy-item-main {
   display: flex;
-  &__left{
-    width: 75px;
-    height: 75px;
-    border: solid 1px rgb(218, 234, 240);
-    align-items: flex-start;
-  }
-  &__right{
-    height: 75px;
-    width: 275px;
-  }
-}
-
-.itembuy,.money {
-  height: 60%;
-  margin-left: 20px;
-  }
-}
-
-.pay_contents{
-  width: 100%;
-  height: 70%;
-  &__in{
-    height: 100%;
-    width: 350px;
-    margin: auto;
-  }
-
-.pay_contents_charge{
-  height: 28%;
-  border-bottom: solid 2px rgb(218, 234, 240);
-  &__pay1{
-    height: 50%;
+  margin-bottom:20px;
+  .buy-item-image {
+    max-width: 100px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
   }
-  &__pay2{
-    height: 50%;
+.buy-item-detail {
+  margin-left: 50px;
+  margin-top:20px;
+  text-align: left;
+  line-height: 1.5;
+  .buy-item-name {
+    font-size: 14px;
+    }
+  }
+}
+  form {
     display: block;
   }
-}
-
-.payment{
-  font-size: 20px;
-  margin-top: 20px;
-}
-.totalmoney{
-  font-size: 30px;
-  margin-top: 20px;
-}
-.points{
-  float: right;
-  margin-top: -20px;
-  margin-right: 90px;
-}
-
-.pay_box_itembuy{
-  height: 24%;
-  border-bottom: solid 2px rgb(218, 234, 240);
-}
-  
-.pay_top{
-  height: 50%;
-  position: relative;
-  &__text{
-    height: 20px;
-    position: absolute;
-    bottom: 0;
+    .buy-form {
+      max-width: 340px;
+      margin: 0 auto;
+      .buy-price {
+        margin: 0;
+        text-align: left;
+        font-size: 15px;
+        font-weight: 600;
+        span {
+          font-size: 15px;
+          font-weight: 400;
+        }
+      } 
+      .buy-price-table {
+        display: flex;
+        width: 100%;
+        margin-top:10px;
+        font-weight: bold;
+        &__left {
+          padding: 24px 0 0;
+          flex: 18px;
+          width: 50%;
+          text-align: left;
+        }
+        &__right {
+          padding: 16px 0;
+          font-size: 28px;
+          width: 50%;
+          text-align: right;
+          font-weight: 600;
+        }
+      } 
+    }
+  .buy-content__user-info {
+    margin: 0 70px;
+    &__inner {
+      margin: 0;
+    }
   }
-}
-
-.pay_box_btn{
-  height: 24%;
-}
-
-.btn_buy{
-  height: 50px;
-  width: 100%;
-  margin-top: 35px;
-  background-color:#3CCACE;;
-  color: white;
-  font-size: 15px;
+  h3{
+    font-size:15px;
+    font-weight:400;
+    margin-top:20px;
   }
+      .user-info-update {
+        font-size: 10px;
+        text-align: right;
+      }
+      .user-info-text{
+        font-size: 13px;
+        text-align: left;
+        margin-bottom:40px;
+      }
+        a {
+          width:70px;
+          height:5x;
+          color:#3CCACE;
+          font-size: 15px;
+          cursor: pointer;
+        }
+        .update-btn:hover {
+          text-decoration: underline;
+          opacity: 0.6;
+        }
+.buy-button {
+    font-weight: bold;
+    margin-top: 30px;
+    background: #3CCACE;
+    border: 1px solid #ccc;
+    color: #fff;
+    height:45px;
+    width: 100%;
+    font-size: 18px;
+    border-radius: 25px;
+    cursor: pointer;
+  }
+.item-buy-btn__destroy{
+    text-decoration: none;
+    color: white;
+    padding-left: 30px;
+    padding-right: 30px;  
+    }
 }
-
-  
