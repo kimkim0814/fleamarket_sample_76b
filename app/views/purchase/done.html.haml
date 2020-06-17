@@ -1,0 +1,27 @@
+%h1.buy-content__attention
+        %i.far.fa-clock
+          発送をお待ちください
+        %h2.buy-content__attention__title
+          購入が完了しました
+        .buy-content__item
+          .buy-content__item__inner
+            .buy-item-main
+              .buy-item-image
+                = image_tag "#{@item.images[0].url}", size: '64x64', class: 'buydetails-contet__image'
+              .buy-item-detail
+                .buy-item-name
+                  = @item.name
+                  %p.buy-price
+                    %span 
+                      = "¥#{@item.price.to_s}"
+                    %span
+                      .shipping-free (税込) 送料込み
+        .buy-content__item
+          %form.buy-form
+            .buy-price-table
+              .buy-price-table__left
+                支払金額
+              .buy-price-table__right
+                = "¥#{@item.price.to_s}"
+            .buy-content__user-info__submit
+              = link_to "トップページへ戻る", root_path, class: 'buy-content__user-info__submit__button'
