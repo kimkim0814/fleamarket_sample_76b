@@ -88,3 +88,36 @@ mens_11.children.create [{:name=>"一般水着"},{:name=>"スポーツ用"},{:na
 mens_12.children.create [{:name=>"ソックス"},{:name=>"レギンス/スパッツ"},{:name=>"レッグウォーマー"},{:name=>"その他"}]
 mens_13.children.create [{:name=>"トランクス"},{:name=>"ボクサーパンツ"},{:name=>"その他"}]
 
+# baby 子要素
+baby_1 = baby.children.create :name => 'ベビー服(女の子用) ~95cm'
+baby_2 = baby.children.create :name => 'ベビー服(男の子用) ~95cm'
+baby_3 = baby.children.create :name => 'ベビー服(男女兼用) ~95cm'
+baby_4 = baby.children.create :name => 'キッズ服(女の子用) 100cm~'
+baby_5 = baby.children.create :name => 'キッズ服(男の子用) 100cm~'
+baby_6 = baby.children.create :name => 'キッズ服(男女兼用) 100cm~'
+baby_7 = baby.children.create :name => 'キッズ靴'
+baby_8 = baby.children.create :name => '子ども用ファッション小物'
+baby_9 = baby.children.create :name => 'おむつ/トイレ/バス'
+baby_10 = baby.children.create :name => '外出/移動用品'
+baby_11 = baby.children.create :name => '授乳/食事'
+baby_12 = baby.children.create :name => 'ベビー家具/寝具/室内用品'
+baby_13 = baby.children.create :name => 'おもちゃ'
+baby_14 = baby.children.create :name => '行事/記念品'
+baby_15 = baby.children.create :name => 'その他'
+
+# baby 子要素
+baby_1.children.create [{:name=>"トップス"},{:name=>"アウター"},{:name=>"パンツ"},{:name=>"スカート"},{:name=>"ワンピース"},{:name=>"ベビードレス"},{:name=>"おくるみ"},{:name=>"下着/肌着"},{:name=>"パジャマ"},{:name=>"ロンパース"},{:name=>"その他"}]
+baby_2.children.create [{:name=>"トップス"},{:name=>"アウター"},{:name=>"パンツ"},{:name=>"おくるみ"},{:name=>"下着/肌着"},{:name=>"パジャマ"},{:name=>"ロンパース"},{:name=>"その他"}]
+baby_3.children.create [{:name=>"トップス"},{:name=>"アウター"},{:name=>"パンツ"},{:name=>"おくるみ"},{:name=>"下着/肌着"},{:name=>"パジャマ"},{:name=>"ロンパース"},{:name=>"その他"}]
+baby_4.children.create [{:name=>"コート"},{:name=>"ジャケット/上着"},{:name=>"トップス(Tシャツ/カットソー)"},{:name=>"トップス(トレーナー)"},{:name=>"トップス(チュニック)"},{:name=>"トップス(タンクトップ)"},{:name=>"トップス(その他)"},{:name=>"スカート"},{:name=>"パンツ"},{:name=>"ワンピース"},{:name=>"セットアップ"},{:name=>"パジャマ"},{:name=>"フォーマル/ドレス"},{:name=>"和服"},{:name=>"浴衣"},{:name=>"甚平"},{:name=>"水着"},{:name=>"その他"}]
+baby_5.children.create [{:name=>"コート"},{:name=>"ジャケット/上着"},{:name=>"トップス(Tシャツ/カットソー)"},{:name=>"トップス(トレーナー)"},{:name=>"トップス(その他)"},{:name=>"パンツ"},{:name=>"セットアップ"},{:name=>"パジャマ"},{:name=>"フォーマル/ドレス"},{:name=>"和服"},{:name=>"浴衣"},{:name=>"甚平"},{:name=>"水着"},{:name=>"その他"}]
+baby_6.children.create [{:name=>"コート"},{:name=>"ジャケット/上着"},{:name=>"トップス(Tシャツ/カットソー)"},{:name=>"トップス(トレーナー)"},{:name=>"トップス(その他)"},{:name=>"ボトムス"},{:name=>"パジャマ"},{:name=>"その他"}]
+baby_7.children.create [{:name=>"スニーカー"},{:name=>"サンダル"},{:name=>"ブーツ"},{:name=>"長靴"},{:name=>"その他"}]
+baby_8.children.create [{:name=>"靴下/スパッツ"},{:name=>"帽子"},{:name=>"エプロン"},{:name=>"サスペンダー"},{:name=>"タイツ"},{:name=>"ハンカチ"},{:name=>"バンダナ"},{:name=>"ベルト"},{:name=>"マフラー"},{:name=>"傘"},{:name=>"手袋"},{:name=>"スタイ"},{:name=>"バッグ"},{:name=>"その他"}]
+baby_9.children.create [{:name=>"おむつ用品"},{:name=>"おまる/補助便座"},{:name=>"トレーニングパンツ"},{:name=>"ベビーバス"},{:name=>"お風呂用品"},{:name=>"その他"}]
+baby_10.children.create [{:name=>"ベビーカー"},{:name=>"抱っこひも/スリング"},{:name=>"チャイルドシート"},{:name=>"その他"}]
+baby_11.children.create [{:name=>"ミルク"},{:name=>"ベビーフード"},{:name=>"ベビー用食器"},{:name=>"その他"}]
+baby_12.children.create [{:name=>"ベッド"},{:name=>"布団/毛布"},{:name=>"イス"},{:name=>"たんす"},{:name=>"その他"}]
+baby_13.children.create [{:name=>"おふろのおもちゃ"},{:name=>"がらがら"},{:name=>"オルゴール"},{:name=>"ベビージム"},{:name=>"手押し車/カタカタ"},{:name=>"知育玩具"},{:name=>"その他"}]
+baby_14.children.create [{:name=>"お宮参り用品"},{:name=>"お食い初め用品"},{:name=>"アルバム"},{:name=>"手形/足形"},{:name=>"その他"}]
+baby_15.children.create [{:name=>"母子手帳用品"},{:name=>"その他"}]
