@@ -6,18 +6,22 @@
       = render "devise/shared/error_messages", resource: @address
       .field__postcode
         = f.label :郵便番号, class:"field__postcode--label"
+        %span 必須
         %br/
         = f.text_field :postcode, autofocus: true, autocomplete: "postcode",placeholder: "　例）000-0000", class:"field__postcode--field"
       .field__prefecture_code
         = f.label :都道府県, class:"fieldprefecture_code--label"
+        %span 必須
         %br/
         = f.collection_select :prefecture_code, JpPrefecture::Prefecture.all, :code, :name, prompt:"-----"
       .field__address_city
         = f.label :市町村, class:"field__address_city--label"
+        %span 必須
         %br/
         = f.text_field :address_city, autofocus: true, autocomplete: "address_city",placeholder: "　入力してください", class:"field__address_city--field"
       .field__address_street
         = f.label :番地, class:"field__address_street--label"
+        %span 必須
         %br/
         = f.text_field :address_street, autofocus: true, autocomplete: "address_street",placeholder: "　入力してください", class:"field__address_street--field"
       .field__address_building
