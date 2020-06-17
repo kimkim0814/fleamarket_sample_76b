@@ -34,15 +34,9 @@ Rails.application.routes.draw do
     end
   end
   
+  resources :items do
+    resources :comments, only: :create
+  end  
+
 end
-
-  # resources :items do
-  #   resources :comments, only: :create
-  # end
-
-  # resources :items  do
-  #   get :itemsbuy
-  # end    
-
-
 

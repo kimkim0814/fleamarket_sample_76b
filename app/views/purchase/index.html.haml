@@ -6,19 +6,20 @@
       .purchase-input-content
         .buy-item-main
           .buy-item-image 
-            = image_tag 'rip.png' ,width: 75,height: 75
+            = image_tag "#{@item.images[0].image}", size: '75x75', class: 'buy-contet__image'
           .buy-item-detail
             .buy-item-name 
-              ディオールリップ
-              %p.buy-price 
-              %span.shipping-free 3450円(税込) 送料込み
+              = @item.name
+              %p.buy-price
+                = "#{@item.price.to_s}円"
+                %span.shipping-free (税込) 送料込み
       .purchase-input-contents
         %form.buy-form
           .buy-price-table
             .buy-price-table__left
               支払金額
             .buy-price-table__right
-              3450円
+              = "#{@item.price.to_s}円"
       .buy-content__user-info
         .buy-content__user-info__inner
           %br
@@ -47,5 +48,6 @@
             %br
             名古屋 嬢
             %br
-            -# = form_tag(action: :create , method: :post) do
-            %button.buy-button{type:"submit"} 購入する
+            = form_tag(action: :create, method: :post) do
+              %button.buy-button{type:"submit"} 購入する 
+

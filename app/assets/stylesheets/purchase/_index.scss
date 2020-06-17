@@ -21,13 +21,15 @@
   border-top: 1px solid rgb(218, 234, 240);;
   display: block;
   .purchase-input-content {
-    max-width: 310px;
+    max-width: 700px;
+    padding-left:150px;
     margin: 0 auto;
   }
 }
 .buy-item-main {
   display: flex;
   margin-bottom:20px;
+
   .buy-item-image {
     max-width: 100px;
     display: flex;
@@ -90,6 +92,7 @@
     font-size:15px;
     font-weight:400;
     margin-top:20px;
+    text-decoration: underline;
   }
       .user-info-update {
         font-size: 10px;

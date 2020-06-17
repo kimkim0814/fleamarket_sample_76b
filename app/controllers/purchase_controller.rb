@@ -1,9 +1,8 @@
 class PurchaseController < ApplicationController
-  require 'payjp'#Payjpの読み込み
-  before_action :set_card
+  require 'payjp'
+  before_action :set_card, :set_item
 
   def index
-    # @card = Card.where(user: current_user).first if Card.where(user: current_user).present?
     if @card.blank?
       redirect_to new_card_path 
     else
@@ -14,14 +13,14 @@ class PurchaseController < ApplicationController
   end
 
 
-  def pay
-    Payjp.api_key = Rails.application.credentials[:PAYJP_PRIVATE_KEY]
+  def create
+    Payjp.api_key = Rails.application.credentials.payjp[:PAYJP_PRIVATE_KEY]
     Payjp::Charge.create(
-      :amount => @item.price, #支払金額を引っ張ってくる
-      :customer => @card.customer_id,  #顧客ID
-      :currency => 'jpy',              #日本円
+      :amount => @item.price, 
+      :customer => @card.customer_id,  
+      :currency => 'jpy',             
     )
-    redirect_to done_item_buyers_path #完了画面に移動
+    redirect_to done_item_purchase_index_path #完了画面に移動
   end
 
   def done
@@ -33,8 +32,8 @@ class PurchaseController < ApplicationController
     @card = Card.find_by(user_id: current_user.id)
   end
 
-  # def set_item
-  #   @item = Item.find(params[:item_id])
-  # end
+  def set_item
+    @item = Item.find(params[:item_id])
+  end
 
 end
