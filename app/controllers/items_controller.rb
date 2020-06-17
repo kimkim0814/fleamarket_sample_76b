@@ -1,8 +1,6 @@
 class ItemsController < ApplicationController
   def index
     @items = Item.includes(:images).order(updated_at: "DESC")
-    @parents = Category.all.order("id ASC").limit(4)
-    
   end
 
   def show

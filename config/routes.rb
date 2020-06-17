@@ -22,4 +22,5 @@ Rails.application.routes.draw do
   resources :items  do
     get :itemsbuy
   end    
+  resources :categories, only: :
 end
