@@ -1,16 +1,17 @@
 class PurchaseController < ApplicationController
   require 'payjp'#Payjpの読み込み
+  before_action :set_card
 
   def index
-    # if @card.blank?
-    #   redirect_to new_card_path 
-    # else
-    #   Payjp.api_key = Rails.application.credentials.payjp[:PAYJP_PRIVATE_KEY]
-    #   #保管した顧客IDでpayjpから情報取得
-    #   customer = Payjp::Customer.retrieve(@card.customer_id) 
-    #   #カード情報表示のためインスタンス変数に代入
-    #   @default_card_information = customer.cards.retrieve(@card.card_id)
+    # @card = Card.where(user: current_user).first if Card.where(user: current_user).present?
+    if @card.blank?
+      redirect_to new_card_path 
+    else
+      Payjp.api_key = Rails.application.credentials.payjp[:PAYJP_PRIVATE_KEY]
+      customer = Payjp::Customer.retrieve(@card.customer_id) 
+      @default_card_information = customer.cards.retrieve(@card.card_id)
     end
+  end
 
   def create
     Payjp.api_key = Rails.application.credentials.payjp[:PAYJP_PRIVATE_KEY]
@@ -24,5 +25,16 @@ class PurchaseController < ApplicationController
 
 
   def done
+  end
+
+
+  private
+
+  def set_card
+    @card = Card.find_by(user_id: current_user.id)
+  end
+
+  def set_item
+    @item = Item.find(params[:id])
   end
 end
