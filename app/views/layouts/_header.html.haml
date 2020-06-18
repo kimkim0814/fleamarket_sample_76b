@@ -1,4 +1,4 @@
-.header
+.header#top
   .header__Inner
     .main-header
       %h1.icon
@@ -17,15 +17,15 @@
           = link_to "カテゴリー", "#" ,class: "category--header"
           %ul.category__parents
             - @parents.each do |parent|
-              %li{class: "category__parent", id: "#{parent.id}"}
+              %li.category__parent{id: "#{parent.id}"}
                 = link_to "#{parent.name}", "/categories/#{parent.id}", method: :get
                 %ul.category__children
                   - parent.children.each do |child|
-                    %li.category__child{class: "child--#{child.ancestry}" ,id: "#{child.id}"}
+                    %li.category__child{id: "#{child.id}"}
                       = link_to "#{child.name}", "/categories/#{child.id}", method: :get
                       %ul.category__grandchildren
                         - child.children.each do |grandchild|
-                          %ul.category__grandchild{class: "grandchild--#{grandchild.ancestry}"}
+                          %ul.category__grandchild
                             = link_to "#{grandchild.name}", "/categories/#{grandchild.id}", method: :get
 
 

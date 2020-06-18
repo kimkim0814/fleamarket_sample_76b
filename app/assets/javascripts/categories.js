@@ -1,5 +1,9 @@
 $(function(){
   
+  $(".category__parent").hide(); 
+  $(".category__child").hide(); 
+  $(".category__grandchild").hide(); 
+
   $(".left-box--first").hover(
     function () {
       $(".category__parent").show(); 

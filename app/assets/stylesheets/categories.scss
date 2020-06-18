@@ -29,6 +29,9 @@
       padding-right:30px;
       line-height: 45px;
       word-break: keep-all;
+      &--top{
+        color: black;
+      }
     }
     &__box{
       padding-left: 20px;
@@ -45,7 +48,25 @@
   }
 }
 .categories_list{
+  padding-left: 250px;
+  background-color: #f8f8f8;
+  overflow:hidden;
   .categories_list__btn{
-
+    height: 50px;
+    width: 185px;
+    border-radius: 5px;
+    text-align: center;
+    float: left;
+    box-shadow: 0 0 5px rgba(0,0,0,0.4);
+    margin: 20px;
+    padding: 20px;
+    line-height: 10px;
+    a{
+      color: black;
+    }
   }
+  .categories_list__btn:hover{
+    background-color: #3CCACE;
+  }
+  
 }

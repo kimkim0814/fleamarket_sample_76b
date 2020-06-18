@@ -3,12 +3,12 @@
     - breadcrumb :categories
     = breadcrumbs separator: "#{content_tag(:i, '', class: 'fas fa-chevron-right')}", class: "breadcrumbs-list"
 .categories_list
-  - @parents.each do |parent|
+  - @parents.each_with_index do |parent,i|
     .categories_list__btn
-      = link_to "#{parent.name}" , { anchor: "#{parent.name}" }
-- @parents.each do |parent|      
-  .categories__container{id: "#{parent.name}"}
-    .categories__container__title
+      = link_to "#{parent.name}" , "#categories--#{i}"
+- @parents.each_with_index do |parent,i|      
+  .categories__container
+    .categories__container__title{id: "categories--#{i}"}
       #{parent.name}の商品一覧
     .categories__container__list
       - parent.children.each do |child|
@@ -17,4 +17,9 @@
         .categories__container__list__box
           - child.children.each do |grandchild|
             = link_to "#{grandchild.name}", "/categories/#{grandchild.id}", method: :get, class: "categories__container__list__box--link"
-      %h1 ページトップへ
+      .categories__container__top
+        = link_to "categories",class: "categories__container__top--link" do
+          = icon('far', 'address-book', class: 'strong')  
+          %p ページトップへ
+          
+        
