@@ -39,4 +39,10 @@ $(function(){
       $(this).css("color","#333")
     }
   );
+
+  $('categories_list--btn').on('click', function(){ 
+    window.location.href = $(this).attr('href');
+    window.location.reload();
+  });
+  
 });

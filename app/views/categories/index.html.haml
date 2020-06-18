@@ -1,12 +1,20 @@
-%ul
+.bread_crumbs
+  .bread_crumbs__line
+    - breadcrumb :categories
+    = breadcrumbs separator: "#{content_tag(:i, '', class: 'fas fa-chevron-right')}", class: "breadcrumbs-list"
+.categories_list
   - @parents.each do |parent|
-    %li
-      = link_to "#{parent.name}", "/categories/#{parent.id}", method: :get
-      %ul
-        - parent.children.each do |child|
-          %li
-            = link_to "#{child.name}", "/categories/#{child.id}", method: :get
-            %ul
-              - child.children.each do |grandchild|
-                %ul
-                  = link_to "#{grandchild.name}", "/categories/#{grandchild.id}", method: :get
+    .categories_list__btn
+      = link_to "#{parent.name}" , { anchor: "#{parent.name}" }
+- @parents.each do |parent|      
+  .categories__container{id: "#{parent.name}"}
+    .categories__container__title
+      #{parent.name}の商品一覧
+    .categories__container__list
+      - parent.children.each do |child|
+        %h1.categories__container__list__title
+          = child.name
+        .categories__container__list__box
+          - child.children.each do |grandchild|
+            = link_to "#{grandchild.name}", "/categories/#{grandchild.id}", method: :get, class: "categories__container__list__box--link"
+      %h1 ページトップへ

@@ -17,6 +17,16 @@ crumb :card do
   parent :mypages
 end
 
+crumb :categories do 
+  link "カテゴリー一覧",  categories_path
+  parent :root
+end
+
+crumb :categories_show do 
+  link "#{@category.name}" ,"/categories/#{@category.id}"
+  parent :categories
+end
+
 # crumb :card do 
 #   link "クレジットカード情報入力", mypage_credit_register_path 
 #   parent :credit_enter

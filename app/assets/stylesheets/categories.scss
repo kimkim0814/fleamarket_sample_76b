@@ -19,6 +19,10 @@
     border-radius: 0 0 5px 5px;
     margin: 0 auto;
     padding: 20px;
+    &__title{
+      font-weight: bold;
+      padding-top: 30px;
+    }
     &--link{
       color: #ffb340;
       font-size: 14px;
@@ -26,5 +30,22 @@
       line-height: 45px;
       word-break: keep-all;
     }
+    &__box{
+      padding-left: 20px;
+      overflow:hidden;
+      &--link{
+      color: #ffb340;
+      font-size: 14px;
+      line-height: 45px;
+      width: 50%;
+      display: inline-block;
+      float: left;
+      }
+    }
+  }
+}
+.categories_list{
+  .categories_list__btn{
+
   }
 }
