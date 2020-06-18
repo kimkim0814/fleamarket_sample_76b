@@ -6,7 +6,7 @@ class ItemsController < ApplicationController
   def show
     @item = Item.find(params[:id])
     @comment = Comment.new
-
+    @category = Category.find(params[:id])
   end
   def itemsbuy
   end
