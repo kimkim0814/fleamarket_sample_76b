@@ -1,5 +1,9 @@
 # README
 fleamarket_sample_76b DB設計
+
+<img width="927" alt="スクリーンショット 2020-06-12 12 32 20" src="https://user-images.githubusercontent.com/64791353/84462767-d1a6aa80-acaa-11ea-8023-752229816f91.png">
+
+
 ## Items テーブル
 |Column|Type|Options|
 |------|----|-------|
@@ -85,6 +89,16 @@ fleamarket_sample_76b DB設計
 - belongs_to :user
 - belongs_to :identification
 
+## Sns_credentialsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|provider|string||
+|uid|string||
+|user| references| foreign_key:true|
+
+
+### Association
+- belongs_to :user
 
 
 ## Cardsテーブル
@@ -114,8 +128,8 @@ fleamarket_sample_76b DB設計
 ## Categorysテーブル
 |Column|Type|Options|
 |------|----|-------|
+|name|string|null;false|
 |ancestry|string||
-|item_id(商品名)|string|null;false,foreign_key:true |
 ### Association
 - has_many :items
 - has_ancestry
@@ -136,7 +150,7 @@ fleamarket_sample_76b DB設計
 |Column|Type|Options|
 |------|----|-------|
 |image|string|null:false|
-
+|item_id|references|null: false, foreign_key: true |
 
 ### Association
 - belongs_to :item

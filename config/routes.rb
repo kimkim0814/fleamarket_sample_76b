@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   get 'purchase/index'
   get 'purchase/done'
   devise_for :users, controllers: {
+    omniauth_callbacks: 'users/omniauth_callbacks',
     registrations: 'users/registrations',
     sessions: 'users/sessions',
   }
@@ -38,5 +39,18 @@ Rails.application.routes.draw do
     resources :comments, only: :create
   end  
 
+end
+
+  get 'mypages/card'
+  resources :users, only: :new
+  resources :items do
+    resources :comments, only: :create
+    resources :favorites, only: [:create, :destroy]
+  end
+
+  resources :items  do
+
+    get :itemsbuy
+  end    
 end
 

@@ -1,3 +1,4 @@
+
 .identification_main{
   background-color: #f8f8f8;
   width: 100%;
@@ -6,14 +7,9 @@
     background-color: white;
     margin: 0 auto;
     width: 50%;
-    padding-bottom: 50px;
+    padding-bottom: 120px;
     &--title{
-    font-size: 22px;
-    padding: 32px;
-    line-height: 1.5;
-    text-align: center;
-    border-bottom: 1px solid #f8f8f8;
-    font-weight: bold;
+      @include title;
     }
     &__name{
       width: 100%;
@@ -21,31 +17,31 @@
       justify-content: space-evenly;
       .field{
         &__familyname{
-          width: 25%;
-          margin-left: 15%;
+          width: 35%;
+          // margin-left: 15%;
           padding: 10px 0;
           &--label{
-            font-size: 15px;
-            font-weight: bold;
+            @include label;
           }
           &--field{
-            padding-left: 5px;
-            height: 43px;
-            width: 100%;
+            @include field;
+          }
+          span{
+            @include require--btn;
           }
         }
         &__firstname{
-          width: 25%;
-          margin-right: 15%;
+          width: 35%;
+          // margin-right: 15%;
           padding: 10px 0;
           &--label{
-            font-size: 15px;
-            font-weight: bold;
+            @include label;
           }
           &--field{
-            padding-left: 5px;
-            height: 43px;
-            width: 100%;
+            @include field;
+          }
+          span{
+            @include require--btn;
           }
         }
       }
@@ -56,42 +52,57 @@
       justify-content: space-evenly;
       .field{
         &__familyname_kana{
-          width: 25%;
-          margin-left: 15%;
+          position: relative;
+          width: 35%;
+          // margin-left: 15%;
           padding: 10px 0;
           &--label{
-            font-size: 15px;
-            font-weight: bold;
+            @include label;
+            white-space: nowrap
+            
           }
           &--field{
-            padding-left: 5px;
-            height: 43px;
-            width: 100%;
+            @include field;
+          }
+          span{
+            @include require--btn;
+            top: 6px;
+            left: 135px;
+            width: 43px;
+            height: 22px;
+            line-height: 14px;
           }
         }
         &__firstname_kana{
-          width: 25%;
-          margin-right: 15%;
+          position: relative;
+          width: 35%;
+          // margin-right: 15%;
           padding: 10px 0;
           &--label{
-            font-size: 15px;
-            font-weight: bold;
+            @include label;
           }
           &--field{
-            padding-left: 5px;
-            height: 43px;
-            width: 100%;
+            @include field;
+          }
+          span{
+            @include require--btn;
+            position: absolute;
+            top: 6px;
+            left: 135px;
+            width: 43px;
+            height: 22px;
+            line-height: 14px;
           }
         }
       }
     }   
     .field{
-      &__bitrh_date{
+      &__birth_date{
         margin-left: 25%;
         padding: 10px 0;
+        position: relative;
         &--label{
-          font-size: 15px;
-          font-weight: bold;
+          @include label;
         }
         #identification_birth_date_1i{
           height: 43px;
@@ -105,29 +116,23 @@
           height: 43px;
           width: 50px;
         }
+        &--date{
+          position: absolute;
+          top: 50px;
+          left: 50px;
+          top: 44px;
+          left: 261px;
+        }
+        &--require{
+          @include require--btn;
+        }
       }
     }
     .identification_submit{
       padding: 20px 20% 30px 25%;
       &--btn{
-        display       : inline-block;
-        border-radius : 5%;         
-        font-size     : 11pt;   
-        text-align    : center;     
-        cursor        : pointer;     
-        padding       : 12px calc(50% - 44px);  
-        background    : #3CCACE;    
-        color         : #ffffff;     
-        line-height   : 24px;         
-        transition    : .3s;     
+        @include submit; 
       }
     }
   }
-}
-.user_link__login{
-  text-decoration: none;
-  float: right;
-  padding-right: 20px;
-  padding-top: 10px;
-  color: #3CCACE; 
 }

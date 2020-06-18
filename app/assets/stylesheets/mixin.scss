@@ -1,0 +1,70 @@
+@mixin user-form{
+  width: 50%;
+  margin: 0 auto;
+  padding: 10px 0;  
+}
+@mixin label{
+  font-size: 15px;
+  font-weight: bold;
+}
+@mixin field{
+  padding-left: 5px;
+  height: 43px;
+  width: 100%;
+}
+@mixin title{
+  font-size: 22px;
+  padding: 32px;
+  line-height: 1.5;
+  text-align: center;
+  border-bottom: 1px solid #f8f8f8;
+  font-weight: bold;
+}
+@mixin link{
+  text-decoration: none;
+  float: right;
+  color: #3CCACE; 
+}
+@mixin link_set{
+  text-decoration: none;
+  float: right;
+  color: #3CCACE; 
+  height: 40px;
+  width: 100%;
+  padding: 20px 20px 0 0;
+  text-align: right;
+  display: block;
+}
+@mixin submit{
+  display       : inline-block;
+  border-radius : 5%;         
+  font-size     : 11pt;   
+  text-align    : center;     
+  cursor        : pointer;     
+  padding       : 12px calc(50% - 44px);  
+  background    : #3CCACE;    
+  color         : #ffffff;     
+  line-height   : 24px;         
+  transition    : .3s;     
+}
+@mixin user_new_box{
+  position: relative;
+  width: 50%;
+  height: 60px;
+  margin: 50px auto;
+  cursor        : pointer;  
+  line-height   : 60px; 
+  text-align: center; 
+  border-radius : 20px;         
+  font-size     : 11pt;     
+}
+@mixin require--btn {
+  background: #3CCACE;
+  padding: 5px 10px;
+  color: #fff;
+  font-size: 11px;
+  font-weight: normal;
+  vertical-align: top;
+  border-radius: 2px;
+  height: 28px;
+}
