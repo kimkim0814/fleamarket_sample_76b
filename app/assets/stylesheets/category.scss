@@ -3,19 +3,21 @@
   z-index: 1;
   float: left;
   position: relative;
-  
   .category{
     &__parent{
       border-bottom: 1px solid rgba(71, 70, 70, 0.103);
       background-color: #ffffff;
+      display: none;
     }
     &__child{
       border-bottom: 1px solid rgba(71, 70, 70, 0.103);
       background-color: #ffffff;
+      display: none;
     }
     &__grandchild{
       border-bottom: 1px solid rgba(71, 70, 70, 0.103);
       background-color: #ffffff;
+      display: none;
     }
  
     &__parents{
@@ -24,8 +26,6 @@
       left: 0px;
       width: 250px;
       font-size: 13px;
-      
-
     }
     &__children{
       position: absolute;

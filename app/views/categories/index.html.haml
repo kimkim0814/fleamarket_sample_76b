@@ -1,2 +1,12 @@
-%h1 Categories#index
-%p topページ
+%ul
+  - @parents.each do |parent|
+    %li
+      = link_to "#{parent.name}", "/categories/#{parent.id}", method: :get
+      %ul
+        - parent.children.each do |child|
+          %li
+            = link_to "#{child.name}", "/categories/#{child.id}", method: :get
+            %ul
+              - child.children.each do |grandchild|
+                %ul
+                  = link_to "#{grandchild.name}", "/categories/#{grandchild.id}", method: :get
