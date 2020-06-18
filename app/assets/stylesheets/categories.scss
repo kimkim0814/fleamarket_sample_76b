@@ -46,12 +46,22 @@
       }
     }
   }
+  &__top{
+    &--icon{
+      color: black;
+    }
+    &--text{
+      color: black;
+    }
+  }
 }
 .categories_list{
   padding-left: 250px;
   background-color: #f8f8f8;
   overflow:hidden;
-  .categories_list__btn{
+  a{
+    color: black;
+    display: block;
     height: 50px;
     width: 185px;
     border-radius: 5px;
@@ -61,9 +71,6 @@
     margin: 20px;
     padding: 20px;
     line-height: 10px;
-    a{
-      color: black;
-    }
   }
   .categories_list__btn:hover{
     background-color: #3CCACE;

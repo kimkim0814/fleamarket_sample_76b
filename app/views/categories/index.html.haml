@@ -4,8 +4,7 @@
     = breadcrumbs separator: "#{content_tag(:i, '', class: 'fas fa-chevron-right')}", class: "breadcrumbs-list"
 .categories_list
   - @parents.each_with_index do |parent,i|
-    .categories_list__btn
-      = link_to "#{parent.name}" , "#categories--#{i}"
+    = link_to "#{parent.name}" , "#categories--#{i}",class: "categories_list__btn"
 - @parents.each_with_index do |parent,i|      
   .categories__container
     .categories__container__title{id: "categories--#{i}"}
@@ -18,8 +17,8 @@
           - child.children.each do |grandchild|
             = link_to "#{grandchild.name}", "/categories/#{grandchild.id}", method: :get, class: "categories__container__list__box--link"
       .categories__container__top
-        = link_to "categories",class: "categories__container__top--link" do
-          = icon('far', 'address-book', class: 'strong')  
-          %p ページトップへ
+        = link_to "categories" do
+          = icon('fas','arrow-up', class: 'categories__container__top--icon')  
+          %span.categories__container__top--text ページトップへ
           
         

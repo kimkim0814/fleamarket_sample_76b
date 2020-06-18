@@ -1,7 +1,7 @@
--# .bread_crumbs
--#   .bread_crumbs__line
--#     - breadcrumb :categories_show
--#     = breadcrumbs separator: "#{content_tag(:i, '', class: 'fas fa-chevron-right')}", class: "breadcrumbs-list"
+.bread_crumbs
+  .bread_crumbs__line
+    - breadcrumb :categories_show
+    = breadcrumbs separator: "#{content_tag(:i, '', class: 'fas fa-chevron-right')}", class: "breadcrumbs-list"
 .categories__container
   .categories__container__title
     #{@category.name}の商品一覧
