@@ -98,8 +98,8 @@
       }
     }
 #token_submit {
-  background: #3CCACE;
-  border: 1px solid #3CCACE;
+  background: radial-gradient(#3CCACE, #DAEAF0);
+  border: none;
   border-radius: 20px;
   color: #fff;
   display: block;
@@ -108,18 +108,21 @@
   transition: all ease-out .6s;
   height:50px;
   cursor: pointer;
-
+  &:hover {
+    background-position: 99% 50%;
+    color: black !important;
+    border: 1px solid rgba(205, 200, 252, 0);
+  }
   &_bottan{
     width: 120px;
     text-align: center;
-    border-radius: 4%;
+    border-radius: 24px;
     bottom: 32px;
     right: 32px;
     position: fixed;
     padding: 30px;
-
     &_txt{
-      color: #fff;
+      // color: #fff;
       display: block;
       font-size: 18px;
       text-decoration: none;
@@ -127,3 +130,4 @@
     }
   }
 }
+
