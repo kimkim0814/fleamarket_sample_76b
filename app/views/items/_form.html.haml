@@ -8,25 +8,24 @@
           .product-body__main__form__image__set__must 必須
         .product-body__main__form__image__text 1枚以上3枚までアップロードできます
 
-        .product-body__main__form__image__box
-          .item-image
-            %img.preview
-            %img.preview
-            %img.preview
+        -# .product-body__main__form__image__box
+          -# .item-image
+          -#   %img.image-zoom#preview0{alt: ""}/
+          -#   %img.image-zoom#preview1{alt: ""}/
+          -#   %img.image-zoom#preview2{alt: ""}/
 
         .product-body__main__form__image__boxes
           .product-body__main__form__image__boxes__form
-            = f.fields_for :images do |i|
-              = i.label :image, class: 'form__mask__image' do
-                = icon('fa', 'camera')
-                = i.file_field :image, class: 'hidden'
+            = f.fields_for :images do |image|
+              .products_new-js-file_group{"data-index" => "#{@item.images.index}"}
+                = image.label :image, class: 'form__mask__image' do
+                  .camera-icon
+                    = icon('fa', 'camera')
+                    = image.file_field :image, class: "products_new-js-file", style: "display:none"
 
-        .product-body__main__form__image__del
-          %button{type: "button", class: "btn"}削除
-          %button{type: "button", class: "btn"}削除
-          %button{type: "button", class: "btn"}削除
-
-
+        -# .product-body__main__form__image__del
+        -#   -for i in 0..2
+        -#     %button{type: "button", class: "btn"}削除
 
       .product-body__main__form__name-area
         .product-body__main__form__name-area__box
