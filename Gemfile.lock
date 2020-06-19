@@ -132,6 +132,8 @@ GEM
       sassc (>= 1.11)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
+    gretel (3.0.9)
+      rails (>= 3.1.0)
     haml (5.1.2)
       temple (>= 0.8.0)
       tilt
@@ -383,6 +385,7 @@ DEPENDENCIES
   erb2haml
   factory_bot_rails
   font-awesome-sass
+  gretel
   haml-rails
   jbuilder (~> 2.5)
   jp_prefecture
@@ -390,10 +393,10 @@ DEPENDENCIES
   listen (>= 3.0.5, < 3.2)
   merge_db_schema
   mysql2 (>= 0.4.4, < 0.6.0)
-  payjp
   omniauth-facebook
   omniauth-google-oauth2
   omniauth-rails_csrf_protection
+  payjp
   pry-rails
   puma (~> 3.11)
   rails (~> 5.2.3)
