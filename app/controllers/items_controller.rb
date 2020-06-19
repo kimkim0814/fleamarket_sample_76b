@@ -9,6 +9,7 @@ class ItemsController < ApplicationController
     @category = Category.find(params[:id])
     @favorite = Favorite.new
   end
+
   
   def itemsbuy
   end

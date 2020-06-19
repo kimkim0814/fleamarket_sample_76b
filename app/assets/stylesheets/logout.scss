@@ -5,13 +5,12 @@
 .logout{
   float:right;
   width:700px;
-  background-color:rgb(218, 234, 240);
   height: 170px;
   margin: auto;
   position: relative;
 
   &__main {
-    background-color:#3CCACE;
+    border-radius:20px;
     width: 50%;
     height: 50px;
     left: 0;
@@ -20,14 +19,33 @@
     bottom :0;
     position: absolute;
     margin: auto; 
-    
     &__btn {
-        width: 50%;
-        height: 50%;
-        background: #3CCACE;
-        border: 10px solid #3CCACE;
-        margin:0 auto;
+        width: 100%;
+        height: 50px;
+      }
+      .mypagelogout {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius:24px;
+        color:rgb(96, 93, 93);
+        line-height: 50px;
         text-align: center;
+        background: transparent;
+        -webkit-transition: all 1.5s ease-out;
+        transition: all 0.9s ease-out;
+        background: -webkit-linear-gradient(180deg, #3CCACE , rgba(132, 179, 252, 0.8), rgba(205, 200, 252, 0), rgba(5, 56, 13, 0));
+        background: -webkit-linear-gradient(right,#6ea5a7 , rgba(132, 179, 252, 0.8), rgba(205, 200, 252, 0), rgba(5, 56, 13, 0));
+        background: linear-gradient(270deg, #3CCACE , rgba(132, 179, 252, 0.8), rgba(205, 200, 252, 0), rgba(5, 56, 13, 0));
+        background-position: 1% 50%;
+        background-size: 300% 300%;
+        border: none;
+        border: 1px solid #3CCACE; 
+        &:hover {
+          background-position: 99% 50%;
+          color: white !important;
+          border: 1px solid rgba(205, 200, 252, 0);
+        }
+      }
     }
   }
-}

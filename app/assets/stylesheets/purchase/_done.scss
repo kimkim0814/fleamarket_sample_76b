@@ -1,0 +1,39 @@
+*{
+  box-sizing:border-box;
+}
+
+.buy-content__attention {
+  display: block;
+  width:350px;
+  margin:0 auto;
+  height:40px;
+  background: rgb(218, 234, 240);
+  text-align: center;
+  line-height: 40px;
+  font-size: 20px;
+  &__title {
+    padding: 8px 24px;
+    font-size: 21px;
+    text-align: center;
+    font-weight: bold;
+    margin-top:20px;
+  }
+}
+.buy-content__user__submit {
+  font-weight: bold;
+  margin-bottom: 30px;
+  background: linear-gradient(45deg,#3CCACE, #daeaf0);
+  border: 1px solid #daeaf0;
+  height:45px;
+  width: 100%;
+  font-size: 18px;
+  border-radius: 25px;
+  cursor: pointer;
+.buy-content__user__submit__btn {           
+  color:white;
+  margin-left: 95px;
+  margin-right: 95px;
+  line-height: 45px;
+  text-align: center;
+  }
+}
