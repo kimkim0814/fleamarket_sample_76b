@@ -1,9 +1,10 @@
-.header#top
+.header
   .header__Inner
     .main-header
       %h1.icon
         = link_to root_path do
           = image_tag  "logo/logo.png", class: "hurima"
+
       .search-box
         = form_with  do |form|
           = form.text_field :search,class: 'input-box',placeholder: 'キーワードから探す'

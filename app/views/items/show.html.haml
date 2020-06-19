@@ -1,4 +1,4 @@
-.main
+.main-show
   .item-contents
     .item-box
       %h2.item-box__name
@@ -19,20 +19,7 @@
         %span (税込)
         %span.item-box__price--detail
           = "送料#{@item.cost}"
-
-          -# 購入画面編集画面
-      -# - if @item.sold_day == nil
-      -#   - if user_signed_in?
-      -#     - if @item.user.id == current_user.id
-      -#       = link_to edit_item_path(@item), class:'item-box__item-change-btn' do
-      -#         商品の編集
-      -#       %p or
-      -#       %a#modal-open.item-box__item-delete-btn この商品を削除する
-      -#     - else 
-      -#       =link_to item_orders_path(@order), class:'item-box__order-btn' do
-      -#         購入画面に進む
-      -# -else
-      -#   %p.item-box__sold-tag 売り切れました
+      
       .item-box__item-detail
         = @item.description
       .table-content
@@ -68,9 +55,20 @@
               = @item.days
       .item-box__option-area
         .item-box__option-area__like-btn
-          %i.fa.fa-star
-          お気に入り 0
+          = "お気に入り #{@item.favorites.count}"
+          - if current_user.already_favorited?(@item)
+            = link_to item_favorite_path(@item), method: :delete do
+              %i.fas.fa-star.unlike-btn
+          - else
+            = link_to item_favorites_path(@item), method: :post do
+              %i.far.fa-star.like-btn
         %a.item-box__option-area__optional-btn
           %i.fa.fa-flag
           不適切な商品情報
-
+  .edit-delete-box
+    - if @item.user.id == current_user.id 
+      = link_to edit_item_path(@item), class:'item-edit-btn' do
+        商品の編集
+      %p or
+      = link_to item_path(@item), method: :delete,class:'item-delete-btn' do
+        商品の削除
