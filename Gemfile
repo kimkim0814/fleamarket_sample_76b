@@ -90,3 +90,4 @@ gem 'carrierwave'
 gem 'ancestry'
 gem "gretel"
 gem 'payjp'
+gem 'breadcrumbs_on_rails'

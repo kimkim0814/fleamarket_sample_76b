@@ -1,0 +1,40 @@
+.left-box--first {
+  background-color: #ffffff;
+  z-index: 1;
+  float: left;
+  position: relative;
+  .category{
+    &__parent{
+      border-bottom: 1px solid rgba(71, 70, 70, 0.103);
+      background-color: #ffffff;
+    }
+    &__child{
+      border-bottom: 1px solid rgba(71, 70, 70, 0.103);
+      background-color: #ffffff;
+    }
+    &__grandchild{
+      border-bottom: 1px solid rgba(71, 70, 70, 0.103);
+      background-color: #ffffff;
+    }
+ 
+    &__parents{
+      position: absolute;
+      top: 40px;
+      left: 0px;
+      width: 250px;
+      font-size: 13px;
+    }
+    &__children{
+      position: absolute;
+      top: 0px;
+      left: 250px;
+      width: 250px;
+    }
+    &__grandchildren{
+      position: absolute;
+      top: 0px;
+      left: 250px;
+      width: 250px;
+    }
+  }
+}

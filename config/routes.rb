@@ -14,6 +14,9 @@ Rails.application.routes.draw do
   end
 
 
+
+  resources :categories, only: [:index, :show]
+
   root 'items#index'
   get 'mypages/index'
   get 'mypages/logout'

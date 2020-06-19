@@ -1,0 +1,23 @@
+.bread_crumbs
+  .bread_crumbs__line
+    = render_breadcrumbs separator:  "#{content_tag(:i, '', class: 'fas fa-chevron-right')}"
+.categories_list
+  - @parents.each_with_index do |parent,i|
+    = link_to "#{parent.name}" , "#categories--#{i}",class: "categories_list__btn"
+- @parents.each_with_index do |parent,i|      
+  .categories__container
+    .categories__container__title{id: "categories--#{i}"}
+      #{parent.name}の商品一覧
+    .categories__container__list
+      - parent.children.each do |child|
+        %h1.categories__container__list__title
+          = child.name
+        .categories__container__list__box
+          - child.children.each do |grandchild|
+            = link_to "#{grandchild.name}", "/categories/#{grandchild.id}", method: :get, class: "categories__container__list__box--link"
+      .categories__container__top
+        = link_to "categories" do
+          = icon('fas','arrow-up', class: 'categories__container__top--icon')  
+          %span.categories__container__top--text ページトップへ
+          
+        

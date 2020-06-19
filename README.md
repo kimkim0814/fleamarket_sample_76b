@@ -129,7 +129,7 @@ fleamarket_sample_76b DB設計
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null;false|
-|ancestry|string||
+|ancestry|string|null;false|
 ### Association
 - has_many :items
 - has_ancestry

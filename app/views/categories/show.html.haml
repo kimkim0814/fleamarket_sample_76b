@@ -1,0 +1,33 @@
+.bread_crumbs
+  .bread_crumbs__line
+    = render_breadcrumbs separator:  "#{content_tag(:i, '', class: 'fas fa-chevron-right')}"
+.categories__container
+  .categories__container__title
+    #{@category.name}の商品一覧
+  .categories__container__list
+    - @category.children.each do |child|
+      = link_to "#{child.name}", "/categories/#{child.id}", method: :get, class: "categories__container__list--link"
+
+.main__content__product__lists
+  -if @items[0] !=nil
+    -@items[0..2].each do |item|
+      .list
+        = link_to item_path(item.id),class:"list__content" do
+          - if item.sold_day != nil
+            .list__content-sold-mark
+              %h3.list__content-sold-mark--text
+                SOLD
+          %figure.main__content__product__lists__list--image
+            = item.images.first(1).each do |image|
+              =image_tag image.image.to_s, class:'img'
+          .main__content__product__lists__list--body
+            %h3.main__content__product__lists__list--body__name
+              = item.name
+            .main__content__product__lists__list--body__details
+              %ul
+                %li
+                  ="#{item.price.to_s(:delimited)}円"
+                %li
+                  = icon('fa','star')
+              %p (税込)
+            
