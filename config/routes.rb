@@ -42,8 +42,6 @@ Rails.application.routes.draw do
     resources :comments, only: :create
   end  
 
-end
-
   get 'mypages/card'
   resources :users, only: :new
   resources :items do
@@ -52,7 +50,6 @@ end
   end
 
   resources :items  do
-
     get :itemsbuy
   end    
 end
