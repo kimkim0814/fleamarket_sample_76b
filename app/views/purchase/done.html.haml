@@ -14,7 +14,7 @@
               .buy-item-name
                 = @item.name
                 %p.buy-price
-                  = "#{@item.price.to_s}円"  
+                  = "#{@item.price.to_s(:delimited)}円"  
                   %span.shipping-free (税込) 送料込み        
       .purchase-input-contents
         %form.buy-form
@@ -22,6 +22,6 @@
             .buy-price-table__left
               支払金額
             .buy-price-table__right
-              = "¥#{@item.price.to_s}"
+              = "¥#{@item.price.to_s(:delimited)}円"
           .buy-content__user__submit
             = link_to "トップページへ戻る", root_path, class: 'buy-content__user__submit__btn'
