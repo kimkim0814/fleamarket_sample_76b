@@ -2,7 +2,7 @@
   .header__Inner
     .main-header
       %h1.icon
-        = link_to "/" do
+        = link_to root_path do
           = image_tag  "logo/logo.png", class: "hurima"
 
       .search-box
@@ -11,14 +11,25 @@
           = form.button type: "submit",class: "search-btn" do
             .search-btn__box
               = image_tag  "icon-search 1.png", class: "icon-search"
-
-
             
     .nav
       %ul.left-box
         %li.left-box--first 
-          = link_to "#" do
-            カテゴリー
+          = link_to "カテゴリー", "#" ,class: "category--header"
+          %ul.category__parents
+            - @parents.each do |parent|
+              %li.category__parent{id: "#{parent.id}"}
+                = link_to "#{parent.name}", "/categories/#{parent.id}", method: :get
+                %ul.category__children
+                  - parent.children.each do |child|
+                    %li.category__child{id: "#{child.id}"}
+                      = link_to "#{child.name}", "/categories/#{child.id}", method: :get
+                      %ul.category__grandchildren
+                        - child.children.each do |grandchild|
+                          %ul.category__grandchild
+                            = link_to "#{grandchild.name}", "/categories/#{grandchild.id}", method: :get
+
+
         %li.left-box--second 
           = link_to "#" do
             ブランド

@@ -8,22 +8,24 @@
     margin: 0 auto;
     padding: 14px 0; 
     color: #333;
+    font-weight: bold;
+    font-size: 14px;
+     a {
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: normal;
+    }
+
+    i {
+      color: #888;
+      font-size: 14px;
+      margin: 0 8px;
+    } 
+   
   }
+  
+ 
 }
-
-.breadcrumbs-list a {
-  color: #333;
-text-decoration: none;
-font-size: 14px;
-}
-
-.breadcrumbs-list i {
-  color: #888;
-  font-size: 14px;
-  margin: 0 8px;
-} 
-
-.breadcrumbs-list span {
-  font-weight: bold;
-  font-size: 14px;
-}
+  
+ 

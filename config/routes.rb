@@ -10,6 +10,7 @@ Rails.application.routes.draw do
     get 'addresses', to: 'users/registrations#new_address', as: :new_address
     post 'addresses', to: 'users/registrations#create_address'
   end
+  resources :categories, only: [:index, :show]
   root 'items#index'
   get 'mypages/index'
   get 'mypages/logout'
