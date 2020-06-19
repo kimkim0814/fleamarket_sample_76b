@@ -1,7 +1,6 @@
 .bread_crumbs
   .bread_crumbs__line
-    - breadcrumb :categories
-    = breadcrumbs separator: "#{content_tag(:i, '', class: 'fas fa-chevron-right')}", class: "breadcrumbs-list"
+    = render_breadcrumbs separator:  "#{content_tag(:i, '', class: 'fas fa-chevron-right')}"
 .categories_list
   - @parents.each_with_index do |parent,i|
     = link_to "#{parent.name}" , "#categories--#{i}",class: "categories_list__btn"

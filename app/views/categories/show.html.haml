@@ -1,14 +1,12 @@
 .bread_crumbs
   .bread_crumbs__line
-    - breadcrumb :categories_show
-    = breadcrumbs separator: "#{content_tag(:i, '', class: 'fas fa-chevron-right')}", class: "breadcrumbs-list"
+    = render_breadcrumbs separator:  "#{content_tag(:i, '', class: 'fas fa-chevron-right')}"
 .categories__container
   .categories__container__title
     #{@category.name}の商品一覧
   .categories__container__list
     - @category.children.each do |child|
       = link_to "#{child.name}", "/categories/#{child.id}", method: :get, class: "categories__container__list--link"
-
 
 .main__content__product__lists
   -if @items[0] !=nil
