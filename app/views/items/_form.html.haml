@@ -16,28 +16,28 @@
 
         .product-body__main__form__image__boxes
           .product-body__main__form__image__boxes__form
-            = f.fields_for :images do |image|
-              .products_new-js-file_group{"data-index" => "#{@item.images.index}"}
-                = image.label :image, class: 'form__mask__image' do
-                  .camera-icon
-                    = icon('fa', 'camera')
-                    = image.file_field :image, class: "products_new-js-file", style: "display:none"
-
-        -# .product-body__main__form__image__del
-        -#   -for i in 0..2
-        -#     %button{type: "button", class: "btn"}削除
+      = f.fields_for :images do |image|
+        .product-body__main__form__image__js
+          .products_new-js-file_group{"data-index": image.index }
+            = image.file_field :image, class: "products_new-js-file"
+            -# = image.label :image, class: 'form__mask__image' do
+            -#   .camera-icon
+            -#     = icon('fa', 'camera')
+          -# .product-body__main__form__image__del
+          -#   -for i in 0..2
+          -#     %button{type: "button", class: "btn"}削除
 
       .product-body__main__form__name-area
         .product-body__main__form__name-area__box
           = f.label :name, "商品名", class: ".product-body__main__form__name-area__box__label"
           .product-body__main__form__name-area__box__must 必須
         .product-body__main__form__name-area__field
-          = f.text_field :name, placeholder: "20字まで", maxlength: "20",class: ".product-body__main__form__name-area__field"
+          = f.text_field :name, placeholder: "20字まで", maxlength: "20", class: ".product-body__main__form__name-area__field"
 
       .product-body__main__form__explanation
         .product-body__main__form__explanation__box
           = f.label :description, "商品の説明",class: ".product-body__main__form__description__box__label"
-          .product-body__main__form__description__box__must 必須
+          .product-body__main__form__name-area__box__must 必須
         .product-body__main__form__description__field
           = f.text_area :description, placeholder:"商品の説明（1,000文字以内で色、素材、重さ、定価、注意点などを記載して下さい)"
 
