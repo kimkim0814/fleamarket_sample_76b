@@ -107,19 +107,22 @@
           .product-body__main__form__price__box__must 必須
         .product-body__main__form__price__field
           ¥
-          = f.number_field :price, in: 300..9999999, step: 1, placeholder: "0"
+          %div
+            = f.number_field :price, in: 300..9999999, step: 1, placeholder: "0",value:'',class:"input-price"
+          
 
       .product-body__main__form__fee
         .product-body__main__form__fee__box
           販売手数料 (10%)
-        .product-body__main__form__fee__box2
-          ー
+        .product-body__main__form__fee__box2 -
+          
+            
 
       .product-body__main__form__profit
         .product-body__main__form__profit__box
           販売利益
-        .product-body__main__form__profit__box2
-          ー
+        .product-body__main__form__profit__box2 -
+          
 
       -# = link_to new_item_path do
       = f.submit "出品する", class: "product-body__main__form__exhibition"

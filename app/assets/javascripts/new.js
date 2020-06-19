@@ -54,6 +54,25 @@ $(function(){
     $(`div[data-index="${targetIndex}"]`).remove();
     if ($('.products_new-js-file').length == 0) $('.products_new-image-box').append(buildFileField(fileIndex[0]));
   });
+    const priceInput = '.input-price';
+    const feeFeild = '.product-body__main__form__fee__box2';
+    const profitFeild = '.product-body__main__form__profit__box2';
+
+    // 価格入力時に手数料、利益計算
+  $(priceInput).on('keyup', function(){
+    let input = $(this).val();
+    if (input >= 300 && input <= 9999999){
+      let fee = Math.floor(input * 0.1);
+      let profit = "¥" + (input - fee).toLocaleString();
+      $(feeFeild).html("¥" + fee.toLocaleString());
+      $(profitFeild).html(profit);
+    } else {
+      let fee = '-';
+      let profit = '-';
+      $(feeFeild).html(fee);
+      $(profitFeild).html(profit);
+    }
+  });
 
   // num = $('.products_new-preview-box').data('index')
   // if (num == 3){
