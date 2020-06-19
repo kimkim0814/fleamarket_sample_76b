@@ -32,7 +32,7 @@
             %th カテゴリー
             %td
               %a.category1
-                = @item.category.ancestry
+                = link_to "#{@item.category.name}" , "/categories/#{@category.id}", method: :get
           %tr
             %th ブランド
             %td 
