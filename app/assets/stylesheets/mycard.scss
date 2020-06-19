@@ -1,0 +1,54 @@
+*{
+  box-sizing:border-box;
+}
+
+.mycard-main{
+  display: flex;
+  padding-top: 40px;
+  &__container {
+    width: 700px;
+    margin: 0 auto;
+    .mycard-main__head {
+      font-size: 24px;
+      padding: 8px 24px;
+      text-align: center;
+      font-weight: bold;
+      border-bottom: 1px solid rgb(218, 234, 240);
+    }
+  }
+    .mycard-btn {
+    border-radius: 20px;
+    line-height:50px;
+    margin:20px auto;
+    width: 50%;
+    height: 50px;
+    cursor: pointer;
+    background: transparent;
+    -webkit-transition: all 1.5s ease-out;
+    transition: all 1.3s ease-out;
+    background: -webkit-linear-gradient(180deg, #3CCACE , #bdea1a, rgba(205, 200, 252, 0), rgba(5, 56, 13, 0));
+    background: -webkit-linear-gradient(right,#3CCACE , #bdea1a, rgba(205, 200, 252, 0), rgba(5, 56, 13, 0));
+    background: linear-gradient(270deg, #3CCACE , #bdea1a, rgba(205, 200, 252, 0), rgba(5, 56, 13, 0));
+    background-position: 1% 50%;
+    background-size: 300% 300%;
+    border: none;
+    border: 1px solid #3CCACE;
+  }
+    .mycardcard{
+      display: block;
+      color:rgb(79, 78, 78);
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 50px;
+      text-align: center;
+    }
+}
+  .mycard-btn:hover {
+    background-position: 99% 50%;
+    border: 1px solid rgba(205, 200, 252, 0);
+  }
+  .mycardcard:hover {
+    background-position: 99% 50%;
+    color: white !important;
+    border: 1px solid rgba(205, 200, 252, 0);
+  }

@@ -88,4 +88,6 @@ gem 'rails-i18n', '~> 5.1'
 gem 'merge_db_schema'
 gem 'carrierwave'
 gem 'ancestry'
+gem "gretel"
+gem 'payjp'
 gem 'breadcrumbs_on_rails'

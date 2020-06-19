@@ -1,0 +1,26 @@
+.bread_crumbs
+  .bread_crumbs__line
+.mypage
+  .mypage_container
+    .mypage_index
+      = render "mypages/side_content"
+    .card-main
+      .card-main__container
+        %h2.card-main__head
+          クレジットカード情報確認
+        .card-save-inner
+          %section.card-save-save
+            .card-save-save-content
+              .form-content
+                カード情報確認
+                %br
+              = "**** **** **** " + @default_card_information.last4
+              .expire__datex
+                有効期限
+                %br
+            - exp_month = @default_card_information.exp_month.to_s
+            - exp_year = @default_card_information.exp_year.to_s.slice(2,3)
+            = exp_month + " / " + exp_year
+            = form_tag(card_path(current_user.id), method: :delete, id: 'charge-form',  name: "inputForm") do
+              %input{ type: "hidden", name: "card_id", value: "" }
+              %button.delete-btn 削除する
