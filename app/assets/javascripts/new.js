@@ -31,6 +31,7 @@ $(function(){
 
   $(document).on('change', '.products_new-js-file', function(e) {
     const targetIndex = $(this).parent().data('index');
+    if (fileIndex === 10) return;
     // ファイルのブラウザ上でのURLを取得する
     const file = e.target.files[0];
     const blobUrl = window.URL.createObjectURL(file);
@@ -39,11 +40,10 @@ $(function(){
     $('.product-body__main__form__image__js').append(buildFileField(fileIndex[0]));
     // $(this).css({'display':'none'});
     fileIndex.shift();
-    // 末尾の数に1足した数を追加する
-    fileIndex.push(fileIndex[fileIndex.length - 1] + 1);
   });
 
-  $('.product-body__main__form__image__boxes__form').on('click', '.products_new-js-remove', function() {
+  $('.product-body__main__form__image__boxes__form').on('click', '.products_new-js-remove', function(e) {
+    e.stopPropagation();
     const targetIndex = $(this).prev().data('index');
     // 該当indexを振られているチェックボックスを取得する
     const hiddenCheck = $(`input[data-index="${targetIndex}"].products_new-hidden-destroy`);
@@ -74,37 +74,14 @@ $(function(){
     }
   });
 
-  // num = $('.products_new-preview-box').data('index')
-  // if (num == 3){
-  //   $('.product-body__main__form__image__boxes__form').css('display', 'none')
-  // }
-
-  // var dataBox = new DataTransfer();
-  // var file_field = document.querySelector('input[type=file]')
-  //   $(document).on('change', '.products_new-js-file', function(e) {
-  //     var files = $('input[type="file"]').prop('files')[0];
-  //     $.each(this.files, function(i, file){
-  //       var fileReader = new FileReader();
-  //       dataBox.items.add(file)
-  //       file_field.files = dataBox.files
-  //       fileReader.readAsDataURL(file);
-  //     });
-  //   });
-
+  // 画像アップロードボタンをクリックした際に写真を追加
   $(".product-body__main__form__image__boxes__form").on("click", function(){
+    // 画像のプレビュー枚数が3枚になったらプレビュー処理を止める
+    let img_count = $(".products_new-preview-box").length;
+    if (img_count == 3) {
+      return
+    }
     let file_field = $(".products_new-js-file:last");
     file_field.trigger("click");
   })
-
-  $('.product-body__main__form__exhibition').on('click', function(){
-    if(
-      $('.product-body__main__form__name-area__field').val() === '' ||
-      $('#item_description').val() === ''
-    ){
-      // console.log($('#item_description').val());
-      alert('必須項目を入力してください')
-      return false;
-    }
-  })
-
 });

@@ -6,13 +6,7 @@
         .product-body__main__form__image__set
           .product-body__main__form__image__set__title 出品画像
           .product-body__main__form__image__set__must 必須
-        .product-body__main__form__image__text 1枚以上3枚までアップロードできます
-
-        -# .product-body__main__form__image__box
-          -# .item-image
-          -#   %img.image-zoom#preview0{alt: ""}/
-          -#   %img.image-zoom#preview1{alt: ""}/
-          -#   %img.image-zoom#preview2{alt: ""}/
+        .product-body__main__form__image__text 最大3枚までアップロードできます（下枠をクリックしてファイルをアップロード）
 
         .product-body__main__form__image__boxes
           .product-body__main__form__image__boxes__form
@@ -20,12 +14,6 @@
         .product-body__main__form__image__js
           .products_new-js-file_group{"data-index": image.index }
             = image.file_field :image, class: "products_new-js-file"
-            -# = image.label :image, class: 'form__mask__image' do
-            -#   .camera-icon
-            -#     = icon('fa', 'camera')
-          -# .product-body__main__form__image__del
-          -#   -for i in 0..2
-          -#     %button{type: "button", class: "btn"}削除
 
       .product-body__main__form__name-area
         .product-body__main__form__name-area__box
@@ -124,11 +112,7 @@
         .product-body__main__form__profit__box2 -
           
 
-      -# = link_to new_item_path do
       = f.submit "出品する", class: "product-body__main__form__exhibition"
-
-      -# = link_to "#" do
-      -#   = f.submit "下書きに保存", class: "product-body__main__form__draft"
 
     .product-body__main__back
       = link_to "もどる", :back, class: "product-body__main__back__btn"
