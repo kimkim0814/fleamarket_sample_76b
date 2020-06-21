@@ -6,8 +6,9 @@ class ItemsController < ApplicationController
 
   def show
     @comment = Comment.new
-    @category = Category.find(params[:id])
+    @category = Item.find(params[:id])
     @favorite = Favorite.new
+
   end
 
   
