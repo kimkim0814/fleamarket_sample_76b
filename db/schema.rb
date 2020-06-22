@@ -67,6 +67,7 @@ ActiveRecord::Schema.define(version: 2020_06_09_112404) do
     t.string "size", null: false
     t.integer "status", null: false
     t.string "cost", null: false
+    t.string "area", null: false
     t.string "days", null: false
     t.date "sold_day"
     t.datetime "created_at", null: false

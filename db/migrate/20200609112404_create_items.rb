@@ -10,6 +10,7 @@ class CreateItems < ActiveRecord::Migration[5.2]
       t.string :size, null:false
       t.integer :status, null:false
       t.string :cost, null:false
+      t.string :area, null:false
       t.string :days, null:false
       t.date   :sold_day
       t.timestamps

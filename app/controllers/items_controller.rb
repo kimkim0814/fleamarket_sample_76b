@@ -46,8 +46,8 @@ class ItemsController < ApplicationController
       :size,
       :status,
       :cost,
+      :area,
       :days,
-      :sold_day,
       images_attributes: [:image]
     ).merge(user_id: current_user.id)
   end
