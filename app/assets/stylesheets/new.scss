@@ -9,9 +9,8 @@
   height: 50px;
   border-radius: 4px;
   border: 1px solid #ccc;
-  padding:  30px;
   width: 100%;
-  background-color: white;
+  padding: 0 15px;
   cursor: pointer;
 }
 @mixin must($color) {
@@ -23,7 +22,7 @@
   padding: 2px 4px;
   text-align: center;
 }
-.preview {
+#preview0, #preview1, #preview2 {
   width: 100px;
   height: 100px;
 }
@@ -55,7 +54,9 @@ a {
         padding: 40px 40px 0 40px;
         font-weight: bold;
       }
-
+      .products_new-js-file{
+        display: none;
+      }
 
 
       // 出品画像
@@ -76,46 +77,19 @@ a {
           margin-top: 15px;
         }
 
-        // 写真BOX
-        &__box {
-          display: flex;
-          justify-content: space-around;
-          margin-top: 15px;
-          .item-image {
-            width: 90%;
-            justify-content: space-evenly;
-            display: flex;
-          }
-        }
-
         // 写真アップロードボタン
         &__boxes {
           display: flex;
           justify-content: space-evenly;
-          margin-top: 15px;
+          margin-top: 30px;
           &__form {
-            .hidden {
-              display: none;
-            }
-          }
-        }
-
-        // 写真削除ボタン
-        &__del {
-          display: flex;
-          justify-content: space-evenly;
-          margin-top: 5px;
-          button {
-            margin-top: 5px;
-            cursor: pointer;
-            border: none;
-            background-color: crimson;
-            color: white;
-            border-radius: 2px;
-            padding: 5px 10px;
-            &:hover {
-              opacity: 0.6;
-            }
+            background-color: #f8f8f8;
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+            width: 100%;
+            height: 100px;
+            border: dashed 1px #d3d3d3;
           }
         }
       }
@@ -174,7 +148,7 @@ a {
             @include must($color:red);
           }
         }
-        select {
+        input {
           @include form2;
         }
       }
@@ -190,8 +164,8 @@ a {
             @include must($color:#ccc);
           }
         }
-          input {
-            @include form;
+          select {
+            @include form2;
           }
       }
 
@@ -346,25 +320,6 @@ a {
         line-height: 50px;
         &:hover {
           background-color: #d22f28;
-          transition: 0.3s;
-          cursor: pointer;
-        }
-      }
-
-      // 下書きボタン
-      &__draft {
-        height: 50px;
-        border-radius: 4px;
-        border: none;
-        width: 80%;
-        background-color: #ccc;;
-        font-weight: bold;
-        color: black;
-        margin: 0 auto 20px;
-        display:block;
-        line-height: 50px;
-        &:hover {
-          background-color: #bfbfbf;
           transition: 0.3s;
           cursor: pointer;
         }

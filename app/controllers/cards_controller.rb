@@ -6,6 +6,11 @@ class CardsController < ApplicationController
     def new
       card = Card.where(user_id: current_user.id)
       redirect_to card_path(current_user.id) if card.exists?
+
+      add_breadcrumb "トップページ",  root_path
+      add_breadcrumb "マイページ",  mypages_index_path
+      add_breadcrumb "支払方法",  mypages_mycard_path
+      add_breadcrumb "クレジットカード入力情報", new_card_path
     end
 
     def create
