@@ -6,13 +6,9 @@ class Item < ApplicationRecord
   has_many :favorites
 
   def self.search(search)
-    if search
-      Item.where('name LIKE(?)', "%#{search}%")
-    else
-      Item.all
-    end
-    # return Item.all unless search
-    # Item.where('name LIKE(?)', "%#{search}%")
+    return Item.all unless search
+    Item.where('name LIKE(?)', "%#{search}%")
   end
+
 end
 
