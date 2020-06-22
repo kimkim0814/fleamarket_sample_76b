@@ -8,7 +8,7 @@ fleamarket_sample_76b DB設計
 |Column|Type|Options|
 |------|----|-------|
 |name(商品名)|string|null: false| 
-|price(値段)|integer|null: false|　
+|price(値段)|integer|null: false|
 |description(商品解説)|string| null: false, foreign_key: true |
 |user_id(出品者)|references | null: false, foreign_key: true |
 |category_id(カテゴリーID)｜references | null:false, foreign_key: true|
@@ -104,8 +104,9 @@ fleamarket_sample_76b DB設計
 ## Cardsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|user_id(カード保持者)|references|null:false, foreign_key:true | 
-|payjp_id|string|null:false|
+|user|references|null:false, foreign_key:true | 
+|customer_id|string|null:false|
+|card_id|string|null:false|
 ### Association
 - belongs_to : user
 

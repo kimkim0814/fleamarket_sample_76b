@@ -1,0 +1,13 @@
+.bread_crumbs
+  .bread_crumbs__line
+    = render_breadcrumbs separator: "#{content_tag(:i, '', class: 'fas fa-chevron-right')}", class: "breadcrumbs-list"
+.mypage
+  .mypage_container
+    .mypage_index
+      = render "side_content"
+    .mycard-main
+      .mycard-main__container
+        %h2.mycard-main__head
+          支払方法
+        .mycard-btn 
+          = link_to "クレジットカード登録", new_card_path, class:"mycardcard"
