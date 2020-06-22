@@ -34,21 +34,21 @@
     border: none;
     border: 1px solid #3CCACE;
   }
-    .mycardcard{
-      display: block;
-      color:rgb(79, 78, 78);
-      margin-left: auto;
-      margin-right: auto;
-      line-height: 50px;
-      text-align: center;
-    }
+  .mycardcard{
+    display: block;
+    color:rgb(79, 78, 78);
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 50px;
+    text-align: center;
+  }
 }
-  .mycard-btn:hover {
-    background-position: 99% 50%;
-    border: 1px solid rgba(205, 200, 252, 0);
-  }
-  .mycardcard:hover {
-    background-position: 99% 50%;
-    color: white !important;
-    border: 1px solid rgba(205, 200, 252, 0);
-  }
+.mycard-btn:hover {
+  background-position: 99% 50%;
+  border: 1px solid rgba(205, 200, 252, 0);
+}
+.mycardcard:hover {
+  background-position: 99% 50%;
+  color: white !important;
+  border: 1px solid rgba(205, 200, 252, 0);
+}
