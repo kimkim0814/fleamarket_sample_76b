@@ -394,10 +394,10 @@ DEPENDENCIES
   merge_db_schema
   mini_magick
   mysql2 (>= 0.4.4, < 0.6.0)
-  payjp
   omniauth-facebook
   omniauth-google-oauth2
   omniauth-rails_csrf_protection
+  payjp
   pry-rails
   puma (~> 3.11)
   rails (~> 5.2.3)

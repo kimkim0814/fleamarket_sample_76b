@@ -10,8 +10,5 @@ FactoryBot.define do
     area        {1}
     days        {"1~2日で発送"}
     user_id     {1}
-    images {[
-      FactoryBot.build(:image, product: nil)
-    ]}
   end
 end
