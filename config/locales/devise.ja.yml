@@ -138,5 +138,25 @@ ja:
       not_found: は見つかりませんでした。
       not_locked: は凍結されていません。
       not_saved:
-        one: エラーが発生したため %{resource} は保存されませんでした。
-        other: "%{count} 件のエラーが発生したため %{resource} は保存されませんでした。"
+        one: エラーが発生したため保存されませんでした。
+        other: "%{count} 件のエラーが発生したため保存されませんでした。"
+  activerecord:
+    attributes:
+      user:
+        nickname: 名前
+        password: パスワード
+        password_confirmation: パスワード確認
+        email: メールアドレス
+      identification:
+        familyname: 苗字
+        firstname: 名前
+        familyname_kana: みょうじ　ふりがな
+        firstname_kana: なまえ　ふりがな
+        birth_date: 生年月日
+      address:
+        postcode: 郵便番号
+        prefecture_code: 都道府県
+        address_city: 市町村
+        address_street: 番地
+        address_building: 建物名
+        phone_number: 電話番号

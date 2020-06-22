@@ -1,5 +1,9 @@
+.bread_crumbs
+  .bread_crumbs__line
+    = render_breadcrumbs separator:  "#{content_tag(:i, '', class: 'fas fa-chevron-right')}"
 .mypage
   .mypage_container
     .mypage_index
       = render "side_content"
       = render "main_content"
+      = render "layouts/item-sell"

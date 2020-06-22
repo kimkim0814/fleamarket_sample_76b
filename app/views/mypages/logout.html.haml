@@ -1,3 +1,6 @@
+.bread_crumbs
+  .bread_crumbs__line
+    = render_breadcrumbs separator:  "#{content_tag(:i, '', class: 'fas fa-chevron-right')}"
 .mypage
   .mypage_container
     .mypage_index
@@ -5,4 +8,4 @@
     .logout
       .logout__main
         .logout__main__btn
-          = link_to "ログアウト", destroy_user_session_path, method: "delete"
+          = link_to "ログアウト", destroy_user_session_path, method: "delete", class:"mypagelogout"

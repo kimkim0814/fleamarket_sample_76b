@@ -8,4 +8,5 @@ class Item < ApplicationRecord
   validates_presence_of :images
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to_active_hash :prefecture
+  has_many :favorites
 end

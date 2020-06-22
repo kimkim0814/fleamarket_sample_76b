@@ -1,10 +1,14 @@
 # README
 fleamarket_sample_76b DB設計
+
+<img width="927" alt="スクリーンショット 2020-06-12 12 32 20" src="https://user-images.githubusercontent.com/64791353/84462767-d1a6aa80-acaa-11ea-8023-752229816f91.png">
+
+
 ## Items テーブル
 |Column|Type|Options|
 |------|----|-------|
 |name(商品名)|string|null: false| 
-|price(値段)|integer|null: false|　
+|price(値段)|integer|null: false|
 |description(商品解説)|string| null: false, foreign_key: true |
 |user_id(出品者)|references | null: false, foreign_key: true |
 |category_id(カテゴリーID)｜references | null:false, foreign_key: true|
@@ -85,13 +89,24 @@ fleamarket_sample_76b DB設計
 - belongs_to :user
 - belongs_to :identification
 
+## Sns_credentialsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|provider|string||
+|uid|string||
+|user| references| foreign_key:true|
+
+
+### Association
+- belongs_to :user
 
 
 ## Cardsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|user_id(カード保持者)|references|null:false, foreign_key:true | 
-|payjp_id|string|null:false|
+|user|references|null:false, foreign_key:true | 
+|customer_id|string|null:false|
+|card_id|string|null:false|
 ### Association
 - belongs_to : user
 
@@ -113,8 +128,8 @@ fleamarket_sample_76b DB設計
 ## Categorysテーブル
 |Column|Type|Options|
 |------|----|-------|
-|ancestry|string||
-|item_id(商品名)|string|null;false,foreign_key:true |
+|name|string|null;false|
+|ancestry|string|null;false|
 ### Association
 - has_many :items
 - has_ancestry
@@ -131,11 +146,11 @@ fleamarket_sample_76b DB設計
 - has_many :items
 
 
-##Imagesテーブル
+## Imagesテーブル
 |Column|Type|Options|
 |------|----|-------|
 |image|string|null:false|
-
+|item_id|references|null: false, foreign_key: true |
 
 ### Association
 - belongs_to :item

@@ -6,20 +6,29 @@
       = render "devise/shared/error_messages", resource: @user
       .field__nickname
         = f.label :ニックネーム, class:"field__nickname--label"
+        %span 必須
         %br/
         = f.text_field :nickname , autofocus: true,placeholder: "　例）furima", class:"field__nickname--field"
       .field__email
         = f.label :email, class:"field__email--label"
+        %span 必須
         %br/
         = f.email_field :email, autofocus: true, autocomplete: "email",placeholder: "　例）xxx@xxx.xxx", class:"field__email--field"
-      .field__password
-        = f.label :パスワード, class:"field__password--label"
-        %br/
-        = f.password_field :password, autocomplete: "new-password",placeholder: " 　#{@minimum_password_length} 文字以上の英数字", class:"field__password--field"
-      .field__confirmation
-        = f.label :パスワード_確認, class:"field__confirmation--label"
-        %br/
-        = f.password_field :password_confirmation, autocomplete: "new-password" ,placeholder: "　もう一度入力してください",class:"field__confirmation--field"
+      - if @sns_id.present?
+        = hidden_field_tag :sns_auth, true
+      - else
+        .field__password
+          = f.label :パスワード, class:"field__password--label"
+          %span 必須
+          %br/
+          = f.password_field :password, autocomplete: "new-password",placeholder: "　7文字以上の英数字", class:"field__password--field"
+        .field__confirmation
+          = f.label :パスワード_確認, class:"field__confirmation--label"
+          %span 必須
+          %br/
+          = f.password_field :password_confirmation, autocomplete: "new-password" ,placeholder: "　もう一度入力してください",class:"field__confirmation--field"
       .actions.user_submit
-        = f.submit "次へ進む", class:"user_submit--btn"
+        = f.submit "次へ進む", class:"user_submit--btn"   
     = render "devise/shared/links"
+    = link_to 'Facebookで登録>', user_facebook_omniauth_authorize_path, method: :post, class: "user_link__facebook"
+    = link_to 'Googleで登録>', user_google_oauth2_omniauth_authorize_path, method: :post, class: "user_link__google"

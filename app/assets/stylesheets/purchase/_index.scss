@@ -1,0 +1,142 @@
+*{
+  box-sizing:border-box;
+}
+
+.purchase-main {
+  display: flex;
+  padding-top: 40px;
+  &__container {
+    width: 700px;
+    margin: 0 auto;
+    .purchase-main__head {
+      font-size: 24px;
+      padding: 8px 24px;
+      text-align: center;
+      font-weight: bold;
+      border-bottom: 2px solid rgb(218, 234, 240);
+    }
+  }
+.purchase-input-contents {
+  padding: 24px 16px 0px;
+  border-top: 1px solid rgb(218, 234, 240);;
+  display: block;
+  .purchase-input-content {
+    max-width: 700px;
+    padding-left:150px;
+    margin: 0 auto;
+  }
+}
+.buy-item-main {
+  display: flex;
+  margin-bottom:20px;
+
+  .buy-item-image {
+    max-width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+.buy-item-detail {
+  margin-left: 50px;
+  margin-top:20px;
+  text-align: left;
+  line-height: 1.5;
+  .buy-item-name {
+    font-size: 14px;
+    }
+  }
+}
+  form {
+    display: block;
+  }
+    .buy-form {
+      max-width: 340px;
+      margin: 0 auto;
+      .buy-price {
+        margin: 0;
+        text-align: left;
+        font-size: 15px;
+        font-weight: 600;
+        span {
+          font-size: 15px;
+          font-weight: 400;
+        }
+      } 
+      .buy-price-table {
+        display: flex;
+        width: 100%;
+        margin-top:10px;
+        font-weight: bold;
+        &__left {
+          padding: 24px 0 0;
+          flex: 18px;
+          width: 50%;
+          text-align: left;
+        }
+        &__right {
+          padding: 16px 0;
+          font-size: 28px;
+          width: 50%;
+          text-align: right;
+          font-weight: 600;
+        }
+      } 
+    }
+  .buy-content__user-info {
+    margin: 0 70px;
+    &__inner {
+      margin: 0;
+    }
+  }
+  h3{
+    font-size:15px;
+    font-weight:400;
+    margin-top:20px;
+    text-decoration: underline;
+  }
+      .user-info-update {
+        font-size: 10px;
+        text-align: right;
+      }
+      .user-info-text{
+        font-size: 13px;
+        text-align: left;
+        margin-bottom:40px;
+      }
+        a {
+          width:70px;
+          height:5x;
+          color:#3CCACE;
+          font-size: 15px;
+          cursor: pointer;
+        }
+        .update-btn:hover {
+          text-decoration: underline;
+          opacity: 0.6;
+        }
+.buy-button {
+    font-weight: bold;
+    margin-top: 30px;
+    background: #3CCACE;
+    background: radial-gradient(#3CCACE, #daeaf0);
+    transition: all ease-out .3s;
+    border: 1px solid #3CCACE;
+    color: #fff;
+    height:45px;
+    width: 100%;
+    font-size: 18px;
+    border-radius: 25px;
+    cursor: pointer;
+  }
+  .buy-button:hover {
+    background-position: 99% 50%;
+    color: black !important;
+    border: 1px solid rgba(205, 200, 252, 0);
+  }
+.item-buy-btn__destroy{
+    text-decoration: none;
+    color: white;
+    padding-left: 30px;
+    padding-right: 30px;  
+    }
+}

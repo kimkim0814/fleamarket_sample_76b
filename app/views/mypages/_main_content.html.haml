@@ -3,23 +3,20 @@
   %section.mypage_content__user_icon
     %figure= image_tag 'imageicon.png' ,width: 60,height: 60
     .mypage_content__user_name
-      = "ニックネーム"
+      #{current_user.nickname}
     %h2 
     .mypage_content__number
       .mypage_content__evaluation
-        評価
-        %span.bold 0
+        評価 10
       .mypage_content__sell-product
-        = "出品数 0"
+        出品数 20
 
-  -# お知らせタブ
   %ul.mypage_content__tabs
     %li.info
       = link_to "お知らせ",root_path,class:"#"
       %li
         = link_to "やることリスト",root_path
 
-  -# お知らせ一覧
   %ul.mypage_content__notification
     %li
       %figure= image_tag 'imageicon.png' ,width: 48,height: 48
@@ -41,7 +38,7 @@
       %figure= image_tag 'imageicon.png' ,width: 48,height: 48
       .mypage_content__item-body
         .mypage_content__item-text
-          <メルカリはじめたあなたへ>買うならメルペイスマート払い！
+          <フリマをはじめたあなたへ>大切なお知らせ！
         %time
           %i.far.fa-clock
           %span 21 時間前
@@ -49,7 +46,7 @@
       %figure= image_tag 'imageicon.png' ,width: 48,height: 48
       .mypage_content__item-body
         .mypage_content__item-text
-          <モノガタリ>あなたのモノにまつわるモノがたりを投稿しよう！キャンペーン第2弾
+          <モノガタリ>あなたのモノにまつわるモノがたりを投稿しよう！
         %time
           %i.far.fa-clock
           %span 1 日前
@@ -82,5 +79,5 @@
         .mypage_content__notification__buying_items
           .mypage_content__item-body
             .mypage_content__item-text
-              = "商品をを購入しました。"
+              = "商品を購入しました。"
               %span.status 購入済み

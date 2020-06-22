@@ -1,0 +1,31 @@
+.bread_crumbs {
+  position: relative;
+  margin: 0 auto;
+  border-top: 1px solid rgb(218, 234, 240);
+  &__line{
+    list-style: none;
+    width: 1020px;
+    margin: 0 auto;
+    padding: 14px 0; 
+    color: #333;
+    font-weight: bold;
+    font-size: 14px;
+     a {
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: normal;
+    }
+
+    i {
+      color: #888;
+      font-size: 14px;
+      margin: 0 8px;
+    } 
+   
+  }
+  
+ 
+}
+  
+ 
