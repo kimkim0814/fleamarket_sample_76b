@@ -1,25 +1,6 @@
-.product-body__main__form__image__boxes{
-  display:flex;
-  .lower-box {
-    display: flex;
-    text-align: center;
-    .update-box {
-      color: #00b0ff;
-      width: 50%;
-      height: 50px;
-      line-height: 50px;
-      border: 1px solid #eee;
-      background: #f5f5f5;
-      cursor: pointer;
-    }
-    .delete-box{
-      color: #00b0ff;
-      width: 50%;
-      height: 50px;
-      line-height: 50px;
-      border: 1px solid #eee;
-      background: #f5f5f5;
-      cursor: pointer;
-    }
+.products_new-upper-box{
+  .preview{
+    height: 100px;
+    width: 100px;
   }
 }

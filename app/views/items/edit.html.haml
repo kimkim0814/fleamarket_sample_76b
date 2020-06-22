@@ -9,13 +9,17 @@
         .product-body__main__form__image__boxes
           .product-body__main__form__image__boxes__form
             - @item.images.each do |image|
-              = image_tag "#{image.image}", class: "preview"
-                
-       
+              .products_new-upper-box
+                = image_tag "#{image.image}", class: "preview"
+                .remove 削除
+              
+      
       = f.fields_for :images do |image|
         .product-body__main__form__image__js
           .products_new-js-file_group{"data-index": image.index }
             = image.file_field :image, class: "products_new-js-file"
+
+
 
 
       .product-body__main__form__name-area

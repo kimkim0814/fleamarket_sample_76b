@@ -34,9 +34,6 @@ class ItemsController < ApplicationController
   def edit
   end
 
-  def update
-    @item.update(item_update_params)
-  end
 
   def destroy
   end
@@ -60,6 +57,10 @@ class ItemsController < ApplicationController
     end
   end
   private
+ # 画像編集でDBが画像を拾ってくる
+  def set_images
+    @images = Image.where(item_id: params[:id])
+  end
 
   def set_categories
     @categories      = CategoryIndex.all
@@ -80,7 +81,8 @@ class ItemsController < ApplicationController
       :cost,
       :area,
       :days,
-      images_attributes: [:image]
+      :brand_id,
+      images_attributes: [:image,:_destroy, :id]
     ).merge(user_id: current_user.id)
   end
 
@@ -93,5 +95,5 @@ class ItemsController < ApplicationController
     params.require(:item).permit(
       :name,
       [images_attributes: [:image, :_destroy, :id]])
-  end
+  end 
 end
