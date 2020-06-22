@@ -1,7 +1,6 @@
 .bread_crumbs
   .bread_crumbs__line
-    - breadcrumb :mycard
-    = breadcrumbs separator: "#{content_tag(:i, '', class: 'fas fa-chevron-right')}", class: "breadcrumbs-list"
+    = render_breadcrumbs separator: "#{content_tag(:i, '', class: 'fas fa-chevron-right')}", class: "breadcrumbs-list"
 .mypage
   .mypage_container
     .mypage_index
