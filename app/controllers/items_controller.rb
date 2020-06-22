@@ -26,6 +26,7 @@ class ItemsController < ApplicationController
       redirect_to root_path
     else
       flash.now[:alert] = '必須項目を入力してください。'
+      @item.images.new
       render :new
     end
   end
@@ -34,6 +35,7 @@ class ItemsController < ApplicationController
   end
 
   def update
+    @item.update(item_update_params)
   end
 
   def destroy
@@ -82,7 +84,14 @@ class ItemsController < ApplicationController
     ).merge(user_id: current_user.id)
   end
 
+
   def set_item
       @item = Item.find(params[:id])
+  end
+
+  def item_update_params
+    params.require(:item).permit(
+      :name,
+      [images_attributes: [:image, :_destroy, :id]])
   end
 end
