@@ -74,7 +74,7 @@
         = link_to item_path(@item), method: :delete,class:'item-delete-btn' do
           商品の削除
       - else
-        = link_to item_purchase_index_path(@item), method: :post,class:'item-box__order-btn' do
+        = link_to item_purchase_index_path(@item), method: :get,class:'item-box__order-btn' do
           購入画面に進む
     -else
       %p.item-box__sold-tag 売り切れました
