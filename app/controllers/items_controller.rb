@@ -15,6 +15,27 @@ class ItemsController < ApplicationController
   end
 
   def new
+      @item = Item.new
+      @item.images.new
+  end
+
+  def create
+    @item = Item.new(item_params)
+    if @item.save
+      redirect_to root_path
+    else
+      flash.now[:alert] = '必須項目を入力してください。'
+      render :new
+    end
+  end
+
+  def edit
+  end
+
+  def update
+  end
+
+  def destroy
   end
 
   def destroy
@@ -33,7 +54,20 @@ class ItemsController < ApplicationController
   end
 
   def item_params
-    params.require(:item).permit(:name, :category_id,:days,:price, :brand_id, :explanation,images: [:image, :_destroy, :id]).merge(user_id: current_user.id)
+    params.require(:item).permit(
+      :name,
+      :price,
+      :description,
+      :user_id,
+      :category_id,
+      :brand_id,
+      :size,
+      :status,
+      :cost,
+      :area,
+      :days,
+      images_attributes: [:image]
+    ).merge(user_id: current_user.id)
   end
 
   def set_item
