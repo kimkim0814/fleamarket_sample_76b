@@ -72,3 +72,6 @@
       %p or
       = link_to item_path(@item), method: :delete,class:'item-delete-btn' do
         商品の削除
+      %p or
+      = link_to "/items/#{@item.id}/purchase",  class:'item-delete-btn' do
+        商品の購入
