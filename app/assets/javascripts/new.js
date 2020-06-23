@@ -45,7 +45,7 @@ $(function(){
 
   $('.product-body__main__form__image__boxes__form').on('click', '.products_new-js-remove', function(e) {
     e.stopPropagation();
-    const targetIndex = $(this).parent().data('index');
+    const targetIndex = $(this).prev().data('id');
     // 該当indexを振られているチェックボックスを取得する
     const hiddenCheck = $(`input[data-index="${targetIndex}"].products_new-hidden-destroy`);
     // もしチェックボックスが存在すればチェックを入れる
@@ -57,14 +57,13 @@ $(function(){
   });
   
   // プレビュー画像の削除
-  $('.product-body__main__form__image__boxes__form').on('click', '.remove', function(e) {
+  $('.products_new-upper-box').on('click', '.remove', function(e) {
     e.stopPropagation();
-    const targetIndex = $(this).prev().data('index');
+    const targetIndex = $(this).parent().data('index');
     console.log(targetIndex)
     // 該当indexを振られているチェックボックスを取得する
     const hiddenCheck = $(`input[data-index="${targetIndex}"].products_new-hidden-destroy`);
     // もしチェックボックスが存在すればチェックを入れる
-    console.log(hiddenCheck)
     if (hiddenCheck) hiddenCheck.prop('checked', true);
     // 削除ボタンを取得
     $(this).parent().remove();
