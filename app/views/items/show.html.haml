@@ -36,11 +36,11 @@
           %tr
             %th ブランド
             %td 
-              = @item.brand_id
+              = link_to "#{@item.brand.name}",method: :get
           %tr
             %th 商品のサイズ
             %td 
-              = link_to "#{@item.brand.name}",method: :get
+              = @item.size
 
           %tr
             %th 商品の状態
