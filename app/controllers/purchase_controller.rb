@@ -24,6 +24,8 @@ class PurchaseController < ApplicationController
   end
 
   def done
+    @item_sold_day= Item.find_by(params[:sold_day])
+    @item_sold_day.update( sold_day: Time.now)
   end
 
   private
