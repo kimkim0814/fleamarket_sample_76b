@@ -55,6 +55,7 @@ $(function(){
     $(`div[data-index="${targetIndex}"]`).remove();
     if ($('.products_new-js-file').length == 0) $('.products_new-image-box').append(buildFileField(fileIndex[0]));
   });
+
   
   // プレビュー画像の削除
   $('.products_new-upper-box').on('click', '.remove', function(e) {
@@ -70,6 +71,7 @@ $(function(){
     $("products_new-upper-box").removeData("image");
     $(`div[data-index="${targetIndex}"]`).remove();
   });
+
 
 
     const priceInput = '.input-price';

@@ -14,11 +14,11 @@ Rails.application.routes.draw do
     post 'addresses', to: 'users/registrations#create_address'
   end
 
-
-
-  resources :categories, only: [:index, :show]
-
   root 'items#index'
+  namespace :items do
+    resources :searches, only: :index
+  end
+  resources :categories, only: [:index, :show]
   get 'mypages/index'
   get 'mypages/logout'
   get 'mypages/mycard'

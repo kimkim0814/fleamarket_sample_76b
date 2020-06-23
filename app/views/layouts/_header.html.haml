@@ -6,7 +6,7 @@
           = image_tag  "logo/logo.png", class: "hurima"
 
       .search-box
-        = form_with  do |form|
+        = form_with(url: items_searches_path,local: true, method: :get)  do |form|
           = form.text_field :search,class: 'input-box',placeholder: 'キーワードから探す'
           = form.button type: "submit",class: "search-btn" do
             .search-btn__box
@@ -19,7 +19,7 @@
           %ul.category__parents
             - @parents.each do |parent|
               %li.category__parent{id: "#{parent.id}"}
-                -# = link_to "#{parent.name}", "/categories/#{parent.id}", method: :get
+                = link_to "#{parent.name}", "/categories/#{parent.id}", method: :get
                 %ul.category__children
                   - parent.children.each do |child|
                     %li.category__child{id: "#{child.id}"}

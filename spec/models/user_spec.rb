@@ -1,5 +1,4 @@
 require 'rails_helper'
-
 describe 'user登録テスト', model: User do 
   describe '#create' do
 
