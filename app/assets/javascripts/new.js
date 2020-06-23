@@ -69,7 +69,6 @@ $(function(){
     $(this).parent().remove();
     $("products_new-upper-box").removeData("image");
     $(`div[data-index="${targetIndex}"]`).remove();
-
   });
 
 
