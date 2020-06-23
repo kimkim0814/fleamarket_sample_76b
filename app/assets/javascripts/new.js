@@ -54,6 +54,7 @@ $(function(){
     $(`div[data-index="${targetIndex}"]`).remove();
     if ($('.products_new-js-file').length == 0) $('.products_new-image-box').append(buildFileField(fileIndex[0]));
   });
+
     const priceInput = '.input-price';
     const feeFeild = '.product-body__main__form__fee__box2';
     const profitFeild = '.product-body__main__form__profit__box2';
