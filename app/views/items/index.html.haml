@@ -173,5 +173,5 @@
                       %li
                         = icon('fa','star')
                     %p (税込)
-
-    = render "layouts/item-sell"
+    - if user_signed_in?
+      = render "layouts/item-sell"
