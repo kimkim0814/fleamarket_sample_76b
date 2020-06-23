@@ -48,13 +48,12 @@ class ItemsController < ApplicationController
       if params[:item].keys.include?("image") 
       # dbにある画像がedit画面で一部削除してるか確認
         update_images_ids = params[:item][:image].values #投稿済み画像の残り
-
         before_images_ids.each do |before_img_id|
           Image.find(before_img_id).destroy unless update_image_ids.include?("#{before_img_id}") 
         end
       else
         before_images_ids.each do |before_img_id|
-          Image.find(before_img_id).destroy pdate_image_ids.include?("#{before_img_id}") 
+          Image.find(before_img_id).destroy 
         end
       end
         redirect_to item_path
