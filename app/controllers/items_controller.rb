@@ -25,6 +25,7 @@ class ItemsController < ApplicationController
       redirect_to root_path
     else
       flash.now[:alert] = '必須項目を入力してください。'
+      @item.images.new
       render :new
     end
   end

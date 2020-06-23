@@ -148,7 +148,7 @@ a {
             @include must($color:red);
           }
         }
-        input {
+        select {
           @include form2;
         }
       }
