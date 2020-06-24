@@ -1,5 +1,6 @@
 FactoryBot.define do
   factory :item do
+
     name        {"スニーカー"}
     price       {"1000"}
     description {"新品のスニーカーです"}
@@ -9,6 +10,9 @@ FactoryBot.define do
     cost        {"送料込み(出品者負担)"}
     area        {1}
     days        {"1~2日で発送"}
-    user_id     {1}
+    user
+    brand
+    category
+
   end
 end
