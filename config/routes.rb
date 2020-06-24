@@ -28,6 +28,7 @@ Rails.application.routes.draw do
     resources :purchase, only: [:index] do
       collection do
         get 'done', to: 'purchase#done'
+        get 'index', to: 'purchase#index'
         post 'create', to: 'purchase#create'
       end
     end
