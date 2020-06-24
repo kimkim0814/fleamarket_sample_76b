@@ -2,7 +2,6 @@ $(function(){
 
   // プレビュー用のボックスを生成するための関数
   function buildImg(index, url){
-    console.log(index)
     const html = `<div data-index="${index}", class="products_new-preview-box">
                     <div class="products_new-upper-box">
                       <img data-index="${index}" src="${url}" width="100px" height="100px">
@@ -61,7 +60,6 @@ $(function(){
   $('.products_new-upper-box').on('click', '.remove', function(e) {
     e.stopPropagation();
     const targetIndex = $(this).parent().data('index');
-    console.log(targetIndex)
     // 該当indexを振られているチェックボックスを取得する
     const hiddenCheck = $(`input[data-index="${targetIndex}"].products_new-hidden-destroy`);
     // もしチェックボックスが存在すればチェックを入れる
