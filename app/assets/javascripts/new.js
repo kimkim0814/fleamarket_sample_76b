@@ -55,6 +55,23 @@ $(function(){
     if ($('.products_new-js-file').length == 0) $('.products_new-image-box').append(buildFileField(fileIndex[0]));
   });
 
+  
+  // プレビュー画像の削除
+  $('.products_new-upper-box').on('click', '.remove', function(e) {
+    e.stopPropagation();
+    const targetIndex = $(this).parent().data('index');
+    // 該当indexを振られているチェックボックスを取得する
+    const hiddenCheck = $(`input[data-index="${targetIndex}"].products_new-hidden-destroy`);
+    // もしチェックボックスが存在すればチェックを入れる
+    if (hiddenCheck) hiddenCheck.prop('checked', true);
+    // 削除ボタンを取得
+    $(this).parent().remove();
+    $("products_new-upper-box").removeData("image");
+    $(`div[data-index="${targetIndex}"]`).remove();
+  });
+
+
+
     const priceInput = '.input-price';
     const feeFeild = '.product-body__main__form__fee__box2';
     const profitFeild = '.product-body__main__form__profit__box2';

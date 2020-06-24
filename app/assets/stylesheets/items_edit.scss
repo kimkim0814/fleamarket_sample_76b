@@ -1,0 +1,21 @@
+.new-contents__box__preview{
+  display: flex;
+  flex-wrap: wrap;
+  &__image{
+    position: relative;
+    padding: 1px;
+    margin: 1px;
+    border: 1px dashed #ccc;
+    background-color: #ecebeb;
+    &__img{
+      width: 120px;
+      height: 120px;
+      margin: 2px;
+      object-fit: cover;
+    }
+    .delete{
+      text-align: center;
+      font-size: 12px;
+    }
+  }
+}

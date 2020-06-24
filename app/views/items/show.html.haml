@@ -32,14 +32,15 @@
             %th カテゴリー
             %td
               %a.category1
-                = link_to "#{@item.category.name}" , "/categories/#{@category.id}", method: :get
+                = link_to "#{@item.category.name}" , "/categories/#{@item.id}", method: :get
           %tr
             %th ブランド
             %td 
+              = link_to "#{@item.brand.name}",method: :get
           %tr
             %th 商品のサイズ
             %td 
-              =@item.size
+              = @item.size
 
           %tr
             %th 商品の状態
@@ -66,9 +67,15 @@
           %i.fa.fa-flag
           不適切な商品情報
   .edit-delete-box
-    - if @item.user.id == current_user.id 
-      = link_to edit_item_path(@item), class:'item-edit-btn' do
-        商品の編集
-      %p or
-      = link_to item_path(@item), method: :delete,class:'item-delete-btn' do
-        商品の削除
+    - if @item.sold_day == nil
+      - if @item.user.id == current_user.id 
+        = link_to edit_item_path(@item), class:'item-edit-btn' do
+          商品の編集
+        %p or
+        = link_to item_path(@item), method: :delete,class:'item-delete-btn' do
+          商品の削除
+      - else
+        = link_to item_purchase_index_path(@item),class:'item-box__order-btn' do
+          購入画面に進む
+    -else
+      %p.item-box__sold-tag 売り切れました

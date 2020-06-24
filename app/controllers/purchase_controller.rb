@@ -20,10 +20,12 @@ class PurchaseController < ApplicationController
       :customer => @card.customer_id,  
       :currency => 'jpy',             
     )
+    @item.update(sold_day: Time.current)
     redirect_to done_item_purchase_index_path #完了画面に移動
   end
 
   def done
+    @item.update( sold_day: Time.now)
   end
 
   private
