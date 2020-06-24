@@ -50,9 +50,9 @@ $(function(){
     let limitFileField = $(".js-file_group:last").data("index");
     const targetIndex = $(this).parent().data('index')
     const hiddenCheck = $(`input[data-index="${targetIndex}"].hidden-destroy`);
-    if (hiddenCheck) hiddenCheck.prop('checked', true);
+    if (hiddenCheck) {hiddenCheck.prop('checked', true)};
     $(this).parent().remove();
     $(`img[data-index="${targetIndex}"]`).remove();
-    if ((targetIndex == limitFileField ) || ($(".js-file_group").length >= 9)) ($('#image-box').append(buildFileField(fileIndex)));
+    if ((targetIndex == limitFileField ) || ($(".js-file_group").length >= 9)) {($('#image-box').append(buildFileField(fileIndex)))};
   });
 });
