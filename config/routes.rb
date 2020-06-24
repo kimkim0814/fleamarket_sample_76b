@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   get 'purchase/index'
   get 'purchase/done'
+  
   devise_for :users, controllers: {
     omniauth_callbacks: 'users/omniauth_callbacks',
     registrations: 'users/registrations',
@@ -27,6 +28,7 @@ Rails.application.routes.draw do
     resources :purchase, only: [:index] do
       collection do
         get 'done', to: 'purchase#done'
+        get 'index', to: 'purchase#index'
         post 'create', to: 'purchase#create'
       end
     end
