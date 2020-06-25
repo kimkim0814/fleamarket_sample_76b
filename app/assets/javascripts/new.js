@@ -57,9 +57,6 @@ $(function(){
 
   
 
-
-
-
     const priceInput = '.input-price';
     const feeFeild = '.product-body__main__form__fee__box2';
     const profitFeild = '.product-body__main__form__profit__box2';
