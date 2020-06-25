@@ -36,7 +36,8 @@
           %tr
             %th ブランド
             %td 
-              = link_to "#{@item.brand.name}",method: :get
+              - if @item.brand.present?
+                = link_to "#{@item.brand.name}",method: :get
           %tr
             %th 商品のサイズ
             %td 
