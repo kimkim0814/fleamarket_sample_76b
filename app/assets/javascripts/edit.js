@@ -45,6 +45,6 @@ $(function(){
     if (hiddenCheck) hiddenCheck.prop('checked', true);
     $(this).parent().remove();
     $(`img[data-index="${targetIndex}"]`).remove();
-    if ((targetIndex == limitFileField ) || ($(".js-file_group").length >= 4)) ($('#image-box').append(buildFileField(fileIndex)));
+    if ((targetIndex == limitFileField ) || ($(".js-file_group").length >= 2)) ($('#image-box').append(buildFileField(fileIndex)));
   });
 });
