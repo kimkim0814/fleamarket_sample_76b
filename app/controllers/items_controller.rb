@@ -1,13 +1,13 @@
 class ItemsController < ApplicationController
-  before_action :set_item,only:[:show,:destroy,:edit]
+  before_action :set_item,only:[:show,:destroy,:edit,:update]
   def index
     @items = Item.includes(:images).order(updated_at: "DESC")
   end
 
   def show
     @comment = Comment.new
-    @category = Category.find(params[:id])
     @favorite = Favorite.new
+
   end
 
   
@@ -33,12 +33,21 @@ class ItemsController < ApplicationController
   def edit
   end
 
-  def update
-  end
 
   def destroy
   end
 
+  def edit
+    
+  end
+
+  def update 
+    if @item.update(item_params)
+      redirect_to item_path
+    else
+      redirect_to "#"
+    end
+  end
   def destroy
     if @item.destroy
       redirect_to root_path
@@ -47,6 +56,10 @@ class ItemsController < ApplicationController
     end
   end
   private
+ # 画像編集でDBが画像を拾ってくる
+  def set_images
+    @images = Image.where(item_id: params[:id])
+  end
 
   def set_categories
     @categories      = CategoryIndex.all
@@ -67,11 +80,15 @@ class ItemsController < ApplicationController
       :cost,
       :area,
       :days,
-      images_attributes: [:image]
+      :brand_id,
+      images_attributes: [:image,:_destroy, :id]
     ).merge(user_id: current_user.id)
   end
+
 
   def set_item
       @item = Item.find(params[:id])
   end
+
+
 end
