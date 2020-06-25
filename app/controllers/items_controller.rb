@@ -34,14 +34,6 @@ class ItemsController < ApplicationController
   def edit
   end
 
-
-  def destroy
-  end
-
-  def edit
-    
-  end
-
   def update 
     if @item.update(item_params)
       redirect_to item_path
@@ -49,6 +41,7 @@ class ItemsController < ApplicationController
       redirect_to "#"
     end
   end
+  
   def destroy
     if @item.destroy
       redirect_to root_path
@@ -94,4 +87,5 @@ class ItemsController < ApplicationController
   def move_to_index
     redirect_to action: :index unless user_signed_in?
   end
+
 end
