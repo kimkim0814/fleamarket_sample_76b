@@ -13,20 +13,21 @@
                 = image_tag "#{image.image}", data: { index: i}, width: "100", height: '100'
           = f.fields_for :images do |image|
             .js-file_group{"data-index" => "#{image.index}"}
-              = image.file_field :image, class: 'js-file'
+              = image.file_field :image, class: 'js-file'  
+     
+               
+
+              
               %span.js-remove 削除
             - if @item.persisted?
               = image.check_box :_destroy, data:{ index: image.index }, class: 'hidden-destroy'
           - if @item.persisted?
             .js-file_group{"data-index" => "#{@item.images.count}"}
-              = file_field_tag :image, name: "item[images_attributes][#{@item.images.count}][image]", class: 'js-file'
+              = file_field_tag :image, name: "item[images_attributes][#{@item.images.count}][image]", class: 'js-file' 
               .js-remove 削除
         
     
             
-
-
-
 
       .product-body__main__form__name-area
         .product-body__main__form__name-area__box

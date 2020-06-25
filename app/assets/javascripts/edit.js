@@ -28,7 +28,10 @@ $(function(){
     } else {  
       $('#previews').append(buildImg(targetIndex, blobUrl));
     let limitFileField = $(".js-file_group:last").data("index");
-    if($(".js-file_group").length >= 10 ){
+
+    
+    if($(".js-file_group").length >= 3 ){
+
       return false;
     } else {
       $('#image-box').append(buildFileField(fileIndex));
@@ -42,6 +45,6 @@ $(function(){
     if (hiddenCheck) hiddenCheck.prop('checked', true);
     $(this).parent().remove();
     $(`img[data-index="${targetIndex}"]`).remove();
-    if ((targetIndex == limitFileField ) || ($(".js-file_group").length >= 9)) ($('#image-box').append(buildFileField(fileIndex)));
+    if ((targetIndex == limitFileField ) || ($(".js-file_group").length >= 4)) ($('#image-box').append(buildFileField(fileIndex)));
   });
 });
