@@ -1,6 +1,5 @@
 class ItemsController < ApplicationController
   before_action :set_item,only:[:show,:destroy,:edit,:update]
-  before_action :move_to_index, only: [:show]
   def index
     @items = Item.includes(:images).order(updated_at: "DESC")
   end
@@ -91,7 +90,5 @@ class ItemsController < ApplicationController
       @item = Item.find(params[:id])
   end
 
-  def move_to_index
-    redirect_to action: :index unless user_signed_in?
-  end
+
 end
